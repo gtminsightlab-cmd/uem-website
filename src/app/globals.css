@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    color: #1C1C1C;
+    background: #FFFFFF;
+    overflow-x: hidden;
+  }
+  ::selection {
+    background: rgba(184, 149, 42, 0.15);
+    color: #0F2040;
+  }
+}
+
+@layer components {
+  .container-wide {
+    @apply max-w-wide mx-auto px-6 md:px-12;
+  }
+  .container-content {
+    @apply max-w-content mx-auto px-6 md:px-12;
+  }
+  .container-narrow {
+    @apply max-w-narrow mx-auto px-6 md:px-12;
+  }
+  .eyebrow {
+    @apply text-[11px] font-semibold tracking-[0.14em] uppercase text-gold;
+  }
+  .gold-line {
+    @apply h-[3px] bg-gold w-12;
+  }
+  .section {
+    @apply py-24 md:py-30;
+  }
+  .section-sm {
+    @apply py-16 md:py-22;
+  }
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-gold text-navy text-[13px] font-bold tracking-[0.06em] px-7 py-3.5 rounded transition-all duration-200 hover:bg-gold-light;
+  }
+  .btn-outline {
+    @apply inline-flex items-center gap-2 bg-transparent text-navy text-[13px] font-semibold tracking-[0.06em] px-7 py-3.5 rounded border-[1.5px] border-gray-200 transition-all duration-200 hover:border-navy hover:bg-surface;
+  }
+  .btn-outline-white {
+    @apply inline-flex items-center gap-2 bg-transparent text-white text-[13px] font-semibold tracking-[0.06em] px-7 py-3.5 rounded border-[1.5px] border-white/40 transition-all duration-200 hover:border-white hover:bg-white/[0.08];
+  }
+  .btn-navy {
+    @apply inline-flex items-center gap-2 bg-navy text-white text-[13px] font-bold tracking-[0.06em] px-7 py-3.5 rounded transition-all duration-200 hover:bg-navy-md;
+  }
+}
+
+@layer utilities {
+  .fade-up {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .delay-100 { transition-delay: 0.1s; }
+  .delay-200 { transition-delay: 0.2s; }
+  .delay-300 { transition-delay: 0.3s; }
+  .delay-400 { transition-delay: 0.4s; }
+}
+
+/* Fallback: if JS hasn't loaded after 2s, show all content */
+@keyframes fadeInFallback {
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-up {
+  animation: fadeInFallback 0.01s 2s forwards;
+}
+
+/* Enhanced hover and interaction effects */
+.hover-lift {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(15, 32, 64, 0.12);
+}
+
+/* Gradient text utility */
+.text-gradient-gold {
+  background: linear-gradient(135deg, #D4AA3A 0%, #B8952A 50%, #D4AA3A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animated underline for links */
+.animated-underline {
+  position: relative;
+}
+.animated-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #B8952A;
+  transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.animated-underline:hover::after {
+  width: 100%;
+}
+
+/* Subtle parallax shimmer on hero */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.hero-shimmer {
+  background: linear-gradient(90deg, transparent 0%, rgba(212, 170, 58, 0.06) 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmer 8s ease-in-out infinite;
+}
