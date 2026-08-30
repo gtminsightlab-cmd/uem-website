@@ -170,17 +170,36 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section bg-light/55">
+      <section className="section bg-light/55" id="proof-of-method">
         <div className="container-content">
           <FadeIn className="max-w-3xl">
-            <p className="eyebrow">A visual operating language</p>
+            <p className="eyebrow">Proof of method</p>
             <h2 className="mt-5 font-serif text-h2 font-medium text-navy">
-              Make launch complexity understandable without making it simplistic.
+              See how UEM turns launch complexity into decisions.
             </h2>
             <p className="mt-5 leading-8 text-mid">
-              Signals, gates, paths, evidence, and decision symbols help leaders see how a launch is
-              moving, where confidence is weak, and what requires action next.
+              We make the operating choreography visible: how evidence becomes a signal, how a signal
+              changes a decision, and how that decision moves the launch. The examples below show the
+              structure of our work without exposing client information or proprietary calibration.
             </p>
+          </FadeIn>
+          <FadeIn delay={0.05} className="mt-10">
+            <ol className="grid overflow-hidden border border-navy/10 bg-white sm:grid-cols-2 lg:grid-cols-6" aria-label="UEM commercialization process">
+              {[
+                ['01', 'Diagnose'],
+                ['02', 'Pressure-test'],
+                ['03', 'Design'],
+                ['04', 'Decide'],
+                ['05', 'Operate'],
+                ['06', 'Learn'],
+              ].map(([number, label], index) => (
+                <li key={label} className="relative border-b border-navy/10 p-4 last:border-b-0 sm:border-r lg:border-b-0">
+                  <span className="text-[9px] font-bold tracking-[0.12em] text-gold">{number}</span>
+                  <p className="mt-2 text-xs font-bold uppercase tracking-[0.08em] text-navy">{label}</p>
+                  {index < 5 && <span className="absolute -right-2.5 top-1/2 z-10 hidden h-5 w-5 -translate-y-1/2 items-center justify-center rounded-full bg-gold text-[9px] text-white lg:flex" aria-hidden="true">→</span>}
+                </li>
+              ))}
+            </ol>
           </FadeIn>
           <FadeIn delay={0.1} className="mt-12">
             <VisualCarousel />

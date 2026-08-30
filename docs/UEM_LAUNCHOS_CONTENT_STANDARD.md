@@ -136,3 +136,27 @@ Keep internal strategy and production mechanics out of customer-facing pages, in
 - disclaimers written for the build team rather than the buyer.
 
 Translate those mechanics into the customer outcome, decision principle, or operating commitment they support. Preserve internal details only in repository documentation.
+
+## Public methodology boundary
+
+UEM may publish selected frameworks, process flows, decision views, signal structures, and fictional sample outputs to demonstrate how the firm thinks and works. The public principle is:
+
+> Reveal the choreography. Protect the calibration.
+
+Approved for public explanation:
+
+- the UEM operating sequence: diagnose, pressure-test, design, decide, operate, learn;
+- evidence-to-signal-to-decision-to-action flows;
+- the structure of readiness, critical-path, executive-decision, failure-signal, and build-buy-rent views;
+- clearly identified fictional sample data that cannot be mistaken for a client result;
+- the questions each view helps leadership answer.
+
+Keep private unless separately approved:
+
+- the complete methodology question bank;
+- weights, thresholds, hard gates, detailed scoring rules, and expert rubrics;
+- benchmark corpora and aggregation thresholds;
+- prompts, evaluation suites, agent instructions, and automation logic;
+- client-specific playbooks, licensed data, and identifiable engagement outputs.
+
+Public examples must not imply predictive validation, general availability, or a verified client outcome. Use concise buyer-facing disclosure such as “Sample LaunchOS output · fictional manufacturer data,” not production notes or internal build labels.
