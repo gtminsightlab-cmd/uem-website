@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1152" height="864" viewBox="0 0 1152 864">
+  <title>Launch risk and governance network</title>
+  <defs>
+    <pattern id="grid" width="52" height="52" patternUnits="userSpaceOnUse"><path d="M52 0H0V52" fill="none" stroke="#DCE7E1" stroke-opacity=".08"/></pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5 0 10Z" fill="#DCE7E1"/></marker>
+    <filter id="shadow"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity=".2"/></filter>
+  </defs>
+  <rect width="1152" height="864" fill="#164B52"/><rect width="1152" height="864" fill="url(#grid)"/>
+  <path d="M116 148H1034" stroke="#DCE7E1" stroke-width="6"/>
+  <g fill="#FBFAF7" stroke="#164B52" stroke-width="5"><circle cx="180" cy="148" r="24"/><circle cx="410" cy="148" r="24"/><circle cx="640" cy="148" r="24"/><circle cx="870" cy="148" r="24"/></g>
+  <path d="M180 172V292M410 172V244M640 172V290M870 172V252" stroke="#DCE7E1" stroke-width="4" stroke-dasharray="8 10"/>
+  <g filter="url(#shadow)">
+    <g transform="translate(120 292)"><rect width="260" height="170" rx="12" fill="#B6533D"/><circle cx="64" cy="85" r="38" fill="#FBFAF7"/><path d="M64 61V91M64 113V116" stroke="#B6533D" stroke-width="12" stroke-linecap="round"/><path d="M130 60H218M130 88H196M130 116H226" stroke="#FBFAF7" stroke-opacity=".65" stroke-width="10" stroke-linecap="round"/></g>
+    <g transform="translate(446 292)"><rect width="260" height="170" rx="12" fill="#FBFAF7"/><path d="M58 55L106 85 58 115 10 85Z" fill="#557582"/><path d="M128 58H224M128 86H202M128 114H232" stroke="#164B52" stroke-opacity=".55" stroke-width="10" stroke-linecap="round"/></g>
+    <g transform="translate(772 292)"><rect width="260" height="170" rx="12" fill="#DCE7E1"/><circle cx="65" cy="85" r="40" fill="#2B6A5B"/><path d="M44 84L60 100 88 67" fill="none" stroke="#FBFAF7" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M128 58H224M128 86H202M128 114H232" stroke="#164B52" stroke-opacity=".55" stroke-width="10" stroke-linecap="round"/></g>
+  </g>
+  <path d="M380 377H446M706 377H772" stroke="#DCE7E1" stroke-width="5" marker-end="url(#arrow)"/>
+  <path d="M250 462V646H522M576 462V646M902 462V646H630" fill="none" stroke="#DCE7E1" stroke-width="4" stroke-dasharray="9 10" marker-end="url(#arrow)"/>
+  <g transform="translate(498 620)" filter="url(#shadow)">
+    <path d="M78 0L156 78 78 156 0 78Z" fill="#FBFAF7"/>
+    <circle cx="78" cy="78" r="24" fill="#B6533D"/>
+  </g>
+  <g fill="#DCE7E1"><circle cx="250" cy="646" r="18"/><circle cx="902" cy="646" r="18"/></g>
+</svg>

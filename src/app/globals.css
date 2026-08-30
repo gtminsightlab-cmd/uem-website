@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -16,14 +14,14 @@
     -moz-osx-font-smoothing: grayscale;
   }
   body {
-    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
-    color: #1C1C1C;
-    background: #FFFFFF;
+    font-family: var(--font-sans), system-ui, sans-serif;
+    color: #182126;
+    background: #F4F1EA;
     overflow-x: hidden;
   }
   ::selection {
-    background: rgba(184, 149, 42, 0.15);
-    color: #0F2040;
+    background: rgba(182, 83, 61, 0.2);
+    color: #164B52;
   }
 }
 
@@ -50,7 +48,7 @@
     @apply py-16 md:py-22;
   }
   .btn-primary {
-    @apply inline-flex items-center gap-2 bg-gold text-navy text-[13px] font-bold tracking-[0.06em] px-7 py-3.5 rounded transition-all duration-200 hover:bg-gold-light;
+    @apply inline-flex items-center gap-2 bg-gold text-white text-[13px] font-bold tracking-[0.06em] px-7 py-3.5 rounded transition-all duration-200 hover:bg-gold-light;
   }
   .btn-outline {
     @apply inline-flex items-center gap-2 bg-transparent text-navy text-[13px] font-semibold tracking-[0.06em] px-7 py-3.5 rounded border-[1.5px] border-gray-200 transition-all duration-200 hover:border-navy hover:bg-surface;
@@ -93,12 +91,12 @@
 }
 .hover-lift:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(15, 32, 64, 0.12);
+  box-shadow: 0 12px 40px rgba(22, 75, 82, 0.14);
 }
 
 /* Gradient text utility */
 .text-gradient-gold {
-  background: linear-gradient(135deg, #D4AA3A 0%, #B8952A 50%, #D4AA3A 100%);
+  background: linear-gradient(135deg, #C96852 0%, #B6533D 50%, #8F3F30 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -115,7 +113,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: #B8952A;
+  background: #B6533D;
   transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .animated-underline:hover::after {
@@ -128,7 +126,18 @@
   100% { background-position: 200% 0; }
 }
 .hero-shimmer {
-  background: linear-gradient(90deg, transparent 0%, rgba(212, 170, 58, 0.06) 50%, transparent 100%);
+  background: linear-gradient(90deg, transparent 0%, rgba(220, 231, 225, 0.06) 50%, transparent 100%);
   background-size: 200% 100%;
   animation: shimmer 8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

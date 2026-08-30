@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Upper Echelon Management Website
 
-## Getting Started
+Public website for Upper Echelon Management (UEM), the operator-led commercialization firm behind the LaunchOS initiative.
 
-First, run the development server:
+## Content authority
 
-```bash
+Read [`AGENTS.md`](AGENTS.md) before changing the site. Public UEM and LaunchOS claims are controlled by:
+
+- [`docs/UEM_LAUNCHOS_CONTENT_STANDARD.md`](docs/UEM_LAUNCHOS_CONTENT_STANDARD.md)
+- [`docs/UEM_OPEN_CONTENT_QUESTIONS.md`](docs/UEM_OPEN_CONTENT_QUESTIONS.md)
+- the LaunchOS source hierarchy under [`docs/launchos/`](docs/launchos/)
+
+Do not restore unsupported case studies, prices, client outcomes, product histories, fake availability claims, or synthetic team representations.
+
+## Local development
+
+```powershell
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Verification
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```powershell
+npm run lint
+npm run build
+```
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This website explains LaunchOS but is not the LaunchOS product application. Moving product code into this repository requires an explicit monorepo/application architecture decision.

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1152" height="864" viewBox="0 0 1152 864">
+  <title>Evidence to decision flow</title>
+  <defs>
+    <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse"><path d="M56 0H0V56" fill="none" stroke="#164B52" stroke-opacity=".055"/></pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5 0 10Z" fill="#164B52"/></marker>
+    <filter id="shadow"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#182126" flood-opacity=".12"/></filter>
+  </defs>
+  <rect width="1152" height="864" fill="#F4F1EA"/><rect width="1152" height="864" fill="url(#grid)"/>
+  <g filter="url(#shadow)">
+    <g transform="translate(88 150)"><rect width="220" height="150" rx="8" fill="#FBFAF7" stroke="#557582" stroke-width="3"/><circle cx="50" cy="50" r="20" fill="#557582"/><path d="M88 42H180M88 64H156M40 108H180" stroke="#164B52" stroke-opacity=".45" stroke-width="8" stroke-linecap="round"/></g>
+    <g transform="translate(88 357)"><rect width="220" height="150" rx="8" fill="#DCE7E1" stroke="#557582" stroke-width="3"/><circle cx="50" cy="50" r="20" fill="#2B6A5B"/><path d="M88 42H180M88 64H156M40 108H180" stroke="#164B52" stroke-opacity=".45" stroke-width="8" stroke-linecap="round"/></g>
+    <g transform="translate(88 564)"><rect width="220" height="150" rx="8" fill="#FBFAF7" stroke="#B6533D" stroke-width="3"/><circle cx="50" cy="50" r="20" fill="#B6533D"/><path d="M88 42H180M88 64H156M40 108H180" stroke="#164B52" stroke-opacity=".45" stroke-width="8" stroke-linecap="round"/></g>
+  </g>
+  <path d="M308 225C420 225 414 372 520 405M308 432H520M308 639C420 639 414 492 520 459" fill="none" stroke="#164B52" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M608 320L720 432 608 544 496 432Z" fill="#164B52" filter="url(#shadow)"/>
+  <circle cx="608" cy="432" r="34" fill="#FBFAF7"/><circle cx="608" cy="432" r="12" fill="#B6533D"/>
+  <path d="M720 432H822V236M720 432H822M720 432H822V628" fill="none" stroke="#164B52" stroke-width="4" marker-end="url(#arrow)"/>
+  <g filter="url(#shadow)">
+    <circle cx="938" cy="236" r="88" fill="#DCE7E1" stroke="#2B6A5B" stroke-width="4"/><path d="M898 236L928 266 984 208" fill="none" stroke="#2B6A5B" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="938" cy="432" r="88" fill="#FBFAF7" stroke="#557582" stroke-width="4"/><path d="M900 432H976M938 394V470" stroke="#557582" stroke-width="12" stroke-linecap="round"/>
+    <circle cx="938" cy="628" r="88" fill="#F3D7CF" stroke="#B6533D" stroke-width="4"/><path d="M900 590L976 666M976 590L900 666" stroke="#B6533D" stroke-width="12" stroke-linecap="round"/>
+  </g>
+</svg>

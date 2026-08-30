@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1152" height="864" viewBox="0 0 1152 864">
+  <title>Commercial operating model</title>
+  <defs>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse"><path d="M64 0H0V64" fill="none" stroke="#164B52" stroke-opacity=".05"/></pattern>
+    <filter id="shadow"><feDropShadow dx="0" dy="9" stdDeviation="12" flood-color="#182126" flood-opacity=".13"/></filter>
+  </defs>
+  <rect width="1152" height="864" fill="#F4F1EA"/><rect width="1152" height="864" fill="url(#grid)"/>
+  <g transform="translate(576 432)">
+    <circle r="170" fill="#DCE7E1" stroke="#164B52" stroke-width="3"/>
+    <circle r="108" fill="#164B52" filter="url(#shadow)"/>
+    <circle r="50" fill="#FBFAF7"/><circle r="18" fill="#B6533D"/>
+    <g stroke="#164B52" stroke-width="4" fill="none">
+      <path d="M0-170V-286"/><path d="M147-85L248-143"/><path d="M147 85L248 143"/>
+      <path d="M0 170V286"/><path d="M-147 85L-248 143"/><path d="M-147-85L-248-143"/>
+    </g>
+    <g filter="url(#shadow)">
+      <g transform="translate(0-320)"><circle r="74" fill="#FBFAF7" stroke="#557582" stroke-width="4"/><path d="M-28-22H28M-28 0H18M-28 22H34" stroke="#557582" stroke-width="9" stroke-linecap="round"/></g>
+      <g transform="translate(278-160)"><circle r="74" fill="#DCE7E1" stroke="#2B6A5B" stroke-width="4"/><path d="M-34 18C-8-42 10-42 36 18M-38 22H40" fill="none" stroke="#2B6A5B" stroke-width="10" stroke-linecap="round"/></g>
+      <g transform="translate(278 160)"><circle r="74" fill="#FBFAF7" stroke="#557582" stroke-width="4"/><circle cx="-22" cy="-8" r="14" fill="#557582"/><circle cx="24" cy="-8" r="14" fill="#557582"/><path d="M-44 34C-32 8-12 8 0 34M0 34C12 8 32 8 44 34" fill="none" stroke="#557582" stroke-width="9" stroke-linecap="round"/></g>
+      <g transform="translate(0 320)"><circle r="74" fill="#F3D7CF" stroke="#B6533D" stroke-width="4"/><path d="M-30 28V2M0 28V-18M30 28V-36" stroke="#B6533D" stroke-width="13" stroke-linecap="round"/></g>
+      <g transform="translate(-278 160)"><circle r="74" fill="#FBFAF7" stroke="#557582" stroke-width="4"/><path d="M-38-14H38V28H-38ZM-18-34H18V-14H-18Z" fill="none" stroke="#557582" stroke-width="8" stroke-linejoin="round"/></g>
+      <g transform="translate(-278-160)"><circle r="74" fill="#DCE7E1" stroke="#2B6A5B" stroke-width="4"/><path d="M-30 0A30 30 0 1 0 30 0A30 30 0 1 0-30 0M0-44V-30M0 30V44M-44 0H-30M30 0H44" fill="none" stroke="#2B6A5B" stroke-width="8" stroke-linecap="round"/></g>
+    </g>
+  </g>
+</svg>

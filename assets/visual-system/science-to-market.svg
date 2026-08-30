@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1152" height="864" viewBox="0 0 1152 864">
+  <title>Science to market interface</title>
+  <defs>
+    <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse"><path d="M56 0H0V56" fill="none" stroke="#164B52" stroke-opacity=".05"/></pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5 0 10Z" fill="#164B52"/></marker>
+    <filter id="shadow"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#182126" flood-opacity=".12"/></filter>
+  </defs>
+  <rect width="1152" height="864" fill="#F4F1EA"/><rect width="1152" height="864" fill="url(#grid)"/>
+  <g transform="translate(300 432)" filter="url(#shadow)">
+    <circle r="238" fill="#DCE7E1" stroke="#164B52" stroke-width="4"/>
+    <circle r="168" fill="#FBFAF7" stroke="#557582" stroke-width="3"/>
+    <circle cx="-38" cy="-22" r="72" fill="#164B52"/><circle cx="-38" cy="-22" r="27" fill="#B6533D"/>
+    <ellipse cx="86" cy="-82" rx="42" ry="24" fill="#557582" transform="rotate(-24 86-82)"/>
+    <ellipse cx="92" cy="80" rx="50" ry="28" fill="#2B6A5B" transform="rotate(28 92 80)"/>
+    <circle cx="-114" cy="105" r="30" fill="#557582" fill-opacity=".75"/>
+    <path d="M-152-130C-80-177-1-170 62-139M-148 146C-70 183 20 175 88 136" fill="none" stroke="#B6533D" stroke-width="10" stroke-linecap="round"/>
+  </g>
+  <path d="M542 432H720" stroke="#164B52" stroke-width="8" marker-end="url(#arrow)"/>
+  <g transform="translate(580 346)"><rect width="88" height="172" rx="44" fill="#FBFAF7" stroke="#164B52" stroke-width="4"/><circle cx="44" cy="50" r="18" fill="#B6533D"/><circle cx="44" cy="122" r="18" fill="#2B6A5B"/></g>
+  <g stroke="#164B52" stroke-width="4" fill="#FBFAF7" filter="url(#shadow)">
+    <circle cx="820" cy="250" r="62"/><circle cx="994" cy="342" r="62"/>
+    <circle cx="832" cy="540" r="62"/><circle cx="1010" cy="628" r="62"/>
+    <circle cx="914" cy="438" r="78" fill="#DCE7E1"/>
+  </g>
+  <g stroke="#557582" stroke-width="4">
+    <path d="M820 312L878 382M966 384L948 402M875 499L888 476M956 501L991 572"/>
+  </g>
+  <g fill="#164B52"><circle cx="820" cy="250" r="16"/><circle cx="994" cy="342" r="16"/><circle cx="832" cy="540" r="16"/><circle cx="1010" cy="628" r="16"/></g>
+  <circle cx="914" cy="438" r="28" fill="#B6533D"/>
+</svg>

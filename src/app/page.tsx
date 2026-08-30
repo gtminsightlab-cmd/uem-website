@@ -1,294 +1,250 @@
+import Image from 'next/image';
 import Link from 'next/link';
+
 import FadeIn from '@/components/FadeIn';
+import VisualCarousel from '@/components/VisualCarousel';
 
-const stats = [
-  { value: '30+', label: 'Years Metabolic Experience' },
-  { value: '4', label: 'Major Pharma Eras' },
-  { value: '$50K', label: 'Monthly Retainer Start' },
-  { value: '100%', label: 'Principal-Led' },
-];
-
-const services = [
+const operatingSteps = [
   {
-    num: '01',
-    title: 'Advanced Metabolic Retention Audit',
-    subtitle: 'Front-Door Diagnostic',
-    desc: 'Quantify revenue leakage from early discontinuation and access barriers. Map the real patient journey and deliver a board-ready Retention Blueprint with prioritized interventions.',
-    link: '/services',
+    number: '01',
+    title: 'Diagnose the launch system',
+    body: 'Make assumptions, evidence gaps, decisions, dependencies, and capability constraints visible before they become execution failures.',
   },
   {
-    num: '02',
-    title: 'Launch Architecture Mandate',
-    subtitle: '12-Month Retainer',
-    desc: 'End-to-end commercial architecture for GLP-1, dual/triple agonists, and obesity assets. Segmentation, access strategy, field model, retention engine, and KOL/narrative governance.',
-    link: '/services',
+    number: '02',
+    title: 'Design the commercial model',
+    body: 'Translate the asset, market, timeline, and ambition into an operating model the organization can actually support.',
   },
   {
-    num: '03',
-    title: 'Talent Architecture & Squad Building',
-    subtitle: 'Elite Hiring',
-    desc: 'Clinical stress tests, behavioral screens, and 30-year network-level checks. Small curated slates with UEM Fit Scores -- not CV stacks from generalist recruiters.',
-    link: '/services',
+    number: '03',
+    title: 'Operate the critical path',
+    body: 'Keep leaders focused on the choices, owners, expert inputs, and cross-functional dependencies that matter most.',
+  },
+  {
+    number: '04',
+    title: 'Learn before the market teaches you',
+    body: 'Use evidence and operator judgment to challenge the plan early, update it deliberately, and preserve the reasoning behind key decisions.',
   },
 ];
 
-const capabilities = [
+const questions = [
+  'Are we genuinely ready—or merely busy?',
+  'Which assumptions carry the greatest commercial risk?',
+  'What must be built, bought, rented, or deferred?',
+  'Which decision is becoming more expensive every week?',
+  'Where is confidence stronger than the evidence?',
+  'What does the executive team need to see next?',
+];
+
+const workingScenes = [
   {
-    icon: '\u2756',
-    name: 'Cardio-Metabolic',
-    desc: 'GLP-1, duals, triples, and related CV/renal launches',
+    src: '/images/people/science-commercial-working-session.webp',
+    alt: 'A cross-functional group of science and commercial professionals reviewing launch evidence together',
+    title: 'Science + commercial judgment',
+    body: 'Evidence becomes useful when scientific, operational, and market perspectives challenge one another early.',
   },
   {
-    icon: '\u26A1',
-    name: 'Obesity & Weight',
-    desc: 'Next-gen obesity agents and legacy weight-loss therapies',
+    src: '/images/people/global-launch-working-session.webp',
+    alt: 'An international group of biopharma leaders working through a launch decision around a table',
+    title: 'Global launch leadership',
+    body: 'U.S. launch choices often connect global asset teams with the leaders responsible for local execution.',
   },
   {
-    icon: '\u2318',
-    name: 'US Market Entry',
-    desc: 'EU/Japanese biotechs entering the U.S. market',
-  },
-  {
-    icon: '\u25C6',
-    name: 'Specialty Biopharma',
-    desc: 'Oncology support, rare disease, CNS, and complex launches',
+    src: '/images/people/evidence-review-working-session.webp',
+    alt: 'A pharmaceutical scientist and a commercial executive closely reviewing evidence',
+    title: 'Evidence before commitment',
+    body: 'Critical assumptions should be examined together before they harden into plans, budgets, and dependencies.',
   },
 ];
 
-const impactCases = [
-  {
-    tag: 'Launch Scale-Up',
-    title: 'National Field Team Expansion',
-    challenge: 'Mid-cap biotech needed to scale from 25 to 60+ reps for a complex metabolic launch, with full clinical readiness from day one.',
-    result: 'Designed squad architecture, ran clinical stress tests on every hire, and achieved top-quartile launch performance in priority territories.',
-  },
-  {
-    tag: 'Retention Architecture',
-    title: 'GLP-1 Persistence Program',
-    challenge: 'Early discontinuation rates eroding lifetime value. Standard patient support programs failing to address titration and side-effect drop-off.',
-    result: 'Built a Retention Engine integrating nurse liaison, HCP coaching, and loyalty constructs that reduced early discontinuation in pilot populations.',
-  },
-  {
-    tag: 'US Market Entry',
-    title: 'Foreign Biotech US Gateway',
-    challenge: 'EU-based mid-cap with zero US commercial footprint needed a complete launch infrastructure for their first metabolic asset.',
-    result: 'Served as de facto Head of US Launch -- built the commercial architecture, hired the initial field team, and aligned KOL and payer narratives.',
-  },
-  {
-    tag: 'Talent Architecture',
-    title: 'Obesity Launch Hiring',
-    challenge: 'Generalist recruiters produced three rounds of weak candidates. Launch timeline threatened.',
-    result: 'Used clinical stress testing and network-level vetting to deliver a curated slate in 4 weeks. Zero first-year turnover among UEM-vetted hires.',
-  },
-];
-
-export default function Home() {
+export default function HomePage() {
   return (
     <>
-      {/* HERO */}
-      <section className="relative min-h-screen flex flex-col justify-end overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy-md to-navy-light" />
-        <div
-          className="absolute inset-0 opacity-[0.04]"
-          style={{
-            backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)',
-            backgroundSize: '40px 40px',
-          }}
-        />
-        <div className="relative z-10 container-content pb-24 pt-40 md:pb-28 md:pt-48">
+      <section className="relative overflow-hidden bg-navy pt-[72px] text-white">
+        <div className="absolute inset-0 hero-shimmer" aria-hidden="true" />
+        <div className="container-wide relative">
+          <div className="grid min-h-[680px] items-stretch lg:grid-cols-[1.08fr_0.92fr]">
+            <div className="flex flex-col justify-center py-20 pr-0 md:py-24 lg:py-28 lg:pr-14">
+            <p className="eyebrow mb-6">Upper Echelon Management</p>
+            <h1 className="font-serif text-hero font-medium text-white">
+              Your U.S. Commercialization Office.
+            </h1>
+            <p className="mt-8 max-w-3xl text-lg leading-8 text-white/72 md:text-xl">
+              UEM helps pharmaceutical leaders design smarter launches, identify failure earlier,
+              and make better commercialization decisions—whether it is their first U.S. launch or
+              their tenth.
+            </p>
+            <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+              <Link href="/services" className="btn-primary justify-center">
+                Explore the operating model <span aria-hidden="true">→</span>
+              </Link>
+              <Link href="/launchos" className="btn-outline-white justify-center">
+                See LaunchOS in development
+              </Link>
+            </div>
+            </div>
+            <div className="relative min-h-[360px] overflow-hidden border-x border-t border-white/10 lg:min-h-full lg:border-y lg:border-r-0">
+              <Image
+                src="/images/uem-commercialization-hero-final.webp"
+                alt=""
+                fill
+                priority
+                quality={90}
+                sizes="(min-width: 1024px) 46vw, 100vw"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/35 via-transparent to-transparent" aria-hidden="true" />
+              <div className="absolute bottom-0 left-0 right-0 border-t border-white/12 bg-navy/65 px-5 py-4 backdrop-blur-sm">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-white/65">
+                  Science · Strategy · Commercial execution
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-gray-200 bg-white">
+        <div className="container-content grid grid-cols-2 divide-x divide-gray-200 md:grid-cols-4">
+          {[
+            ['50+', 'combined years in regulated commercial leadership'],
+            ['200+', 'field representatives hired'],
+            ['30+', 'district managers hired'],
+            ['1,000+', 'representative interviews conducted'],
+          ].map(([value, label]) => (
+            <div key={value} className="px-4 py-8 text-center md:px-8">
+              <p className="font-serif text-3xl text-navy md:text-4xl">{value}</p>
+              <p className="mt-2 text-xs leading-5 text-mid">{label}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="section bg-white">
+        <div className="container-content grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <FadeIn>
-            <span className="eyebrow text-gold/80 mb-5 block">Strategy-Led Execution</span>
+            <p className="eyebrow">The real problem</p>
+            <h2 className="mt-5 font-serif text-h2 font-medium text-navy">
+              Launches rarely fail because the team lacked a project plan.
+            </h2>
           </FadeIn>
           <FadeIn delay={0.1}>
-            <h1 className="font-serif text-hero font-normal text-white mb-6 max-w-[820px]">
-              Elite Launch Architecture for{' '}
-              <em className="italic text-gold-light">Advanced Metabolic</em> Therapies
-            </h1>
-          </FadeIn>
-          <FadeIn delay={0.2}>
-            <p className="text-lg font-light leading-relaxed text-white/80 max-w-[540px] mb-9">
-              We help biotechs de-risk U.S. launches for GLP-1, dual and triple agonists, and
-              modern obesity therapies by aligning evidence, access, and field execution.
-            </p>
-          </FadeIn>
-          <FadeIn delay={0.3}>
-            <div className="flex gap-3 flex-wrap">
-              <Link href="/contact" className="btn-primary">
-                Schedule a Launch Stress Test <span className="text-sm">&rarr;</span>
-              </Link>
-              <Link href="/services" className="btn-outline-white">
-                Explore Services
-              </Link>
+            <div className="space-y-6 text-base leading-8 text-mid md:text-lg">
+              <p>
+                They fail when assumptions remain untested, evidence is fragmented, decisions arrive
+                late, and functional workstreams optimize independently of the launch as a whole.
+              </p>
+              <p>
+                UEM brings operator leadership to that system. We connect launch readiness,
+                organization design, field and hiring strategy, partner decisions, and executive
+                governance so commercial leaders can see what is true—and what still needs proof.
+              </p>
+              <p className="border-l-2 border-gold pl-5 font-medium text-navy">
+                The goal is not more activity. It is earlier conviction about the decisions that
+                determine commercial performance.
+              </p>
             </div>
           </FadeIn>
         </div>
-        <div className="relative z-10 bg-navy/90 backdrop-blur-sm">
-          <div className="container-content">
-            <div className="grid grid-cols-2 md:grid-cols-4">
-              {stats.map((stat, i) => (
-                <div key={stat.label} className={`py-5 ${i < stats.length - 1 ? 'border-r border-white/10' : ''}`}>
-                  <div className="font-serif text-[34px] font-normal text-gold-light leading-none">{stat.value}</div>
-                  <div className="text-[11px] font-medium text-white/50 mt-1 tracking-wide">{stat.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
       </section>
 
-      {/* POSITIONING */}
-      <section className="section bg-white">
-        <div className="container-content">
-          <div className="grid md:grid-cols-2 gap-20 items-center">
-            <FadeIn>
-              <div>
-                <span className="eyebrow mb-4 block">Who We Are</span>
-                <h2 className="font-serif text-h2 text-navy mb-5">
-                  The boutique your board hires when the <em className="italic">launch cannot fail</em>
-                </h2>
-                <div className="gold-line mb-6" />
-                <p className="text-base leading-relaxed text-mid mb-5">
-                  Upper Echelon Management is a principal-led launch and retention architecture firm for
-                  advanced metabolic and obesity innovators. We combine 70% commercial rigor with 30%
-                  clinical fluency -- the exact blend that makes CCOs, payers, and physicians trust that
-                  your asset is clinically inevitable, not optional.
-                </p>
-                <p className="text-base leading-relaxed text-mid">
-                  Unlike global strategy houses that hand off to junior teams, or contract organizations
-                  that sell volume, we stay in the room from day one through month twelve. Every engagement
-                  is led by our Principal, who has sold and led teams on foundational diabetes and obesity
-                  brands at BMS, Novo Nordisk, and Vivus.
-                </p>
-              </div>
-            </FadeIn>
-            <FadeIn delay={0.15}>
-              <div className="bg-surface border border-gray-200 rounded-md p-10">
-                <span className="eyebrow mb-6 block">We Serve</span>
-                <div className="space-y-5">
-                  {[
-                    { title: 'EU & Japanese Mid-Cap Biotechs', desc: 'Bringing their first advanced metabolic or obesity asset to the U.S. market with thin or zero commercial footprint.' },
-                    { title: 'U.S. Biotechs with Stalling Launches', desc: 'In-market or near-launch GLP-1, dual/triple agonists, or obesity drugs facing early discontinuation and payer friction.' },
-                    { title: 'Specialty Biopharma Innovators', desc: 'Companies in oncology support, rare disease, CNS, and other complex categories needing principal-level launch strategy.' },
-                  ].map((item) => (
-                    <div key={item.title} className="flex gap-4">
-                      <div className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0" />
-                      <div>
-                        <p className="text-sm font-semibold text-navy mb-1">{item.title}</p>
-                        <p className="text-sm text-mid leading-relaxed">{item.desc}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </FadeIn>
-          </div>
-        </div>
-      </section>
-
-      {/* SERVICES */}
-      <section className="bg-white">
-        <div className="container-content">
-          <FadeIn>
-            <div className="text-center mb-16">
-              <span className="eyebrow mb-4 block">Core Services</span>
-              <h2 className="font-serif text-h2 text-navy">
-                Three pillars of launch <em className="italic">certainty</em>
-              </h2>
-            </div>
-          </FadeIn>
-          <div className="grid md:grid-cols-3 gap-px bg-gray-200">
-            {services.map((svc, i) => (
-              <FadeIn key={svc.num} delay={i * 0.1}>
-                <Link href={svc.link} className="group bg-white p-9 relative block transition-all duration-300 hover:bg-navy">
-                  <span className="absolute bottom-0 left-0 w-0 h-[3px] bg-gold transition-all duration-500 group-hover:w-full" />
-                  <span className="text-[11px] font-bold tracking-[0.15em] text-gold mb-5 block">{svc.num}</span>
-                  <h3 className="font-serif text-[22px] font-normal text-navy mb-2.5 leading-tight group-hover:text-white transition-colors">{svc.title}</h3>
-                  <span className="text-[10px] font-bold tracking-[0.12em] uppercase text-gold mb-4 block">{svc.subtitle}</span>
-                  <p className="text-sm leading-relaxed text-mid mb-5 group-hover:text-white/70 transition-colors">{svc.desc}</p>
-                  <span className="text-[11px] font-bold tracking-[0.1em] uppercase text-gold">Learn More &rarr;</span>
-                </Link>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* THERAPEUTIC FOCUS */}
       <section className="section bg-surface">
         <div className="container-content">
-          <FadeIn>
-            <div className="mb-14">
-              <span className="eyebrow mb-4 block">Therapeutic Focus</span>
-              <h2 className="font-serif text-h2 text-navy max-w-lg">
-                Deep expertise where <em className="italic">persistence</em> determines value
-              </h2>
-            </div>
+          <FadeIn className="max-w-3xl">
+            <p className="eyebrow">How we work</p>
+            <h2 className="mt-5 font-serif text-h2 font-medium text-navy">
+              One commercialization system, not a stack of disconnected workstreams.
+            </h2>
           </FadeIn>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
-            {capabilities.map((cap, i) => (
-              <FadeIn key={cap.name} delay={i * 0.08}>
-                <div className="group bg-white border border-gray-200 p-5 rounded-md cursor-default relative overflow-hidden transition-all duration-200 hover:border-navy hover:shadow-lg hover:-translate-y-0.5">
-                  <span className="absolute left-0 top-0 bottom-0 w-0 bg-gold transition-all duration-300 group-hover:w-[3px]" />
-                  <div className="text-[22px] mb-2.5">{cap.icon}</div>
-                  <h4 className="font-serif text-[15px] text-navy mb-1">{cap.name}</h4>
-                  <p className="text-xs text-mist leading-relaxed">{cap.desc}</p>
-                </div>
+          <div className="mt-14 grid gap-px overflow-hidden border border-gray-200 bg-gray-200 md:grid-cols-2">
+            {operatingSteps.map((step, index) => (
+              <FadeIn key={step.number} delay={index * 0.08} className="h-full">
+                <article className="h-full bg-white p-8 md:p-10">
+                  <p className="text-xs font-semibold tracking-[0.14em] text-gold">{step.number}</p>
+                  <h3 className="mt-5 font-serif text-2xl text-navy">{step.title}</h3>
+                  <p className="mt-4 leading-7 text-mid">{step.body}</p>
+                </article>
               </FadeIn>
             ))}
           </div>
         </div>
       </section>
 
-      {/* IMPACT */}
-      <section className="bg-navy">
-        <div className="container-content py-24">
-          <FadeIn>
-            <div className="mb-14">
-              <span className="eyebrow text-gold/70 mb-4 block">Impact</span>
-              <h2 className="font-serif text-h2 text-white">Selected engagement <em className="italic">outcomes</em></h2>
-            </div>
+      <section className="section bg-light/55">
+        <div className="container-content">
+          <FadeIn className="max-w-3xl">
+            <p className="eyebrow">A visual operating language</p>
+            <h2 className="mt-5 font-serif text-h2 font-medium text-navy">
+              Make launch complexity understandable without making it simplistic.
+            </h2>
+            <p className="mt-5 leading-8 text-mid">
+              UEM uses a restrained system of signals, gates, paths, evidence, and decision symbols to
+              clarify how a launch moves—and where it can still fail. These are conceptual operating
+              views, not fixed scores or hard-coded methodology.
+            </p>
           </FadeIn>
-          <div className="grid md:grid-cols-2 gap-px bg-white/[0.12]">
-            {impactCases.map((c, i) => (
-              <FadeIn key={c.tag} delay={i * 0.08}>
-                <div className="bg-navy p-10 transition-colors hover:bg-navy-md">
-                  <span className="text-[10px] font-bold tracking-[0.14em] uppercase text-gold mb-3 block">{c.tag}</span>
-                  <h3 className="font-serif text-[22px] text-white mb-3.5 leading-tight">{c.title}</h3>
-                  <p className="text-[13px] text-white/50 leading-relaxed mb-3.5">{c.challenge}</p>
-                  <div className="h-px bg-white/10 mb-3.5" />
-                  <p className="text-sm font-medium text-white/90 leading-relaxed">{c.result}</p>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
+          <FadeIn delay={0.1} className="mt-12">
+            <VisualCarousel />
+          </FadeIn>
         </div>
       </section>
 
-      {/* METHODOLOGY */}
       <section className="section bg-white">
         <div className="container-content">
-          <FadeIn>
-            <div className="text-center mb-16">
-              <span className="eyebrow mb-4 block">How We Work</span>
-              <h2 className="font-serif text-h2 text-navy">From diagnostic to <em className="italic">launch certainty</em></h2>
+          <FadeIn className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+            <div>
+              <p className="eyebrow">People make the system work</p>
+              <h2 className="mt-5 font-serif text-h2 font-medium text-navy">
+                Better commercial decisions happen when science, operations, and market judgment meet.
+              </h2>
             </div>
+            <p className="max-w-2xl leading-8 text-mid lg:justify-self-end">
+              Launches are human systems. UEM helps the right leaders and specialists work from the
+              same evidence, surface disagreement early, and turn expertise into decisions the
+              organization can execute.
+            </p>
           </FadeIn>
-          <div className="grid md:grid-cols-4 gap-0 relative">
-            <div className="hidden md:block absolute top-9 left-[12%] right-[12%] h-px bg-gray-200" />
-            {[
-              { num: '1', weeks: 'Week 1-2', title: 'Stress Test', desc: '30-minute diagnostic conversation to identify where your launch is most exposed.' },
-              { num: '2', weeks: 'Week 2-8', title: 'Retention Audit', desc: 'Quantify leakage, map the patient journey, and deliver a prioritized Retention Blueprint.' },
-              { num: '3', weeks: 'Month 2-6', title: 'Architecture Build', desc: 'Design launch, retention, and talent architecture. Stand up field model and KOL strategy.' },
-              { num: '4', weeks: 'Month 6-12', title: 'Govern & Optimize', desc: 'Ongoing governance, war-room facilitation, and real-time optimization of launch KPIs.' },
-            ].map((step, i) => (
-              <FadeIn key={step.num} delay={i * 0.12}>
-                <div className="group text-center px-4 md:py-0 py-6">
-                  <div className="w-[72px] h-[72px] rounded-full border-[1.5px] border-gray-200 bg-white flex items-center justify-center mx-auto mb-5 relative z-10 transition-all duration-300 group-hover:bg-navy group-hover:border-navy">
-                    <span className="font-serif text-xl font-normal text-navy group-hover:text-gold transition-colors">{step.num}</span>
+
+          <div className="mt-12 grid gap-6 lg:grid-cols-3">
+            {workingScenes.map((scene, index) => (
+              <FadeIn key={scene.src} delay={index * 0.08} className="h-full">
+                <article className="flex h-full flex-col overflow-hidden border border-gray-200 bg-surface">
+                  <div className="relative aspect-[3/2] overflow-hidden bg-light">
+                    <Image
+                      src={scene.src}
+                      alt={scene.alt}
+                      fill
+                      sizes="(min-width: 1024px) 33vw, 100vw"
+                      className="object-cover transition duration-500 hover:scale-[1.02]"
+                    />
+                    <p className="absolute bottom-0 left-0 bg-navy/85 px-3 py-2 text-[9px] font-semibold uppercase tracking-[0.14em] text-white/80 backdrop-blur-sm">
+                      Illustrative working scene
+                    </p>
                   </div>
-                  <span className="text-[10px] font-bold tracking-[0.14em] uppercase text-gold mb-2 block">{step.weeks}</span>
-                  <h4 className="font-serif text-lg text-navy mb-2">{step.title}</h4>
-                  <p className="text-[13px] text-mid leading-relaxed">{step.desc}</p>
+                  <div className="flex flex-1 flex-col p-6">
+                    <h3 className="font-serif text-2xl text-navy">{scene.title}</h3>
+                    <p className="mt-3 leading-7 text-mid">{scene.body}</p>
+                  </div>
+                </article>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section bg-navy text-white">
+        <div className="container-content grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+          <FadeIn>
+            <p className="eyebrow">The questions that matter</p>
+            <h2 className="mt-5 font-serif text-h2 font-medium">
+              A clearer executive view of launch reality.
+            </h2>
+          </FadeIn>
+          <div className="grid gap-3 sm:grid-cols-2">
+            {questions.map((question, index) => (
+              <FadeIn key={question} delay={index * 0.05}>
+                <div className="h-full border border-white/12 bg-white/[0.04] p-6">
+                  <p className="font-serif text-lg leading-7 text-white/90">{question}</p>
                 </div>
               </FadeIn>
             ))}
@@ -296,27 +252,50 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-navy py-20">
-        <div className="container-content text-center">
+      <section className="section bg-white">
+        <div className="container-content grid gap-6 lg:grid-cols-2">
           <FadeIn>
-            <span className="eyebrow text-gold/70 mb-4 block">Ready to Begin?</span>
-            <h2 className="font-serif text-h2 text-white mb-6">
-              Schedule your 30-minute <em className="italic text-gold-light">Launch Stress Test</em>
-            </h2>
-            <p className="text-base text-white/60 max-w-lg mx-auto mb-8 leading-relaxed">
-              A focused diagnostic conversation with our Principal to identify where your advanced
-              metabolic or obesity launch is most exposed -- and what to do about it.
-            </p>
-            <div className="flex gap-3 justify-center flex-wrap">
-              <Link href="/contact" className="btn-primary">
-                Schedule a Call <span className="text-sm">&rarr;</span>
+            <article className="h-full border border-gray-200 p-8 md:p-10">
+              <p className="eyebrow">UEM today</p>
+              <h2 className="mt-5 font-serif text-3xl text-navy">The human operating layer</h2>
+              <p className="mt-5 leading-8 text-mid">
+                Experienced operators help leadership teams diagnose readiness, design the U.S.
+                commercial model, sequence critical work, and bring the right specialist expertise
+                into the room.
+              </p>
+              <Link href="/services" className="mt-7 inline-flex text-sm font-semibold text-navy animated-underline">
+                View commercialization services <span className="ml-2" aria-hidden="true">→</span>
               </Link>
-              <Link href="/services" className="btn-outline-white">
-                View All Services
-              </Link>
-            </div>
+            </article>
           </FadeIn>
+          <FadeIn delay={0.1}>
+            <article className="h-full border border-gold/35 bg-surface p-8 md:p-10">
+              <p className="eyebrow">LaunchOS · in development</p>
+              <h2 className="mt-5 font-serif text-3xl text-navy">The system layer</h2>
+              <p className="mt-5 leading-8 text-mid">
+                UEM is developing LaunchOS: an AI-native, multi-tenant commercialization operating
+                system intended to connect evidence, readiness, risks, decisions, experts, and the
+                launch critical path without replacing the tools teams already use.
+              </p>
+              <Link href="/launchos" className="mt-7 inline-flex text-sm font-semibold text-navy animated-underline">
+                Understand the product direction <span className="ml-2" aria-hidden="true">→</span>
+              </Link>
+            </article>
+          </FadeIn>
+        </div>
+      </section>
+
+      <section className="section-sm bg-gold text-white">
+        <div className="container-content flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
+          <div className="max-w-2xl">
+            <p className="text-xs font-bold uppercase tracking-[0.14em] text-white/70">Start with the launch reality</p>
+            <h2 className="mt-3 font-serif text-3xl text-white md:text-4xl">
+              Bring the decision you cannot afford to get wrong.
+            </h2>
+          </div>
+          <Link href="/contact" className="btn-outline-white whitespace-nowrap">
+            Start a conversation <span aria-hidden="true">→</span>
+          </Link>
         </div>
       </section>
     </>

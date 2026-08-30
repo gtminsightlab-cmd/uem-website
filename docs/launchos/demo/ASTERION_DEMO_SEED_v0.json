@@ -1,0 +1,313 @@
+{
+  "demo_version": "0.1",
+  "fictional": true,
+  "seed_policy": "Ordinary production records only; no UI or service branching on demo identity.",
+  "organization": {
+    "name": "Asterion BioPharma Co., Ltd.",
+    "slug": "asterion-biopharma-demo",
+    "headquarters": "Seoul, Republic of Korea",
+    "organization_type": "manufacturer"
+  },
+  "tenant": {
+    "name": "Asterion U.S. Commercialization",
+    "timezone": "America/New_York",
+    "currency": "USD"
+  },
+  "product": {
+    "name": "ABP-101",
+    "development_code": "ABP-101",
+    "modality": "specialty prescription medicine",
+    "status": "pre-commercial",
+    "fictional_indication": "chronic specialty endocrine disorder"
+  },
+  "launch": {
+    "geography": "United States",
+    "pdufa_date": "2027-10-15",
+    "anticipated_launch_date": "2027-11-01",
+    "current_stage": "pre-launch",
+    "launch_archetype_candidate": "Focused specialty / first U.S. launch / outsourced-capability intensive",
+    "commercial_context": {
+      "target_hcp_universe": 4800,
+      "priority_hcp_tier_1": 620,
+      "commercial_products_currently_in_us": 0,
+      "us_commercial_headcount_current": 7,
+      "field_rep_range_under_consideration": [
+        35,
+        50
+      ],
+      "field_model_decision": "undecided",
+      "crm_status": "vendor evaluation",
+      "market_access_status": "payer research incomplete",
+      "distribution_status": "strategy defined; contracts incomplete"
+    }
+  },
+  "seeded_evidence": [
+    {
+      "title": "U.S. Commercial Strategy Draft",
+      "grade": "E1",
+      "source_type": "tenant_internal",
+      "as_of_date": "2026-08-01"
+    },
+    {
+      "title": "Preliminary HCP Universe",
+      "grade": "E2",
+      "source_type": "tenant_internal",
+      "as_of_date": "2026-08-15"
+    },
+    {
+      "title": "Payer Landscape Draft",
+      "grade": "E1",
+      "source_type": "tenant_internal",
+      "as_of_date": "2026-06-01"
+    },
+    {
+      "title": "Field Force Scenario Spreadsheet",
+      "grade": "E1",
+      "source_type": "tenant_internal",
+      "as_of_date": "2026-08-20"
+    },
+    {
+      "title": "Distribution Options Memo",
+      "grade": "E2",
+      "source_type": "tenant_internal",
+      "as_of_date": "2026-07-30"
+    }
+  ],
+  "seeded_rules": [
+    {
+      "rule_code": "RULE-HIRING-001",
+      "name": "FLSM sequencing risk",
+      "category": "hiring",
+      "condition": {
+        "all": [
+          {
+            "field": "field_rep_range_max",
+            "operator": "greater_than",
+            "value": 30
+          },
+          {
+            "field": "days_to_launch",
+            "operator": "less_than",
+            "value": 450
+          },
+          {
+            "field": "flsm_staffing_status",
+            "operator": "in",
+            "value": [
+              "not_started",
+              "at_risk"
+            ]
+          }
+        ]
+      },
+      "action": {
+        "create_risk": true,
+        "severity": "high",
+        "recommendation": "Accelerate first-line manager hiring and validate recruiting dependencies before representative hiring scales."
+      }
+    },
+    {
+      "rule_code": "RULE-EVIDENCE-001",
+      "name": "Stale payer evidence",
+      "category": "evidence_freshness",
+      "condition": {
+        "all": [
+          {
+            "field": "payer_landscape_age_days",
+            "operator": "greater_than",
+            "value": 75
+          },
+          {
+            "field": "days_to_launch",
+            "operator": "less_than",
+            "value": 450
+          }
+        ]
+      },
+      "action": {
+        "create_risk": true,
+        "severity": "medium",
+        "recommendation": "Refresh payer/access evidence and review forecast assumptions."
+      }
+    },
+    {
+      "rule_code": "RULE-EXPERT-001",
+      "name": "Field sizing expert escalation",
+      "category": "expert_escalation",
+      "condition": {
+        "all": [
+          {
+            "field": "decision_type",
+            "operator": "equals",
+            "value": "field_force_sizing"
+          },
+          {
+            "field": "decision_confidence",
+            "operator": "less_than",
+            "value": 0.7
+          }
+        ]
+      },
+      "action": {
+        "recommend_expert": true,
+        "specialty": "Pharmaceutical Field Force Design"
+      }
+    }
+  ],
+  "milestones": [
+    {
+      "name": "U.S. commercial operating model approved",
+      "relative_month": "L-15",
+      "status": "complete",
+      "criticality": "critical"
+    },
+    {
+      "name": "VP Sales / field leadership model finalized",
+      "relative_month": "L-13",
+      "status": "at_risk",
+      "criticality": "critical"
+    },
+    {
+      "name": "Field force model selected",
+      "relative_month": "L-12",
+      "status": "late",
+      "criticality": "critical"
+    },
+    {
+      "name": "CRM vendor selected",
+      "relative_month": "L-11",
+      "status": "in_progress",
+      "criticality": "high"
+    },
+    {
+      "name": "FLSM recruiting begins",
+      "relative_month": "L-10",
+      "status": "not_started",
+      "criticality": "critical"
+    },
+    {
+      "name": "Representative recruiting begins",
+      "relative_month": "L-8",
+      "status": "not_started",
+      "criticality": "critical"
+    },
+    {
+      "name": "Training curriculum locked",
+      "relative_month": "L-5",
+      "status": "not_started",
+      "criticality": "high"
+    },
+    {
+      "name": "Field certification complete",
+      "relative_month": "L-1",
+      "status": "not_started",
+      "criticality": "critical"
+    }
+  ],
+  "dependencies": [
+    {
+      "predecessor": "VP Sales / field leadership model finalized",
+      "successor": "FLSM recruiting begins",
+      "lag_days": 0
+    },
+    {
+      "predecessor": "Field force model selected",
+      "successor": "FLSM recruiting begins",
+      "lag_days": 0
+    },
+    {
+      "predecessor": "FLSM recruiting begins",
+      "successor": "Representative recruiting begins",
+      "lag_days": 45
+    },
+    {
+      "predecessor": "CRM vendor selected",
+      "successor": "Field certification complete",
+      "lag_days": 0
+    },
+    {
+      "predecessor": "Training curriculum locked",
+      "successor": "Field certification complete",
+      "lag_days": 30
+    }
+  ],
+  "risks": [
+    {
+      "title": "Field model decision delay compresses recruiting window",
+      "category": "field",
+      "severity": "high",
+      "probability": "high",
+      "impact": "high",
+      "status": "open"
+    },
+    {
+      "title": "Payer assumptions rely on aging evidence",
+      "category": "market_access",
+      "severity": "medium",
+      "probability": "medium",
+      "impact": "high",
+      "status": "open"
+    },
+    {
+      "title": "CRM selection may collide with field onboarding",
+      "category": "commercial_ops",
+      "severity": "medium",
+      "probability": "medium",
+      "impact": "medium",
+      "status": "open"
+    }
+  ],
+  "decisions": [
+    {
+      "title": "Select field operating model",
+      "question": "Should Asterion build an internal field team, use a CSO, or use a hybrid model?",
+      "status": "open",
+      "due_date": "2026-10-15",
+      "options": [
+        "Internal",
+        "CSO",
+        "Hybrid"
+      ],
+      "current_confidence": 0.61
+    },
+    {
+      "title": "Approve CRM platform",
+      "question": "Which CRM/implementation approach best supports the first launch and future reuse?",
+      "status": "open",
+      "due_date": "2026-11-01",
+      "options": [
+        "Veeva",
+        "Salesforce Life Sciences",
+        "Other"
+      ],
+      "current_confidence": 0.68
+    }
+  ],
+  "experts": [
+    {
+      "name": "Dr. Evelyn Hart",
+      "fictional": true,
+      "specialties": [
+        "Market Access",
+        "Payer Strategy"
+      ],
+      "availability": "available"
+    },
+    {
+      "name": "Mark Ellis",
+      "fictional": true,
+      "specialties": [
+        "Pharma Field Force Design",
+        "CSO Strategy",
+        "Sales Leadership"
+      ],
+      "availability": "available"
+    }
+  ],
+  "sample_expert_engagement": {
+    "title": "Validate field-force and first-line manager sequencing",
+    "question": "Given the current launch timing and proposed 35\u201350 representative range, what should be validated before committing to rep count and when must FLSM hiring begin?",
+    "requested_specialty": "Pharma Field Force Design",
+    "status": "draft"
+  }
+}

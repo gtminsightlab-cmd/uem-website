@@ -1,44 +1,50 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
+import type { Metadata } from 'next';
+import { IBM_Plex_Sans, Source_Serif_4 } from 'next/font/google';
+
+import Footer from '@/components/Footer';
+import Navigation from '@/components/Navigation';
+
+import './globals.css';
+
+const sans = IBM_Plex_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
+  variable: '--font-sans',
+});
+
+const serif = Source_Serif_4({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-serif',
+});
 
 export const metadata: Metadata = {
-  title: "Upper Echelon Management | Advanced Metabolic Launch Architecture",
+  title: {
+    default: 'Upper Echelon Management | Your U.S. Commercialization Office',
+    template: '%s | Upper Echelon Management',
+  },
   description:
-    "UEM helps biotechs de-risk U.S. launches for GLP-1, dual and triple agonists, and modern obesity therapies. Principal-led launch architecture, retention engine design, and talent sourcing.",
+    'Operator-led U.S. commercialization strategy, launch readiness, organization design, and LaunchOS product development for emerging and global biopharma manufacturers.',
   keywords: [
-    "biopharma consulting",
-    "GLP-1 launch",
-    "metabolic therapy",
-    "obesity drug launch",
-    "retention architecture",
-    "pharma talent recruiting",
-    "biotech commercial strategy",
+    'pharmaceutical commercialization',
+    'first U.S. launch',
+    'commercial launch readiness',
+    'pharma organization design',
+    'field force design',
+    'LaunchOS',
   ],
   openGraph: {
-    title: "Upper Echelon Management | Advanced Metabolic Launch Architecture",
+    title: 'Upper Echelon Management | Your U.S. Commercialization Office',
     description:
-      "Elite launch architecture for advanced metabolic and obesity therapies. Principal-led. No handoffs.",
-    type: "website",
+      'Operator leadership and an evidence-aware commercialization operating system for high-stakes U.S. launches.',
+    type: 'website',
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+    <html lang="en" className={`${sans.variable} ${serif.variable}`}>
       <body className="antialiased">
         <Navigation />
         <main>{children}</main>

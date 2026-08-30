@@ -1,216 +1,96 @@
-'use client';
+import type { Metadata } from 'next';
 
-import { useState } from 'react';
-import FadeIn from '@/components/FadeIn';
+export const metadata: Metadata = {
+  title: 'Contact',
+  description: 'Start a conversation with Upper Echelon Management about a U.S. commercialization decision or LaunchOS operator review.',
+};
 
-const engagementTypes = [
-  'Launch Stress Test (30-min call)',
-  'Advanced Metabolic Retention Audit',
-  'Launch Architecture Mandate',
-  'Talent Architecture & Squad Building',
-  'Coaching & Training Add-On',
-  'Intelligence Vault Access',
-  'General Inquiry',
+const inquiryTypes = [
+  {
+    title: 'Commercial readiness',
+    body: 'A first U.S. launch, an approaching inflection point, or a leadership team that needs an evidence-based view of readiness.',
+  },
+  {
+    title: 'Commercialization office',
+    body: 'Operator support for the U.S. commercial model, organization, field strategy, governance, or a decision on what to build, buy, or rent.',
+  },
+  {
+    title: 'LaunchOS operator review',
+    body: 'A pharmaceutical commercial operator, functional expert, or manufacturer leader interested in challenging the Conviction Prototype and its methodology.',
+  },
+  {
+    title: 'Research or partnership',
+    body: 'A scoped intelligence request, expert capability, or potential partnership relevant to a defined commercialization decision.',
+  },
 ];
 
+const subject = encodeURIComponent('UEM commercialization conversation');
+const body = encodeURIComponent(
+  'Name:\nCompany:\nLaunch stage or timing:\nDecision or problem to discuss:\nRelevant therapeutic area (optional):\n',
+);
+
 export default function ContactPage() {
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Form submission will be wired to Supabase or email service later
-    setSubmitted(true);
-  };
-
   return (
     <>
-      {/* Hero */}
-      <section className="bg-surface border-b border-gray-200 pt-32 pb-16 md:pt-40 md:pb-20">
-        <div className="container-content">
-          <FadeIn>
-            <span className="eyebrow mb-4 block">Contact</span>
-            <h1 className="font-serif text-h2 text-navy mb-5 max-w-2xl">
-              Start with a conversation, <em className="italic">not a contract</em>
-            </h1>
-            <p className="text-base text-mid leading-relaxed max-w-xl">
-              Schedule a 30-minute Launch Stress Test, request an Intelligence Vault report,
-              or reach out with a general inquiry. Sharon responds personally within 24 hours.
-            </p>
-          </FadeIn>
+      <section className="bg-navy pt-[72px] text-white">
+        <div className="container-content py-24 md:py-30">
+          <p className="eyebrow">Start a conversation</p>
+          <h1 className="mt-6 max-w-4xl font-serif text-hero font-medium">
+            Bring the commercialization decision—not a polished brief.
+          </h1>
+          <p className="mt-8 max-w-3xl text-lg leading-8 text-white/72">
+            A useful first conversation establishes the launch stage, the decision at risk, the
+            evidence already available, and where operator or specialist judgment may be needed.
+          </p>
         </div>
       </section>
 
-      {/* Contact Content */}
-      <section className="bg-navy">
-        <div className="container-content py-20">
-          <div className="grid lg:grid-cols-2 gap-16">
-            {/* Left: what to expect */}
-            <FadeIn>
-              <div>
-                <span className="eyebrow text-gold/70 mb-6 block">What to Expect</span>
-                <div className="space-y-0">
-                  {[
-                    { num: '1', title: 'You reach out', desc: 'Fill out the form or email us directly. Tell us about your asset, stage, and what you are trying to solve.' },
-                    { num: '2', title: 'Sharon responds personally', desc: 'Within 24 hours, Sharon will review your inquiry and either schedule a call or ask a clarifying question.' },
-                    { num: '3', title: '30-minute Launch Stress Test', desc: 'A focused diagnostic conversation to identify where your launch is most exposed and whether UEM is the right fit.' },
-                    { num: '4', title: 'Clear recommendation', desc: 'You will receive a short written summary of the key risks identified and a recommendation for the right engagement model -- or a candid note that we are not the right fit.' },
-                  ].map((step, i) => (
-                    <div
-                      key={step.num}
-                      className={`flex gap-4 py-5 ${
-                        i < 3 ? 'border-b border-white/10' : ''
-                      }`}
-                    >
-                      <span className="font-serif text-base text-gold flex-shrink-0 w-5">
-                        {step.num}
-                      </span>
-                      <div>
-                        <p className="text-[13px] font-semibold text-white mb-1">{step.title}</p>
-                        <p className="text-xs text-white/50 leading-relaxed">{step.desc}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Contact info */}
-                <div className="mt-10 pt-8 border-t border-white/10">
-                  <h3 className="text-[10px] font-bold tracking-[0.16em] uppercase text-gold mb-5">
-                    Direct Contact
-                  </h3>
-                  <div className="space-y-3">
-                    <div>
-                      <p className="text-xs text-white/40 mb-0.5">Principal</p>
-                      <p className="text-sm text-white">Sharon Lee</p>
-                    </div>
-                    <div>
-                      <p className="text-xs text-white/40 mb-0.5">Email</p>
-                      <p className="text-sm text-white">info@echelonconsulting.io</p>
-                    </div>
-                    <div>
-                      <p className="text-xs text-white/40 mb-0.5">Phone</p>
-                      <p className="text-sm text-white">(307) 761-6181</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </FadeIn>
-
-            {/* Right: form */}
-            <FadeIn delay={0.15}>
-              <div>
-                {submitted ? (
-                  <div className="bg-white/[0.06] border border-white/10 rounded-md p-12 text-center">
-                    <div className="w-16 h-16 rounded-full bg-gold/20 flex items-center justify-center mx-auto mb-5">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B8952A" strokeWidth="2.5" strokeLinecap="round">
-                        <polyline points="20 6 9 17 4 12" />
-                      </svg>
-                    </div>
-                    <h3 className="font-serif text-xl text-white mb-3">Message received</h3>
-                    <p className="text-sm text-white/50 leading-relaxed">
-                      Sharon will review your inquiry and respond personally within 24 hours.
-                      If you requested a Launch Stress Test, expect scheduling options shortly.
-                    </p>
-                  </div>
-                ) : (
-                  <form onSubmit={handleSubmit} className="space-y-0.5">
-                    <div className="grid grid-cols-2 gap-0.5">
-                      <div>
-                        <label className="block text-[10px] font-bold tracking-[0.14em] uppercase text-white/40 bg-white/[0.06] px-4 pt-3 pb-1">
-                          First Name
-                        </label>
-                        <input
-                          type="text"
-                          required
-                          placeholder="Your first name"
-                          className="w-full bg-white/[0.06] border-none border-b border-white/10 text-white px-4 py-2.5 text-sm outline-none focus:border-gold/60 placeholder:text-white/25 transition-colors"
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-[10px] font-bold tracking-[0.14em] uppercase text-white/40 bg-white/[0.06] px-4 pt-3 pb-1">
-                          Last Name
-                        </label>
-                        <input
-                          type="text"
-                          required
-                          placeholder="Your last name"
-                          className="w-full bg-white/[0.06] border-none border-b border-white/10 text-white px-4 py-2.5 text-sm outline-none focus:border-gold/60 placeholder:text-white/25 transition-colors"
-                        />
-                      </div>
-                    </div>
-                    <div className="grid grid-cols-2 gap-0.5">
-                      <div>
-                        <label className="block text-[10px] font-bold tracking-[0.14em] uppercase text-white/40 bg-white/[0.06] px-4 pt-3 pb-1">
-                          Email
-                        </label>
-                        <input
-                          type="email"
-                          required
-                          placeholder="you@company.com"
-                          className="w-full bg-white/[0.06] border-none border-b border-white/10 text-white px-4 py-2.5 text-sm outline-none focus:border-gold/60 placeholder:text-white/25 transition-colors"
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-[10px] font-bold tracking-[0.14em] uppercase text-white/40 bg-white/[0.06] px-4 pt-3 pb-1">
-                          Title / Role
-                        </label>
-                        <input
-                          type="text"
-                          placeholder="e.g., VP Commercial"
-                          className="w-full bg-white/[0.06] border-none border-b border-white/10 text-white px-4 py-2.5 text-sm outline-none focus:border-gold/60 placeholder:text-white/25 transition-colors"
-                        />
-                      </div>
-                    </div>
-                    <div>
-                      <label className="block text-[10px] font-bold tracking-[0.14em] uppercase text-white/40 bg-white/[0.06] px-4 pt-3 pb-1">
-                        Company
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        placeholder="Company name"
-                        className="w-full bg-white/[0.06] border-none border-b border-white/10 text-white px-4 py-2.5 text-sm outline-none focus:border-gold/60 placeholder:text-white/25 transition-colors"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-[10px] font-bold tracking-[0.14em] uppercase text-white/40 bg-white/[0.06] px-4 pt-3 pb-1">
-                        Interest
-                      </label>
-                      <select
-                        required
-                        className="w-full bg-white/[0.06] border-none border-b border-white/10 text-white/60 px-4 py-2.5 text-sm outline-none appearance-none"
-                      >
-                        <option value="">Select engagement type</option>
-                        {engagementTypes.map((t) => (
-                          <option key={t} value={t} className="text-navy bg-white">
-                            {t}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-                    <div>
-                      <label className="block text-[10px] font-bold tracking-[0.14em] uppercase text-white/40 bg-white/[0.06] px-4 pt-3 pb-1">
-                        Message
-                      </label>
-                      <textarea
-                        rows={3}
-                        placeholder="Tell us about your asset, stage, and what you are trying to solve..."
-                        className="w-full bg-white/[0.06] border-none border-b border-white/10 text-white px-4 py-3 text-sm outline-none resize-none focus:border-gold/60 placeholder:text-white/25 transition-colors"
-                      />
-                    </div>
-                    <button
-                      type="submit"
-                      className="w-full bg-gold text-navy font-bold text-[12px] tracking-[0.08em] uppercase py-4 mt-0.5 hover:bg-gold-light transition-colors"
-                    >
-                      Submit Inquiry
-                    </button>
-                    <p className="text-center text-[11px] text-white/30 mt-3">
-                      All inquiries are confidential. Sharon responds personally within 24 hours.
-                    </p>
-                  </form>
-                )}
-              </div>
-            </FadeIn>
+      <section className="section bg-white">
+        <div className="container-content grid gap-14 lg:grid-cols-[0.9fr_1.1fr]">
+          <div>
+            <p className="eyebrow">Contact UEM</p>
+            <h2 className="mt-5 font-serif text-h2 font-medium text-navy">Tell us what must be decided.</h2>
+            <p className="mt-6 leading-8 text-mid">
+              Email is the current intake channel. Include enough context to understand the problem,
+              but do not send protected health information, patient information, trade secrets, or
+              other confidential material in an initial message.
+            </p>
+            <a
+              href={`mailto:info@echelonconsulting.io?subject=${subject}&body=${body}`}
+              className="btn-primary mt-8"
+            >
+              Email info@echelonconsulting.io <span aria-hidden="true">→</span>
+            </a>
+            <p className="mt-4 text-xs leading-5 text-mist">
+              This link opens your email application with a short context guide. It does not submit
+              information through this website.
+            </p>
           </div>
+
+          <div className="grid gap-4 sm:grid-cols-2">
+            {inquiryTypes.map((inquiry) => (
+              <article key={inquiry.title} className="border border-gray-200 bg-surface p-6">
+                <h3 className="font-serif text-xl text-navy">{inquiry.title}</h3>
+                <p className="mt-3 text-sm leading-7 text-mid">{inquiry.body}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-sm bg-surface">
+        <div className="container-content grid gap-8 md:grid-cols-3">
+          {[
+            ['1', 'State the decision', 'What must the leadership team choose, approve, sequence, or challenge?'],
+            ['2', 'Share the context', 'Where is the asset in its journey, and what evidence or constraints shape the decision?'],
+            ['3', 'Define the next useful step', 'UEM will be clear about fit, boundaries, and whether a specialist is required.'],
+          ].map(([number, title, text]) => (
+            <div key={number} className="border-t-2 border-gold pt-5">
+              <p className="text-xs font-semibold text-gold">0{number}</p>
+              <h2 className="mt-3 font-serif text-xl text-navy">{title}</h2>
+              <p className="mt-3 text-sm leading-7 text-mid">{text}</p>
+            </div>
+          ))}
         </div>
       </section>
     </>

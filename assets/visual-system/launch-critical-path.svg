@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1152" height="864" viewBox="0 0 1152 864">
+  <title>Pharmaceutical launch critical path</title>
+  <defs>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse"><path d="M64 0H0V64" fill="none" stroke="#164B52" stroke-opacity=".055"/></pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5 0 10Z" fill="#164B52"/></marker>
+    <filter id="shadow"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#182126" flood-opacity=".12"/></filter>
+  </defs>
+  <rect width="1152" height="864" fill="#F4F1EA"/><rect width="1152" height="864" fill="url(#grid)"/>
+  <path d="M94 432H1052" fill="none" stroke="#DCE7E1" stroke-width="56" stroke-linecap="round"/>
+  <path d="M94 432H1052" fill="none" stroke="#164B52" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M278 432V252H510" fill="none" stroke="#557582" stroke-width="3" stroke-dasharray="9 10" marker-end="url(#arrow)"/>
+  <path d="M650 432V632H880" fill="none" stroke="#557582" stroke-width="3" stroke-dasharray="9 10" marker-end="url(#arrow)"/>
+  <g filter="url(#shadow)">
+    <rect x="70" y="366" width="150" height="132" rx="8" fill="#FBFAF7" stroke="#164B52" stroke-width="3"/>
+    <rect x="265" y="366" width="150" height="132" rx="8" fill="#DCE7E1" stroke="#164B52" stroke-width="3"/>
+    <path d="M548 348L632 432 548 516 464 432Z" fill="#B6533D" stroke="#8F3F30" stroke-width="3"/>
+    <rect x="680" y="366" width="150" height="132" rx="8" fill="#FBFAF7" stroke="#164B52" stroke-width="3"/>
+    <rect x="875" y="366" width="150" height="132" rx="8" fill="#DCE7E1" stroke="#164B52" stroke-width="3"/>
+    <circle cx="548" cy="432" r="20" fill="#FBFAF7"/>
+  </g>
+  <g stroke="#557582" stroke-width="4" fill="#FBFAF7">
+    <circle cx="278" cy="252" r="28"/><circle cx="510" cy="252" r="28"/>
+    <circle cx="650" cy="632" r="28"/><circle cx="880" cy="632" r="28"/>
+  </g>
+  <g fill="#164B52">
+    <circle cx="145" cy="432" r="10"/><circle cx="340" cy="432" r="10"/>
+    <circle cx="755" cy="432" r="10"/><circle cx="950" cy="432" r="10"/>
+  </g>
+  <path d="M156 325C220 192 368 151 510 224" fill="none" stroke="#2B6A5B" stroke-width="12" stroke-linecap="round"/>
+  <path d="M650 659C794 724 972 668 1010 538" fill="none" stroke="#2B6A5B" stroke-width="12" stroke-linecap="round"/>
+</svg>
