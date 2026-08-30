@@ -39,9 +39,9 @@ export default function Footer() {
             <p className="mb-4 max-w-[240px] text-xs leading-relaxed text-white/[0.42]">
               Operator leadership and a commercialization operating system for high-stakes U.S. launches.
             </p>
-            <a href="mailto:info@echelonconsulting.io" className="text-xs text-white/[0.55] transition-colors hover:text-gold">
-              info@echelonconsulting.io
-            </a>
+            <Link href="/contact" className="text-xs text-white/[0.55] transition-colors hover:text-gold">
+              Begin an inquiry through the contact form →
+            </Link>
           </div>
 
           {Object.entries(footerLinks).map(([heading, links]) => (

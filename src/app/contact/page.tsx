@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ContactForm from '@/components/ContactForm';
 
 export const metadata: Metadata = {
   title: 'Contact',
@@ -24,11 +25,6 @@ const inquiryTypes = [
   },
 ];
 
-const subject = encodeURIComponent('UEM commercialization conversation');
-const body = encodeURIComponent(
-  'Name:\nCompany:\nLaunch stage or timing:\nDecision or problem to discuss:\nRelevant therapeutic area (optional):\n',
-);
-
 export default function ContactPage() {
   return (
     <>
@@ -46,35 +42,26 @@ export default function ContactPage() {
       </section>
 
       <section className="section bg-white">
-        <div className="container-content grid gap-14 lg:grid-cols-[0.9fr_1.1fr]">
+        <div className="container-content grid gap-14 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
             <p className="eyebrow">Contact UEM</p>
             <h2 className="mt-5 font-serif text-h2 font-medium text-navy">Tell us what must be decided.</h2>
             <p className="mt-6 leading-8 text-mid">
-              Email is the current intake channel. Include enough context to understand the problem,
-              but do not send protected health information, patient information, trade secrets, or
-              other confidential material in an initial message.
+              Every inquiry begins here so the right UEM teammate can understand its purpose and
+              context. Share enough to frame the problem, but do not include protected health
+              information, patient information, trade secrets, or other confidential material.
             </p>
-            <a
-              href={`mailto:info@echelonconsulting.io?subject=${subject}&body=${body}`}
-              className="btn-primary mt-8"
-            >
-              Email info@echelonconsulting.io <span aria-hidden="true">→</span>
-            </a>
-            <p className="mt-4 text-xs leading-5 text-mist">
-              This link opens your email application with a short context guide. It does not submit
-              information through this website.
-            </p>
+            <div className="mt-9 grid gap-4">
+              {inquiryTypes.map((inquiry) => (
+                <article key={inquiry.title} className="border-l-2 border-gold pl-5">
+                  <h3 className="font-serif text-xl text-navy">{inquiry.title}</h3>
+                  <p className="mt-2 text-sm leading-7 text-mid">{inquiry.body}</p>
+                </article>
+              ))}
+            </div>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2">
-            {inquiryTypes.map((inquiry) => (
-              <article key={inquiry.title} className="border border-gray-200 bg-surface p-6">
-                <h3 className="font-serif text-xl text-navy">{inquiry.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-mid">{inquiry.body}</p>
-              </article>
-            ))}
-          </div>
+          <ContactForm />
         </div>
       </section>
 

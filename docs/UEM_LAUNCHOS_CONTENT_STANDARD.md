@@ -1,5 +1,12 @@
 # UEM + LaunchOS Public Content Standard
 
+## Contact intake
+
+- Do not publish a direct company email address on the website.
+- Route every public inquiry through the contact form.
+- Require the visitor to identify the purpose of communication before submitting.
+- Never display a success state unless the message service has accepted the inquiry.
+
 **Status:** Current website content authority  
 **Purpose:** Keep public UEM messaging aligned with verified LaunchOS product and founder context.
 
@@ -67,6 +74,13 @@ Do not publish unconfirmed therapeutic-area specifics, product names, client rev
 UEM is supported by a broader team of operators and specialists. Named founding-member experience
 may be described individually, but do not reduce the firm to a two-person story. Do not use the prior
 website's unsupported "65+ years" claim.
+
+### Broader team roster
+
+- The owner confirmed on 2026-08-30 that the team roster from the prior About page should be restored.
+- Sharon Lee must remain identified as a **Founding Member** and one member of the broader team.
+- Publish the restored names, practice roles, and locations without synthetic portraits.
+- Do not reintroduce detailed former-employer, product-launch, client-outcome, or tenure claims unless separately substantiated.
 
 ## Expertise honesty
 

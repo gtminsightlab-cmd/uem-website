@@ -29,6 +29,69 @@ const principles = [
   },
 ];
 
+const coreLeadership = [
+  {
+    name: 'Sharon Lee',
+    role: 'Founding Member · Pharmaceutical Commercialization',
+    location: 'United States',
+    body: 'Sharon brings 25 years of pharmaceutical commercial leadership and contributes field, organization, hiring, readiness, and launch-execution judgment to UEM engagements and LaunchOS development.',
+  },
+  {
+    name: 'Ronnie O’Dell',
+    role: 'Regulated Distribution & Commercial Systems',
+    location: 'United States',
+    body: 'Ronnie brings more than 25 years of experience building regulated distribution, channel, vendor-network, and go-to-market systems.',
+  },
+  {
+    name: 'Alexandra “Alex” Cortez',
+    role: 'Managing Partner, Advanced Metabolic & Obesity Practice',
+    location: 'Virginia, USA',
+    body: 'Advanced metabolic and obesity launch architecture, retention strategy, and cross-functional commercial design.',
+  },
+  {
+    name: 'Kenji Nakamura',
+    role: 'Partner, Launch Architecture & U.S. Entry Practice',
+    location: 'Tokyo, Japan',
+    body: 'U.S. market-entry planning, launch architecture, segmentation, and field-model design for global manufacturers.',
+  },
+  {
+    name: 'Mei Lin',
+    role: 'Partner, Talent Architecture & Field Excellence',
+    location: 'Shenzhen, China',
+    body: 'Commercial organization design, selection frameworks, field-team readiness, and manager development.',
+  },
+  {
+    name: 'Diego Alvarez',
+    role: 'Partner, Real-World Retention & Access Strategy',
+    location: 'Bogotá, Colombia',
+    body: 'Real-world evidence, outcomes, payer dynamics, patient access, and persistence strategy.',
+  },
+  {
+    name: 'Sophia Gallagher, RN, MSN',
+    role: 'Director, Clinical Operations & Patient Support Design',
+    location: 'London, United Kingdom',
+    body: 'Patient-support design, nurse-liaison models, onboarding pathways, and clinical program operations.',
+  },
+];
+
+const practiceTeam = [
+  ['Daniel “Danny” Brooks', 'Compliance & Risk-Informed Design', 'Washington, D.C., USA'],
+  ['Ethan Carter', 'Commercial Finance & Launch Economics', 'Chicago, USA'],
+  ['Jing Chen', 'Real-World Evidence & Outcomes Integration', 'Shanghai, China'],
+  ['Priya Desai', 'Omnichannel & Patient Experience', 'Mumbai, India'],
+  ['Rafael “Rafa” Jiménez', 'KOL & Speaker Program Strategy', 'Houston, USA'],
+  ['Marcus Lee', 'Field Analytics & Performance Optimization', 'Seoul, South Korea'],
+  ['Luis Martinez', 'Field Strategy & Squad Deployment', 'Miami, USA'],
+  ['Claudia Morales, RN, MSN', 'Nurse Liaison & Patient Support Models', 'San Antonio, USA'],
+  ['Christopher “Chris” O’Neill', 'Access & Channel Strategy', 'Paris, France'],
+  ['Naomi Park', 'Pricing & Contracting Strategy', 'Seoul, South Korea'],
+  ['Marisol Reyes', 'Training & New Manager Development', 'Mexico City, Mexico'],
+  ['Isabella “Bella” Ruiz', 'Cardiometabolic Portfolio Strategy', 'Milan, Italy'],
+  ['Yuki Sato', 'Medical-Commercial Interface', 'Osaka, Japan'],
+  ['Hiroko Tan', 'U.S. Market Entry & Partner Models', 'Frankfurt, Germany'],
+  ['Emily Watson', 'Organizational Change & Launch Readiness', 'Basel, Switzerland'],
+] as const;
+
 export default function AboutPage() {
   return (
     <>
@@ -87,56 +150,47 @@ export default function AboutPage() {
       <section className="section bg-surface">
         <div className="container-content">
           <FadeIn className="max-w-3xl">
-            <p className="eyebrow">Founding members</p>
-            <h2 className="mt-5 font-serif text-h2 font-medium text-navy">Founding experience inside a broader operating team.</h2>
+            <p className="eyebrow">The UEM team</p>
+            <h2 className="mt-5 font-serif text-h2 font-medium text-navy">Founding experience inside a multidisciplinary operating team.</h2>
             <p className="mt-5 max-w-2xl leading-8 text-mid">
-              UEM is supported by a broader team of operators and specialists. The founding members
-              below contribute two of the disciplines that shape the firm&apos;s commercialization work
-              and the development of LaunchOS.
+              Sharon Lee is a Founding Member and one contributor among a broader team of operators
+              and specialists. Team members enter an engagement according to the decision, evidence,
+              and functional depth required—not as a generic bench assigned to every project.
             </p>
           </FadeIn>
 
-          <div className="mt-14 grid gap-6 lg:grid-cols-2">
-            <FadeIn>
-              <article className="h-full border border-gray-200 p-8 md:p-10">
-                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-gold">Founding member · pharmaceutical commercialization</p>
-                <h3 className="mt-5 font-serif text-3xl text-navy">Sharon Lee</h3>
-                <p className="mt-5 leading-8 text-mid">
-                  Sharon brings 25 years of pharmaceutical commercial leadership across Janssen/J&amp;J,
-                  Bristol Myers Squibb, Novo Nordisk, VIVUS, KVK, and Daiichi Sankyo, including
-                  experience across multiple product launches.
-                </p>
-                <p className="mt-5 leading-8 text-mid">
-                  Her operating record includes hiring more than 200 field representatives and 30
-                  district managers, conducting more than 1,000 representative interviews, and
-                  approximately four years in contract pharmaceutical sales with Amplity.
-                </p>
-                <p className="mt-5 border-l-2 border-gold pl-5 text-sm leading-7 text-navy">
-                  Her experience directly informs UEM&apos;s organization, field, hiring, certification,
-                  readiness, and launch-execution methodology.
-                </p>
-              </article>
-            </FadeIn>
+          <div className="mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+            {coreLeadership.map((member, index) => (
+              <FadeIn key={member.name} delay={index * 0.04}>
+                <article className="h-full border border-gray-200 bg-white p-7">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-gold">{member.role}</p>
+                  <h3 className="mt-4 font-serif text-2xl text-navy">{member.name}</h3>
+                  <p className="mt-2 text-xs font-semibold uppercase tracking-[0.1em] text-mist">{member.location}</p>
+                  <p className="mt-5 text-sm leading-7 text-mid">{member.body}</p>
+                </article>
+              </FadeIn>
+            ))}
+          </div>
 
-            <FadeIn delay={0.1}>
-              <article className="h-full border border-gray-200 p-8 md:p-10">
-                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-gold">Founding member · regulated distribution systems</p>
-                <h3 className="mt-5 font-serif text-3xl text-navy">Ronnie O&apos;Dell</h3>
-                <p className="mt-5 leading-8 text-mid">
-                  Ronnie brings more than 25 years of experience building commercial distribution,
-                  channel, vendor-network, and go-to-market systems in a regulated industry.
-                </p>
-                <p className="mt-5 leading-8 text-mid">
-                  That systems perspective shapes UEM&apos;s approach to operating-model design, partner
-                  decisions, governance, commercial infrastructure, and the translation of complex
-                  work into an executive decision system.
-                </p>
-                <p className="mt-5 border-l-2 border-gold pl-5 text-sm leading-7 text-navy">
-                  In LaunchOS, this experience informs the neutral partner-arbitration and system-design
-                  layers while pharmaceutical methodology remains grounded in qualified operators and experts.
-                </p>
-              </article>
-            </FadeIn>
+          <FadeIn className="mt-20 max-w-3xl">
+            <p className="eyebrow">Practice leaders &amp; senior consultants</p>
+            <h2 className="mt-5 font-serif text-h2 font-medium text-navy">Specialist depth aligned to the work.</h2>
+            <p className="mt-5 leading-8 text-mid">
+              The wider team spans field strategy, market access, evidence, clinical operations,
+              finance, analytics, training, organizational readiness, and cross-border U.S. entry.
+            </p>
+          </FadeIn>
+
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {practiceTeam.map(([name, practice, location], index) => (
+              <FadeIn key={name} delay={(index % 6) * 0.03}>
+                <article className="h-full border border-gray-200 bg-white p-6">
+                  <h3 className="font-serif text-xl text-navy">{name}</h3>
+                  <p className="mt-3 text-xs font-semibold uppercase leading-5 tracking-[0.1em] text-gold">{practice}</p>
+                  <p className="mt-3 text-xs text-mist">{location}</p>
+                </article>
+              </FadeIn>
+            ))}
           </div>
         </div>
       </section>

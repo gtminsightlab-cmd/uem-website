@@ -13,3 +13,4 @@ Do not silently resolve these items in website copy.
 9. Confirm contact-response expectations before publishing any service-level promise.
 10. Confirm the canonical production domain and social-preview URL.
 11. Decide whether the LaunchOS product remains a separate repository or becomes a UEM monorepo application before moving product code.
+12. **Resolved 2026-08-30:** Restore the public team roster from the prior About page. Use names, practice roles, and locations; do not restore synthetic portraits or expand former-employer and outcome claims without separate evidence.
