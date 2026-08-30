@@ -8,8 +8,8 @@ const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/services', label: 'Commercialization Office' },
   { href: '/launchos', label: 'LaunchOS' },
+  { href: '/insights', label: 'Insights' },
   { href: '/about', label: 'About' },
-  { href: '/resources', label: 'Intelligence' },
 ];
 
 export default function Navigation() {

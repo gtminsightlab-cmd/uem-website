@@ -41,7 +41,11 @@ LaunchOS must not be described as:
 
 ## Approved founder context
 
-### Sharon O'Dell
+### Sharon Lee
+
+- Public name confirmed by the owner on 2026-08-30: **Sharon Lee**.
+- Public role confirmed by the owner on 2026-08-30: **Founding Member**.
+- Sharon is one member of a broader UEM team; do not present her as the whole team or UEM as a two-person organization.
 
 - 25 years of pharmaceutical commercial leadership across Janssen/J&J, Bristol Myers Squibb, Novo Nordisk, VIVUS, KVK, and Daiichi Sankyo.
 - Multiple product launches; do not publish a product-by-product list until confirmed.
@@ -60,7 +64,9 @@ Do not publish unconfirmed therapeutic-area specifics, product names, client rev
 
 ### Combined positioning
 
-Use "50+ combined years" when a combined-experience statement is useful. Do not use the prior website's unsupported "65+ years" claim.
+UEM is supported by a broader team of operators and specialists. Named founding-member experience
+may be described individually, but do not reduce the firm to a two-person story. Do not use the prior
+website's unsupported "65+ years" claim.
 
 ## Expertise honesty
 

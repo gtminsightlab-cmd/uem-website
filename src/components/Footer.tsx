@@ -14,8 +14,9 @@ const footerLinks = {
     { href: '/contact', label: 'Operator Review' },
   ],
   Company: [
-    { href: '/about', label: 'Founding Team' },
-    { href: '/resources', label: 'Launch Intelligence' },
+    { href: '/about', label: 'About UEM' },
+    { href: '/insights', label: 'Commercialization Insights' },
+    { href: '/resources', label: 'Research & Methodology' },
     { href: '/contact', label: 'Contact' },
   ],
 };

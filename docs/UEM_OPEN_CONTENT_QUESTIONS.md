@@ -3,7 +3,7 @@
 Do not silently resolve these items in website copy.
 
 1. Confirm LaunchOS public name and trademark clearance before removing the "in development" qualifier.
-2. Confirm Sharon's preferred public surname and exact UEM/LaunchOS title. Current canonical LaunchOS documents use **Sharon O'Dell**; prior website drafts used an unverified **Sharon Lee**.
+2. **Resolved 2026-08-30:** Use **Sharon Lee** publicly and identify her as a **Founding Member**. She is one member of a broader UEM team. Internal LaunchOS source documents still use Sharon O'Dell and should be normalized separately only through their source-of-truth process.
 3. Confirm Ronnie's exact public UEM/LaunchOS title.
 4. Confirm which product launches, therapeutic areas, and former-employer details Sharon may name publicly.
 5. Confirm which UEM client outcomes may be published, whether anonymized or named, and provide substantiation.

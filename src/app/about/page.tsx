@@ -87,15 +87,20 @@ export default function AboutPage() {
       <section className="section bg-surface">
         <div className="container-content">
           <FadeIn className="max-w-3xl">
-            <p className="eyebrow">Founding operators</p>
-            <h2 className="mt-5 font-serif text-h2 font-medium text-navy">More than 50 years across two regulated commercial systems.</h2>
+            <p className="eyebrow">Founding members</p>
+            <h2 className="mt-5 font-serif text-h2 font-medium text-navy">Founding experience inside a broader operating team.</h2>
+            <p className="mt-5 max-w-2xl leading-8 text-mid">
+              UEM is supported by a broader team of operators and specialists. The founding members
+              below contribute two of the disciplines that shape the firm&apos;s commercialization work
+              and the development of LaunchOS.
+            </p>
           </FadeIn>
 
           <div className="mt-14 grid gap-6 lg:grid-cols-2">
             <FadeIn>
               <article className="h-full border border-gray-200 p-8 md:p-10">
-                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-gold">Pharmaceutical commercialization</p>
-                <h3 className="mt-5 font-serif text-3xl text-navy">Sharon O&apos;Dell</h3>
+                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-gold">Founding member · pharmaceutical commercialization</p>
+                <h3 className="mt-5 font-serif text-3xl text-navy">Sharon Lee</h3>
                 <p className="mt-5 leading-8 text-mid">
                   Sharon brings 25 years of pharmaceutical commercial leadership across Janssen/J&amp;J,
                   Bristol Myers Squibb, Novo Nordisk, VIVUS, KVK, and Daiichi Sankyo, including
@@ -115,7 +120,7 @@ export default function AboutPage() {
 
             <FadeIn delay={0.1}>
               <article className="h-full border border-gray-200 p-8 md:p-10">
-                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-gold">Regulated distribution systems</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-gold">Founding member · regulated distribution systems</p>
                 <h3 className="mt-5 font-serif text-3xl text-navy">Ronnie O&apos;Dell</h3>
                 <p className="mt-5 leading-8 text-mid">
                   Ronnie brings more than 25 years of experience building commercial distribution,
@@ -161,13 +166,14 @@ export default function AboutPage() {
         <div className="container-content grid gap-10 lg:grid-cols-2 lg:items-center">
           <FadeIn>
             <p className="eyebrow">A boundary we state plainly</p>
-            <h2 className="mt-5 font-serif text-h2 font-medium text-navy">No founding team covers every launch discipline.</h2>
+            <h2 className="mt-5 font-serif text-h2 font-medium text-navy">No team covers every launch discipline.</h2>
           </FadeIn>
           <FadeIn delay={0.1}>
             <div className="space-y-5 leading-8 text-mid">
               <p>
-                UEM&apos;s deepest founding experience sits in pharmaceutical commercial leadership,
-                organization, field execution, hiring, and regulated commercial systems.
+                UEM&apos;s founding experience includes pharmaceutical commercial leadership,
+                organization, field execution, hiring, and regulated commercial systems. The broader
+                team adds other operator and specialist perspectives as each decision requires.
               </p>
               <p>
                 Deep payer and market-access expertise is a specialist requirement, not a claim we
