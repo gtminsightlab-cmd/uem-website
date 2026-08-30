@@ -9,9 +9,8 @@ const footerLinks = {
   ],
   Product: [
     { href: '/launchos', label: 'LaunchOS Overview' },
-    { href: '/launchos#architecture', label: 'Product Architecture' },
-    { href: '/launchos#prototype', label: 'Conviction Prototype' },
-    { href: '/contact', label: 'Operator Review' },
+    { href: '/launchos#capabilities', label: 'Decision Capabilities' },
+    { href: '/contact', label: 'Discuss LaunchOS' },
   ],
   Company: [
     { href: '/about', label: 'About UEM' },

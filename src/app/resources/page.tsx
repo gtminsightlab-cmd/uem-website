@@ -6,7 +6,7 @@ import FadeIn from '@/components/FadeIn';
 export const metadata: Metadata = {
   title: 'Launch Intelligence',
   description:
-    'UEM launch intelligence, research areas, and transparent notes on the methodology being developed for LaunchOS.',
+    'UEM launch intelligence and research areas for consequential U.S. commercialization decisions.',
 };
 
 const researchAreas = [
@@ -25,18 +25,18 @@ const researchAreas = [
   'Respiratory disease',
 ];
 
-const methodologyNotes = [
+const intelligencePrinciples = [
   {
     title: 'Readiness is not a decorative score',
-    body: 'The LaunchOS methodology separates readiness, confidence, evidence quality, unanswered questions, and hard-gate exposure. Candidate questions and rules remain subject to operator and expert validation.',
+    body: 'A useful readiness view separates progress from confidence, evidence quality, unanswered questions, and launch-gating exposure.',
   },
   {
-    title: 'AI does not get to rewrite launch reality',
+    title: 'AI does not rewrite launch reality',
     body: 'AI may summarize, structure, compare, and surface gaps. It should not silently change readiness state, close decisions, manufacture evidence, or present unsupported certainty.',
   },
   {
-    title: 'Demo data is not product logic',
-    body: 'A fictional manufacturer can demonstrate the product, but deleting that tenant must never break a feature. Methodology, tenant records, product behavior, and seed data remain separate.',
+    title: 'A conclusion should show its basis',
+    body: 'Material recommendations should make their sources, assumptions, limitations, and decision consequences visible to the people accountable for acting.',
   },
 ];
 
@@ -50,9 +50,8 @@ export default function ResourcesPage() {
             Research should improve a decision—not decorate a website.
           </h1>
           <p className="mt-8 max-w-3xl text-lg leading-8 text-white/72">
-            UEM is reviewing and updating its research library alongside the LaunchOS methodology.
-            Materials will be released only when their sources, permissions, currency, and intended
-            decision use have been checked.
+            UEM follows the scientific, market, access, field, and operating questions that shape
+            commercialization decisions across major therapeutic areas.
           </p>
         </div>
       </section>
@@ -61,11 +60,11 @@ export default function ResourcesPage() {
         <div className="container-content grid gap-14 lg:grid-cols-[0.72fr_1.28fr]">
           <FadeIn>
             <p className="eyebrow">Research library</p>
-            <h2 className="mt-5 font-serif text-h2 font-medium text-navy">Thirteen therapeutic-area workstreams under review.</h2>
+            <h2 className="mt-5 font-serif text-h2 font-medium text-navy">Thirteen therapeutic areas connected by launch decisions.</h2>
             <p className="mt-5 leading-8 text-mid">
-              These areas reflect the current working library. They are not represented as current,
-              complete, independently validated publications or client-ready deliverables until the
-              review is finished.
+              The therapeutic context changes, but the leadership questions remain connected:
+              evidence, differentiation, access, organization, field execution, patient friction,
+              governance, and the timing of consequential choices.
             </p>
           </FadeIn>
           <div className="grid gap-px overflow-hidden border border-gray-200 bg-gray-200 sm:grid-cols-2">
@@ -84,15 +83,15 @@ export default function ResourcesPage() {
       <section className="section bg-surface">
         <div className="container-content">
           <FadeIn className="max-w-3xl">
-            <p className="eyebrow">Methodology in the open</p>
-            <h2 className="mt-5 font-serif text-h2 font-medium text-navy">The proof standard behind LaunchOS.</h2>
+            <p className="eyebrow">The proof standard</p>
+            <h2 className="mt-5 font-serif text-h2 font-medium text-navy">Research earns value when it changes a decision.</h2>
             <p className="mt-5 leading-8 text-mid">
-              LaunchOS is in development. The principles below describe its intended architecture,
-              not a claim that every capability is available today.
+              UEM evaluates intelligence by its source quality, currency, relevance, and ability to
+              clarify what leadership should decide or investigate next.
             </p>
           </FadeIn>
           <div className="mt-12 grid gap-5 lg:grid-cols-3">
-            {methodologyNotes.map((note, index) => (
+            {intelligencePrinciples.map((note, index) => (
               <FadeIn key={note.title} delay={index * 0.08}>
                 <article className="h-full border border-gray-200 bg-white p-7">
                   <h3 className="font-serif text-xl leading-7 text-navy">{note.title}</h3>

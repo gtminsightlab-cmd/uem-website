@@ -3,7 +3,7 @@ import ContactForm from '@/components/ContactForm';
 
 export const metadata: Metadata = {
   title: 'Contact',
-  description: 'Start a conversation with Upper Echelon Management about a U.S. commercialization decision or LaunchOS operator review.',
+  description: 'Start a conversation with Upper Echelon Management about a U.S. commercialization decision or LaunchOS.',
 };
 
 const inquiryTypes = [
@@ -16,8 +16,8 @@ const inquiryTypes = [
     body: 'Operator support for the U.S. commercial model, organization, field strategy, governance, or a decision on what to build, buy, or rent.',
   },
   {
-    title: 'LaunchOS operator review',
-    body: 'A pharmaceutical commercial operator, functional expert, or manufacturer leader interested in challenging the Conviction Prototype and its methodology.',
+    title: 'LaunchOS',
+    body: 'A pharmaceutical commercial leader exploring a more evidence-aware way to govern readiness, risk, and consequential launch decisions.',
   },
   {
     title: 'Research or partnership',
