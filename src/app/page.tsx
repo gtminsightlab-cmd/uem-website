@@ -105,16 +105,16 @@ export default function HomePage() {
       </section>
 
       <section className="border-b border-gray-200 bg-white">
-        <div className="container-content grid grid-cols-2 divide-x divide-gray-200 md:grid-cols-4">
+        <div className="container-content grid grid-cols-1 divide-y divide-gray-200 sm:grid-cols-2 sm:divide-x sm:divide-y-0 lg:grid-cols-4">
           {[
-            ['50+', 'combined years in regulated commercial leadership'],
-            ['200+', 'field representatives hired'],
-            ['30+', 'district managers hired'],
-            ['1,000+', 'representative interviews conducted'],
+            ['Operator-led', 'Commercial leaders who have built and run regulated operating systems'],
+            ['Cross-functional', 'Science, access, field, operations, data, and executive decision perspectives'],
+            ['Globally connected', 'Experience connecting global asset strategy with U.S. launch execution'],
+            ['System-enabled', 'Human judgment strengthened by LaunchOS evidence, signals, and decision discipline'],
           ].map(([value, label]) => (
-            <div key={value} className="px-4 py-8 text-center md:px-8">
-              <p className="font-serif text-3xl text-navy md:text-4xl">{value}</p>
-              <p className="mt-2 text-xs leading-5 text-mid">{label}</p>
+            <div key={value} className="px-5 py-8 text-left md:px-8">
+              <p className="font-serif text-2xl text-navy md:text-3xl">{value}</p>
+              <p className="mt-3 text-xs leading-5 text-mid">{label}</p>
             </div>
           ))}
         </div>
