@@ -115,7 +115,7 @@ export const insights: Insight[] = [
         heading: 'The philosophy behind LaunchOS',
         paragraphs: [
           {
-            text: 'At UEM, we are developing LaunchOS around a simple belief: launch leadership should be able to see what decision is required, why it matters now, what evidence supports it, and what happens if the team waits. The product is in development; it is not presented as a substitute for experienced operators, regulatory counsel, market-access leadership, or the systems a manufacturer already uses.',
+            text: 'LaunchOS is grounded in a simple belief: launch leadership should be able to see what decision is required, why it matters now, what evidence supports it, and what happens if the team waits. It supports experienced operators and accountable leaders rather than attempting to replace their judgment or the systems a manufacturer already uses.',
           },
           {
             text: 'The intended role is a manufacturer-side decision layer: configurable methodology, evidence-aware AI, explicit rules, and scoped expert judgment working together. When the system does not know enough, it should say so—and help the team get the right human expertise into the decision.',
@@ -164,7 +164,7 @@ export const insights: Insight[] = [
     readingTime: '8 minute read',
     image: '/images/people/global-launch-working-session.webp',
     imageAlt: 'International pharmaceutical leaders reviewing a U.S. launch operating model',
-    imageCaption: 'Illustrative working scene',
+    imageCaption: 'Cross-functional U.S. launch planning',
     lead: [
       {
         text: 'The first U.S. commercial organization chart is usually drawn too early.',
@@ -248,7 +248,7 @@ export const insights: Insight[] = [
             text: 'My field and hiring experience is one input into UEM’s work. The broader UEM team brings additional perspectives across pharmaceutical commercialization, regulated distribution, technology, operating-model design, and scoped specialist disciplines. A credible commercialization office should never pretend one person covers every launch decision.',
           },
           {
-            text: 'UEM is translating that combined operator judgment into inspectable methods. LaunchOS, currently in development, is intended to make the assumptions, decision rules, evidence, and rationale visible rather than burying them in one expert’s memory or one vendor’s proposal.',
+            text: 'UEM translates that combined operator judgment into inspectable methods. LaunchOS makes assumptions, decision rules, evidence, and rationale visible rather than burying them in one expert’s memory or one vendor’s proposal.',
           },
         ],
       },
@@ -287,7 +287,7 @@ export const insights: Insight[] = [
     readingTime: '7 minute read',
     image: '/images/people/evidence-review-working-session.webp',
     imageAlt: 'Commercial and access leaders reviewing evidence and patient journey friction',
-    imageCaption: 'Illustrative working scene',
+    imageCaption: 'Access evidence and patient-journey friction',
     lead: [
       {
         text: 'Somewhere in the launch dashboard, the prescription counted as a win.',

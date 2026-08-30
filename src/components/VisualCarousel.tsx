@@ -63,9 +63,6 @@ export default function VisualCarousel() {
             sizes="(min-width: 1024px) 65vw, 100vw"
             className="object-cover"
           />
-          <div className="absolute left-5 top-5 border border-navy/15 bg-white/90 px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.14em] text-navy backdrop-blur-sm">
-            Illustrative operating model
-          </div>
         </div>
 
         <div className="flex min-h-[320px] flex-col justify-between bg-navy p-7 text-white md:p-10">

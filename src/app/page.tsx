@@ -79,7 +79,7 @@ export default function HomePage() {
                 Explore the operating model <span aria-hidden="true">→</span>
               </Link>
               <Link href="/launchos" className="btn-outline-white justify-center">
-                See LaunchOS in development
+                Explore LaunchOS
               </Link>
             </div>
             </div>
@@ -178,9 +178,8 @@ export default function HomePage() {
               Make launch complexity understandable without making it simplistic.
             </h2>
             <p className="mt-5 leading-8 text-mid">
-              UEM uses a restrained system of signals, gates, paths, evidence, and decision symbols to
-              clarify how a launch moves—and where it can still fail. These are conceptual operating
-              views, not fixed scores or hard-coded methodology.
+              Signals, gates, paths, evidence, and decision symbols help leaders see how a launch is
+              moving, where confidence is weak, and what requires action next.
             </p>
           </FadeIn>
           <FadeIn delay={0.1} className="mt-12">
@@ -217,9 +216,6 @@ export default function HomePage() {
                       sizes="(min-width: 1024px) 33vw, 100vw"
                       className="object-cover transition duration-500 hover:scale-[1.02]"
                     />
-                    <p className="absolute bottom-0 left-0 bg-navy/85 px-3 py-2 text-[9px] font-semibold uppercase tracking-[0.14em] text-white/80 backdrop-blur-sm">
-                      Illustrative working scene
-                    </p>
                   </div>
                   <div className="flex flex-1 flex-col p-6">
                     <h3 className="font-serif text-2xl text-navy">{scene.title}</h3>
@@ -270,15 +266,15 @@ export default function HomePage() {
           </FadeIn>
           <FadeIn delay={0.1}>
             <article className="h-full border border-gold/35 bg-surface p-8 md:p-10">
-              <p className="eyebrow">LaunchOS · in development</p>
+              <p className="eyebrow">LaunchOS</p>
               <h2 className="mt-5 font-serif text-3xl text-navy">The system layer</h2>
               <p className="mt-5 leading-8 text-mid">
-                UEM is developing LaunchOS: an AI-native, multi-tenant commercialization operating
-                system intended to connect evidence, readiness, risks, decisions, experts, and the
+                LaunchOS is UEM&apos;s AI-native commercialization operating system, connecting
+                evidence, readiness, risks, decisions, experts, and the
                 launch critical path without replacing the tools teams already use.
               </p>
               <Link href="/launchos" className="mt-7 inline-flex text-sm font-semibold text-navy animated-underline">
-                Understand the product direction <span className="ml-2" aria-hidden="true">→</span>
+                See how LaunchOS works <span className="ml-2" aria-hidden="true">→</span>
               </Link>
             </article>
           </FadeIn>

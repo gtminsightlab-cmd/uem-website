@@ -97,8 +97,8 @@ export default function InsightsPage() {
             </h2>
             <p className="mt-5 max-w-2xl leading-8 text-mid">
               UEM publishes to help commercial leaders see decisions, dependencies, and evidence
-              gaps earlier. LaunchOS is in development; these articles explain the operating
-              philosophy behind it without presenting unfinished capabilities as available today.
+              gaps earlier. Each article connects practical launch questions with the operating
+              principles behind UEM and LaunchOS.
             </p>
           </FadeIn>
           <FadeIn delay={0.1}>

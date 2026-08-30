@@ -5,7 +5,7 @@ export const contactPurposes = [
   'Organization or field-force design',
   'Market access, patient journey, or channel strategy',
   'Research, intelligence, or evidence review',
-  'LaunchOS operator review',
+  'LaunchOS',
   'Expert, data, or strategic partnership',
   'Media, speaking, or other inquiry',
 ] as const;

@@ -15,7 +15,7 @@
 - **Upper Echelon Management (UEM)** is the operator-led commercialization firm.
 - **LaunchOS** is the AI-native, multi-tenant U.S. pharmaceutical commercialization operating system being developed as part of UEM's work.
 - UEM supplies operator leadership and scoped expert judgment. LaunchOS is intended to make methodology, evidence, risks, decisions, dependencies, and next actions configurable and visible.
-- Until name/trademark clearance and product release decisions are complete, public copy must describe LaunchOS as **in development** and must not imply general commercial availability.
+- Public copy should describe what LaunchOS helps leaders do without publishing internal release-stage names, build notes, roadmap tactics, or engineering architecture. Do not imply self-service or general commercial availability unless an accessible offer is approved.
 
 ## Approved product language
 
@@ -106,8 +106,8 @@ The following claims are not approved for public use unless the owner supplies e
 
 ## Visual truth standard
 
-- Synthetic editorial scenes may illustrate the kinds of people, roles, and working situations involved in commercialization.
-- Label synthetic people imagery as an **illustrative working scene** wherever a reasonable viewer could otherwise read it as documentary evidence.
+- Synthetic editorial scenes may illustrate the kinds of people, roles, and working situations involved in commercialization when their placement cannot reasonably imply that the people are UEM employees, clients, experts, or engagement participants.
+- Do not publish production labels such as “illustrative working scene,” “AI-generated,” “placeholder,” or similar internal notes on the public site. Use a normal topic caption when one adds value; otherwise use no caption.
 - Never present synthetic people as UEM founders, employees, experts, clients, or participants in a real engagement.
 - Use real approved portraits for named people. Do not generate replacements or imply a synthetic likeness is the person.
 - Prefer credible work in progress over staged handshakes, generic laboratory theater, national stereotypes, or decorative "AI" imagery.
@@ -123,3 +123,16 @@ Before publishing a claim, answer:
 5. Does it reveal confidential client or former-employer information?
 
 If the answer is unclear, add it to `docs/UEM_OPEN_CONTENT_QUESTIONS.md` and omit it from public copy.
+
+## Public-copy boundary
+
+Keep internal strategy and production mechanics out of customer-facing pages, including:
+
+- prototype or wave names;
+- demo/seed architecture;
+- validation queues and candidate-rule status;
+- internal build targets, release gates, or development tactics;
+- production notes attached to imagery;
+- disclaimers written for the build team rather than the buyer.
+
+Translate those mechanics into the customer outcome, decision principle, or operating commitment they support. Preserve internal details only in repository documentation.

@@ -7,7 +7,7 @@ import FadeIn from '@/components/FadeIn';
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'Meet the operators behind Upper Echelon Management and the principles guiding LaunchOS development.',
+    'Meet the operators behind Upper Echelon Management and the principles guiding its commercialization work.',
 };
 
 const principles = [
@@ -138,9 +138,6 @@ export default function AboutPage() {
                   sizes="(min-width: 1024px) 58vw, 100vw"
                   className="object-cover"
                 />
-                <p className="absolute bottom-0 left-0 bg-navy/85 px-3 py-2 text-[9px] font-semibold uppercase tracking-[0.14em] text-white/80 backdrop-blur-sm">
-                  Illustrative working scene
-                </p>
               </div>
             </figure>
           </FadeIn>
