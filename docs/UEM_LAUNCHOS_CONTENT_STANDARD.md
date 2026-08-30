@@ -75,6 +75,11 @@ UEM is supported by a broader team of operators and specialists. Named founding-
 may be described individually, but do not reduce the firm to a two-person story. Do not use the prior
 website's unsupported "65+ years" claim.
 
+Do not present an individual founder's hiring, interview, launch, or career statistics as a firm-level
+metric. Individual accomplishments belong in the named person's biography. Firm-level bands and
+homepage proof points should describe collective capabilities unless an aggregate has been separately
+substantiated.
+
 ### Broader team roster
 
 - The owner confirmed on 2026-08-30 that the team roster from the prior About page should be restored.
