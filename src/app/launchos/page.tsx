@@ -56,6 +56,10 @@ const operatingCommitments = [
   },
 ];
 
+const launchosUrl = 'https://launchos-demo.vercel.app';
+const launchosLoginUrl = `${launchosUrl}/login`;
+const launchosPricingUrl = `${launchosUrl}/pricing`;
+
 export default function LaunchOSPage() {
   return (
     <>
@@ -73,13 +77,14 @@ export default function LaunchOSPage() {
                 readiness, risks, decisions, experts, and execution into one executive operating view.
               </p>
               <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-                <a href="#capabilities" className="btn-primary justify-center">
-                  Explore LaunchOS <span aria-hidden="true">↓</span>
+                <a href={launchosLoginUrl} className="btn-primary justify-center">
+                  Explore the LaunchOS demo <span aria-hidden="true">→</span>
                 </a>
-                <Link href="/contact" className="btn-outline-white justify-center">
-                  Discuss your launch
-                </Link>
+                <a href={launchosPricingUrl} className="btn-outline-white justify-center">View plans &amp; pricing</a>
               </div>
+              <p className="mt-4 max-w-2xl text-sm leading-6 text-white/55">
+                LaunchOS is the product. Asterion is the clearly labeled fictional pharmaceutical company used inside its read-only demonstration.
+              </p>
             </div>
             <div className="relative min-h-[360px] overflow-hidden border-x border-t border-white/10 lg:min-h-full lg:border-y lg:border-r-0">
               <Image
@@ -99,6 +104,34 @@ export default function LaunchOSPage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="section-sm border-b border-gray-200 bg-white">
+        <div className="container-content">
+          <FadeIn className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+            <div>
+              <p className="eyebrow">Use the product</p>
+              <h2 className="mt-5 font-serif text-h2 font-medium text-navy">See it, build in it, then subscribe at the scope you need.</h2>
+            </div>
+            <div className="grid gap-3 sm:grid-cols-3">
+              <a href={launchosLoginUrl} className="border border-gray-200 bg-surface p-5 transition-colors hover:border-gold">
+                <span className="text-[10px] font-bold uppercase tracking-[0.14em] text-gold">Demo</span>
+                <strong className="mt-3 block text-navy">Explore LaunchOS</strong>
+                <span className="mt-2 block text-xs leading-5 text-mid">Use fictional Asterion data in a read-only workspace.</span>
+              </a>
+              <a href={`${launchosUrl}/signup`} className="border border-gray-200 bg-surface p-5 transition-colors hover:border-gold">
+                <span className="text-[10px] font-bold uppercase tracking-[0.14em] text-gold">Working trial</span>
+                <strong className="mt-3 block text-navy">Create your workspace</strong>
+                <span className="mt-2 block text-xs leading-5 text-mid">Set up a real isolated launch tenant and role plan.</span>
+              </a>
+              <a href={launchosPricingUrl} className="border border-gray-200 bg-surface p-5 transition-colors hover:border-gold">
+                <span className="text-[10px] font-bold uppercase tracking-[0.14em] text-gold">Monthly plans</span>
+                <strong className="mt-3 block text-navy">See pricing and subscribe</strong>
+                <span className="mt-2 block text-xs leading-5 text-mid">Compare Professional, Commercial Team, and Enterprise scope.</span>
+              </a>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -147,6 +180,21 @@ export default function LaunchOSPage() {
               </FadeIn>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="section-sm bg-white">
+        <div className="container-content">
+          <FadeIn className="grid gap-8 border-l-2 border-gold py-3 pl-6 md:grid-cols-[0.35fr_1fr] md:items-center md:pl-10">
+            <div>
+              <p className="eyebrow">Product leadership</p>
+              <h2 className="mt-3 font-serif text-3xl font-medium text-navy">Sharon Lee</h2>
+              <p className="mt-2 text-sm font-semibold text-mid">Founding Member, Upper Echelon Management</p>
+            </div>
+            <p className="max-w-3xl text-base leading-8 text-mid">
+              Sharon Lee defined LaunchOS and spearheaded its development and project management, translating 25 years of pharmaceutical commercial leadership, launch, field-organization, hiring, and CRM planning experience into the product&apos;s operating direction.
+            </p>
+          </FadeIn>
         </div>
       </section>
 
@@ -230,6 +278,9 @@ export default function LaunchOSPage() {
               <Link href="/contact" className="btn-outline-white mt-7">
                 Start a LaunchOS conversation <span aria-hidden="true">→</span>
               </Link>
+              <a href={launchosPricingUrl} className="mt-4 block text-xs font-semibold text-white/70 underline decoration-white/30 underline-offset-4 hover:text-white">
+                Or view plans and monthly pricing in LaunchOS →
+              </a>
             </div>
           </FadeIn>
         </div>
