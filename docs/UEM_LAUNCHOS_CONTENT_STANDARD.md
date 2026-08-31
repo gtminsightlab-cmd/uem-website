@@ -17,6 +17,15 @@
 - UEM supplies operator leadership and scoped expert judgment. LaunchOS is intended to make methodology, evidence, risks, decisions, dependencies, and next actions configurable and visible.
 - Public copy should describe what LaunchOS helps leaders do without publishing internal release-stage names, build notes, roadmap tactics, or engineering architecture. Do not imply self-service or general commercial availability unless an accessible offer is approved.
 
+### Accessible product paths approved 2026-08-30
+
+- The UEM website may link to the live LaunchOS product page, read-only fictional demonstration, account login, 14-day working trial, and public pricing page.
+- Asterion must be described as the fictional pharmaceutical manufacturer inside the LaunchOS demonstration, never as the application name.
+- Professional and Commercial Team may be presented as monthly Stripe-hosted subscription paths only when the public page can read active Stripe Prices and the authenticated tenant checkout is operational.
+- Enterprise remains a scoped agreement and conversation path.
+- Public copy may state: **Sharon Lee defined LaunchOS and spearheaded its development and project management.**
+- The UEM and LaunchOS sites must link back to each other so visitors can distinguish the firm from the product.
+
 ## Approved product language
 
 North Star:

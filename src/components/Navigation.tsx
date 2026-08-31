@@ -12,6 +12,9 @@ const navLinks = [
   { href: '/about', label: 'About' },
 ];
 
+const launchosLoginUrl = 'https://launchos-demo.vercel.app/login';
+const launchosPricingUrl = 'https://launchos-demo.vercel.app/pricing';
+
 export default function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
@@ -56,6 +59,9 @@ export default function Navigation() {
                   {link.label}
                 </Link>
               ))}
+              <a href={launchosLoginUrl} className="ml-2 rounded border border-navy/25 px-4 py-2.5 text-[12px] font-semibold text-navy transition-colors hover:border-navy hover:bg-surface">
+                LaunchOS Login
+              </a>
               <Link href="/contact" className="btn-navy ml-3 px-5 py-2.5 text-[12px]">
                 Start a Conversation
               </Link>
@@ -95,6 +101,12 @@ export default function Navigation() {
               {link.label}
             </Link>
           ))}
+          <a href={launchosLoginUrl} className="mt-2 rounded border border-navy/25 px-5 py-3 text-center text-[13px] font-semibold text-navy">
+            LaunchOS Login
+          </a>
+          <a href={launchosPricingUrl} className="rounded border border-navy/25 px-5 py-3 text-center text-[13px] font-semibold text-navy">
+            LaunchOS Pricing
+          </a>
           <Link href="/contact" className="mt-2 rounded bg-navy px-5 py-3 text-center text-[13px] font-semibold text-white">
             Start a Conversation
           </Link>

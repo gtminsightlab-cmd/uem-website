@@ -9,8 +9,9 @@ const footerLinks = {
   ],
   Product: [
     { href: '/launchos', label: 'LaunchOS Overview' },
-    { href: '/launchos#capabilities', label: 'Decision Capabilities' },
-    { href: '/contact', label: 'Discuss LaunchOS' },
+    { href: 'https://launchos-demo.vercel.app/login', label: 'LaunchOS Demo & Login' },
+    { href: 'https://launchos-demo.vercel.app/pricing', label: 'Plans & Monthly Pricing' },
+    { href: '/contact', label: 'Discuss Enterprise Scope' },
   ],
   Company: [
     { href: '/about', label: 'About UEM' },
