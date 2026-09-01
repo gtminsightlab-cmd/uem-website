@@ -14,3 +14,6 @@ Do not silently resolve these items in website copy.
 10. Confirm the canonical production domain and social-preview URL.
 11. Decide whether the LaunchOS product remains a separate repository or becomes a UEM monorepo application before moving product code.
 12. **Resolved 2026-08-30:** Restore the public team roster from the prior About page. Use names, practice roles, and locations; do not restore synthetic portraits or expand former-employer and outcome claims without separate evidence.
+13. Have employment counsel confirm UEM's employing legal entity or entities, applicable worker states, and the state-specific response, employee-copy, service-letter, timing, and retention rules before the implemented employment-verification intake is treated as a final nationwide response policy.
+14. **Partially resolved 2026-09-01:** Ronnie O'Dell is the primary employment-verification recipient and reviewer. Name a backup authorized reviewer and approve the secure outbound-response channel for compensation or other sensitive records.
+15. Approve the final retention schedule for employment-verification requests, authorizations, uploaded documents, and completed responses. The technical default removes uploaded intake documents after 30 days and remains configurable.

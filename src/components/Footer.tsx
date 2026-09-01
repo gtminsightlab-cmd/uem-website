@@ -18,6 +18,7 @@ const footerLinks = {
     { href: '/insights', label: 'Commercialization Insights' },
     { href: '/resources', label: 'Research & Methodology' },
     { href: '/contact', label: 'Contact' },
+    { href: '/employment-verification', label: 'Employment Verification' },
   ],
 };
 

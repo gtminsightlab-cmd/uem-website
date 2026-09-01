@@ -6,6 +6,11 @@
 - Route every public inquiry through the contact form.
 - Require the visitor to identify the purpose of communication before submitting.
 - Never display a success state unless the message service has accepted the inquiry.
+- Keep ordinary business inquiries and employment-verification requests on separate forms.
+- Employment-verification intake must collect the requester, worker, jurisdiction, purpose, requested fields, authority attestation, and secure response method without collecting Social Security numbers, birth dates, banking data, medical/genetic information, patient information, or client-confidential material.
+- Basic dates/title/status may be requested without an upload. Compensation and custom-document completion require an authorization or request document; UEM still decides what may lawfully be disclosed.
+- Store uploaded documents in private server-only storage, send no email attachment, and never imply that receipt confirms employment or authorizes disclosure.
+- Follow `docs/EMPLOYMENT_VERIFICATION_INTAKE_STANDARD.md` for the implemented security and legal-review baseline.
 
 **Status:** Current website content authority  
 **Purpose:** Keep public UEM messaging aligned with verified LaunchOS product and founder context.

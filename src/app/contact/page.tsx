@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import ContactForm from '@/components/ContactForm';
 
 export const metadata: Metadata = {
@@ -51,6 +52,17 @@ export default function ContactPage() {
               context. Share enough to frame the problem, but do not include protected health
               information, patient information, trade secrets, or other confidential material.
             </p>
+            <div className="mt-8 border border-gray-200 bg-surface p-5">
+              <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-gold">Separate request path</p>
+              <h3 className="mt-2 font-serif text-xl text-navy">Need employment verification?</h3>
+              <p className="mt-2 text-sm leading-7 text-mid">
+                HR teams, screening providers, agencies, and current or former workers should use the
+                dedicated employment-verification form, including its optional secure document upload.
+              </p>
+              <Link className="mt-4 inline-flex min-h-11 items-center text-sm font-semibold text-navy underline decoration-gold underline-offset-4" href="/employment-verification">
+                Open employment verification →
+              </Link>
+            </div>
             <div className="mt-9 grid gap-4">
               {inquiryTypes.map((inquiry) => (
                 <article key={inquiry.title} className="border-l-2 border-gold pl-5">
