@@ -289,8 +289,8 @@ export default function HomePage() {
               <h2 className="mt-5 font-serif text-3xl text-navy">The system layer</h2>
               <p className="mt-5 leading-8 text-mid">
                 LaunchOS is UEM&apos;s AI-native commercialization operating system, connecting
-                evidence, readiness, risks, decisions, experts, and the
-                launch critical path without replacing the tools teams already use.
+                role-based plans, evidence-qualified scoring, governed scenarios, risks, decisions,
+                experts, and the launch critical path without replacing the tools teams already use.
               </p>
               <Link href="/launchos" className="mt-7 inline-flex text-sm font-semibold text-navy animated-underline">
                 See how LaunchOS works <span className="ml-2" aria-hidden="true">→</span>
