@@ -28,7 +28,7 @@
 - Asterion must be described as the fictional pharmaceutical manufacturer inside the LaunchOS demonstration, never as the application name.
 - Professional and Commercial Team may be presented as monthly Stripe-hosted subscription paths only when the public page can read active Stripe Prices and the authenticated tenant checkout is operational.
 - Enterprise remains a scoped agreement and conversation path.
-- Public copy may state: **Sharon Lee defined LaunchOS and spearheaded its development and project management.**
+- LaunchOS provenance should be presented at the UEM team level. Do not give Sharon a standalone product-leadership spotlight.
 - The UEM and LaunchOS sites must link back to each other so visitors can distinguish the firm from the product.
 
 ## Approved product language
@@ -62,14 +62,16 @@ LaunchOS must not be described as:
 
 ## Approved founder context
 
-### Sharon Lee
+### Sharon O'Dell
 
-- Public name confirmed by the owner on 2026-08-30: **Sharon Lee**.
-- Public role confirmed by the owner on 2026-08-30: **Founding Member**.
+- Public name superseded by the owner on 2026-08-31: **Sharon O'Dell**.
+- Public role confirmed by the owner on 2026-08-31: **Founder · Since 2015**.
 - Sharon is one member of a broader UEM team; do not present her as the whole team or UEM as a two-person organization.
 
-- 25 years of pharmaceutical commercial leadership across Janssen/J&J, Bristol Myers Squibb, Novo Nordisk, VIVUS, KVK, and Daiichi Sankyo.
-- Multiple product launches; do not publish a product-by-product list until confirmed.
+- Pharmaceutical career began in 1996.
+- Bachelor of Science in History, UC Berkeley, magna cum laude.
+- Career chronology approved for public use: Janssen Pharmaceuticals; Bristol Myers Squibb; Sankyo, where she accepted her first district manager position; Novo Nordisk; VIVUS; Amplity, where she served as National Sales Director.
+- Helped launch several pharmaceutical products; do not publish a product-by-product list until confirmed.
 - 200+ field representatives and 30+ district managers hired.
 - 1,000+ representative interviews conducted.
 - Approximately four years of contract pharmaceutical sales experience at Amplity.
@@ -79,6 +81,7 @@ Do not publish unconfirmed therapeutic-area specifics, product names, client rev
 
 ### Ronnie O'Dell
 
+- Public role confirmed by the owner on 2026-08-31: **Chief Revenue Officer**.
 - 25+ years building regulated commercial distribution and go-to-market systems.
 - Founding input for system architecture, distribution, vendor governance, build/buy/rent choices, commercial operating models, and AI/product systems.
 - Do not publish unverified growth figures or employer-specific performance claims without evidence and owner approval.
@@ -97,7 +100,7 @@ substantiated.
 ### Broader team roster
 
 - The owner confirmed on 2026-08-30 that the team roster from the prior About page should be restored.
-- Sharon Lee must remain identified as a **Founding Member** and one member of the broader team.
+- Sharon O'Dell must remain identified as **Founder · Since 2015** and one member of the broader team.
 - Publish the restored names, practice roles, and locations without synthetic portraits.
 - Do not reintroduce detailed former-employer, product-launch, client-outcome, or tenure claims unless separately substantiated.
 
@@ -179,3 +182,30 @@ Keep private unless separately approved:
 - client-specific playbooks, licensed data, and identifiable engagement outputs.
 
 Public examples must not imply predictive validation, general availability, or a verified client outcome. Use concise buyer-facing disclosure such as “Sample LaunchOS output · fictional manufacturer data,” not production notes or internal build labels.
+
+## Approved audience, scoring, and simulation language
+
+### Role-based planning
+
+The website may explain the operating jobs supported by these role lenses:
+
+- territory representative / KAM: assigned accounts, objectives, stakeholder and barrier facts, evidence, outcomes, follow-ups, and the next purposeful action;
+- district manager / first-line manager: roster, territories, capacity, coaching evidence, commitments, barriers, actions, and escalations;
+- regional director / RVP: authorized district patterns, manager intervention, resource needs, and regional strategy pivots;
+- VP / functional leader: national targets, capabilities, vendors, channels, evidence, milestones, and cross-functional dependencies;
+- CMO / commercial executive: cross-functional decisions, tradeoffs, resource and capital implications, risks, assumptions, and launch attention;
+- cross-functional commercial team: a shared versioned operating record with explicit functional ownership and human approval.
+
+Public copy must state or preserve the principle that a role lens changes questions, horizons, and roll-ups but does not grant authorization. Do not describe LaunchOS as ranking employees, conducting employee surveillance, or replacing manager judgment.
+
+### Plan-quality scoring
+
+LaunchOS may be described as evaluating plan sufficiency or readiness under a named, versioned methodology. Public explanation may identify coverage, gate integrity, decision hygiene, evidence adequacy, critical-path exposure, blocking inputs, contradictions, stale evidence, and refused calculations.
+
+Do not publish private weights, thresholds, hard-gate rules, or expert calibration. Do not describe a plan-quality score as a probability of regulatory approval, market success, forecast attainment, revenue, or employee performance. When required coverage, gates, or evidence are insufficient, explain that LaunchOS suppresses false precision and shows what must be resolved.
+
+### Governed scenarios and simulation
+
+LaunchOS may be described as comparing explicit options, assumptions, dependencies, tradeoffs, leading indicators, and wait consequences for choices such as field operating model, organization size and sequencing, CRM timing, access-sensitive investment gates, and territory alignment.
+
+Use “scenario,” “simulation,” “rehearsal,” or “comparison” only when the copy preserves the human decision boundary. A scenario is not a prediction, autonomous recommendation, verified outcome, or substitute for specialist judgment.
