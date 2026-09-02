@@ -3,6 +3,7 @@ import { IBM_Plex_Sans, Source_Serif_4 } from 'next/font/google';
 
 import Footer from '@/components/Footer';
 import Navigation from '@/components/Navigation';
+import RexaConcierge from '@/components/RexaConcierge';
 
 import './globals.css';
 
@@ -49,6 +50,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <Navigation />
         <main>{children}</main>
         <Footer />
+        <RexaConcierge />
       </body>
     </html>
   );
