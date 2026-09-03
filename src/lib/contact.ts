@@ -5,7 +5,7 @@ export const contactPurposes = [
   'Organization or field-force design',
   'Market access, patient journey, or channel strategy',
   'Research, intelligence, or evidence review',
-  'LaunchOS',
+  'RxLaunchOS',
   'Expert, data, or strategic partnership',
   'Media, speaking, or other inquiry',
 ] as const;
@@ -53,7 +53,7 @@ export const engagementNeeds = [
   'Market access, channel, and patient support',
   'Research, competitive intelligence, or evidence synthesis',
   'Launch economics, scenarios, or investment choices',
-  'LaunchOS, data, analytics, or decision-system review',
+  'RxLaunchOS, data, analytics, or decision-system review',
   'Expert network or strategic partnership',
   'Other',
 ] as const;

@@ -39,7 +39,7 @@ export default function EmploymentVerificationPage() {
           </h1>
           <p className="mt-8 max-w-3xl text-lg leading-8 text-white/72">
             This form is for current or former worker verification—not
-            consulting, LaunchOS, careers, Form I-9, or E-Verify support. UEM
+            consulting, RxLaunchOS, careers, Form I-9, or E-Verify support. UEM
             reviews the requester, authority, record, jurisdiction, and response
             method before disclosing information.
           </p>

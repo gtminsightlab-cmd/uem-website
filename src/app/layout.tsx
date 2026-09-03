@@ -26,14 +26,14 @@ export const metadata: Metadata = {
     template: '%s | Upper Echelon Management',
   },
   description:
-    'Operator-led U.S. commercialization strategy, launch readiness, organization design, and LaunchOS product development for emerging and global biopharma manufacturers.',
+    'Operator-led U.S. commercialization strategy, launch readiness, organization design, and RxLaunchOS product development for emerging and global biopharma manufacturers.',
   keywords: [
     'pharmaceutical commercialization',
     'first U.S. launch',
     'commercial launch readiness',
     'pharma organization design',
     'field force design',
-    'LaunchOS',
+    'RxLaunchOS',
   ],
   openGraph: {
     title: 'Upper Echelon Management | Your U.S. Commercialization Office',

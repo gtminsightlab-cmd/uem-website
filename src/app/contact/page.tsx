@@ -4,7 +4,7 @@ import ContactForm from '@/components/ContactForm';
 
 export const metadata: Metadata = {
   title: 'Contact',
-  description: 'Start a conversation with Upper Echelon Management about a U.S. commercialization decision or LaunchOS.',
+  description: 'Start a conversation with Upper Echelon Management about a U.S. commercialization decision or RxLaunchOS.',
 };
 
 const inquiryTypes = [
@@ -17,7 +17,7 @@ const inquiryTypes = [
     body: 'Operator support for the U.S. commercial model, organization, field strategy, governance, or a decision on what to build, buy, or rent.',
   },
   {
-    title: 'LaunchOS',
+    title: 'RxLaunchOS',
     body: 'A pharmaceutical commercial leader exploring a more evidence-aware way to govern readiness, risk, and consequential launch decisions.',
   },
   {

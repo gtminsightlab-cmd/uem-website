@@ -8,9 +8,9 @@ const footerLinks = {
     { href: '/services#experts', label: 'Scoped Expert Engagements' },
   ],
   Product: [
-    { href: '/launchos', label: 'LaunchOS Overview' },
-    { href: 'https://launchos-demo.vercel.app/login', label: 'LaunchOS Demo & Login' },
-    { href: 'https://launchos-demo.vercel.app/pricing', label: 'Plans & Monthly Pricing' },
+    { href: '/launchos', label: 'RxLaunchOS Overview' },
+    { href: 'https://app.rxlaunchos.com/login', label: 'RxLaunchOS Demo & Login' },
+    { href: 'https://app.rxlaunchos.com/pricing', label: 'Plans & Monthly Pricing' },
     { href: '/contact', label: 'Discuss Enterprise Scope' },
   ],
   Company: [

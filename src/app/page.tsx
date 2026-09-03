@@ -79,7 +79,7 @@ export default function HomePage() {
                 Explore the operating model <span aria-hidden="true">→</span>
               </Link>
               <Link href="/launchos" className="btn-outline-white justify-center">
-                Explore LaunchOS
+                Explore RxLaunchOS
               </Link>
             </div>
             </div>
@@ -110,7 +110,7 @@ export default function HomePage() {
             ['Operator-led', 'Commercial leaders who have built and run regulated operating systems'],
             ['Cross-functional', 'Science, access, field, operations, data, and executive decision perspectives'],
             ['Globally connected', 'Experience connecting global asset strategy with U.S. launch execution'],
-            ['System-enabled', 'Human judgment strengthened by LaunchOS evidence, signals, and decision discipline'],
+            ['System-enabled', 'Human judgment strengthened by RxLaunchOS evidence, signals, and decision discipline'],
           ].map(([value, label]) => (
             <div key={value} className="px-5 py-8 text-left md:px-8">
               <p className="font-serif text-2xl text-navy md:text-3xl">{value}</p>
@@ -285,15 +285,15 @@ export default function HomePage() {
           </FadeIn>
           <FadeIn delay={0.1}>
             <article className="h-full border border-gold/35 bg-surface p-8 md:p-10">
-              <p className="eyebrow">LaunchOS</p>
+              <p className="eyebrow">RxLaunchOS</p>
               <h2 className="mt-5 font-serif text-3xl text-navy">The system layer</h2>
               <p className="mt-5 leading-8 text-mid">
-                LaunchOS is UEM&apos;s AI-native commercialization operating system, connecting
+                RxLaunchOS is UEM&apos;s AI-native commercialization operating system, connecting
                 evidence, readiness, risks, decisions, experts, and the
                 launch critical path without replacing the tools teams already use.
               </p>
               <Link href="/launchos" className="mt-7 inline-flex text-sm font-semibold text-navy animated-underline">
-                See how LaunchOS works <span className="ml-2" aria-hidden="true">→</span>
+                See how RxLaunchOS works <span className="ml-2" aria-hidden="true">→</span>
               </Link>
             </article>
           </FadeIn>
