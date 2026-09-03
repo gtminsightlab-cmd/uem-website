@@ -1,14 +1,14 @@
 # Upper Echelon Management Website
 
-Public website for Upper Echelon Management (UEM), the operator-led commercialization firm behind the LaunchOS initiative.
+Public website for Upper Echelon Management (UEM), the operator-led commercialization firm behind the RxLaunchOS initiative.
 
 ## Content authority
 
-Read [`AGENTS.md`](AGENTS.md) before changing the site. Public UEM and LaunchOS claims are controlled by:
+Read [`AGENTS.md`](AGENTS.md) before changing the site. Public UEM and RxLaunchOS claims are controlled by:
 
 - [`docs/UEM_LAUNCHOS_CONTENT_STANDARD.md`](docs/UEM_LAUNCHOS_CONTENT_STANDARD.md)
 - [`docs/UEM_OPEN_CONTENT_QUESTIONS.md`](docs/UEM_OPEN_CONTENT_QUESTIONS.md)
-- the LaunchOS source hierarchy under [`docs/launchos/`](docs/launchos/)
+- the RxLaunchOS source hierarchy under [`docs/launchos/`](docs/launchos/)
 
 Do not restore unsupported case studies, prices, client outcomes, product histories, fake availability claims, or synthetic team representations.
 
@@ -28,4 +28,4 @@ npm run lint
 npm run build
 ```
 
-This website explains LaunchOS but is not the LaunchOS product application. Moving product code into this repository requires an explicit monorepo/application architecture decision.
+This website explains RxLaunchOS but is not the RxLaunchOS product application. Moving product code into this repository requires an explicit monorepo/application architecture decision.

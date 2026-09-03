@@ -149,7 +149,7 @@ export default function ServicesPage() {
           <FadeIn delay={0.1}>
             <div className="space-y-6 leading-8 text-white/72">
               <p>
-                UEM and the developing LaunchOS product are not intended to replace CRM, data
+                UEM and the developing RxLaunchOS product are not intended to replace CRM, data
                 platforms, agency execution, market-access specialists, or the accountable leaders
                 inside the manufacturer.
               </p>
@@ -159,7 +159,7 @@ export default function ServicesPage() {
                 of executive decisions.
               </p>
               <Link href="/launchos" className="inline-flex text-sm font-semibold text-gold">
-                See how LaunchOS extends this model <span className="ml-2" aria-hidden="true">→</span>
+                See how RxLaunchOS extends this model <span className="ml-2" aria-hidden="true">→</span>
               </Link>
             </div>
           </FadeIn>

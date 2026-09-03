@@ -2,13 +2,13 @@
 
 ## Repository purpose
 
-This repository contains the public Upper Echelon Management website. UEM is the operator-led commercialization firm. LaunchOS is the AI-native commercialization operating system being developed as part of UEM's work.
+This repository contains the public Upper Echelon Management website. UEM is the operator-led commercialization firm. RxLaunchOS is the AI-native commercialization operating system being developed as part of UEM's work.
 
-Do not merge the LaunchOS product application into this marketing website without an explicit architecture decision. Public website content may explain LaunchOS, its product direction, and its current build stage.
+Do not merge the RxLaunchOS product application into this marketing website without an explicit architecture decision. Public website content may explain RxLaunchOS, its product direction, and its current build stage.
 
-## LaunchOS source of truth
+## RxLaunchOS source of truth
 
-For any LaunchOS claim or feature description, read in order:
+For any RxLaunchOS claim or feature description, read in order:
 
 1. `docs/launchos/AGENTS.md`
 2. `docs/launchos/00_READ_ME_FIRST.md`
@@ -19,7 +19,7 @@ For any LaunchOS claim or feature description, read in order:
 7. `docs/launchos/07_DECISION_LOG.md`
 8. `docs/launchos/08_OPEN_QUESTIONS.md`
 
-The LaunchOS source package is preserved under `docs/launchos/`. Do not rewrite those extracted source files to fit website copy.
+The RxLaunchOS source package is preserved under `docs/launchos/`. Do not rewrite those extracted source files to fit website copy.
 
 ## Public-content rules
 
@@ -28,10 +28,10 @@ The LaunchOS source package is preserved under `docs/launchos/`. Do not rewrite 
 - Never invent client outcomes, revenue lifts, retention improvements, launch rankings, product histories, pricing, titles, timelines, or response-time promises.
 - Do not publish anonymized case studies until the owner confirms the underlying engagement and permitted claims.
 - Do not portray synthetic group imagery as the UEM team.
-- Do not present draft videos, reports, tools, or LaunchOS features as available when they are not accessible through a working production path.
+- Do not present draft videos, reports, tools, or RxLaunchOS features as available when they are not accessible through a working production path.
 - Never render a fake form-submission success state.
-- LaunchOS must be described as a configurable, evidence-aware decision system—not a project manager, generic dashboard, CRM, or ChatGPT wrapper.
-- Keep UEM human judgment, LaunchOS product logic, configurable methodology, client data, and demo data conceptually distinct.
+- RxLaunchOS must be described as a configurable, evidence-aware decision system—not a project manager, generic dashboard, CRM, or ChatGPT wrapper.
+- Keep UEM human judgment, RxLaunchOS product logic, configurable methodology, client data, and demo data conceptually distinct.
 - Describe candidate readiness questions, weights, gates, benchmarks, and archetypes as under validation; never imply predictive validation.
 - Preserve vendor neutrality and be honest about evidence limits and expert gaps.
 
@@ -41,4 +41,4 @@ The repository may contain uncommitted owner work and untracked media. Preserve 
 
 ## Verification
 
-For website changes, run the repository's lint and production build. Inspect all changed routes for missing assets, false links, and content that contradicts the LaunchOS source hierarchy.
+For website changes, run the repository's lint and production build. Inspect all changed routes for missing assets, false links, and content that contradicts the RxLaunchOS source hierarchy.

@@ -7,13 +7,13 @@ import { useEffect, useState } from 'react';
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/services', label: 'Commercialization Office' },
-  { href: '/launchos', label: 'LaunchOS' },
+  { href: '/launchos', label: 'RxLaunchOS' },
   { href: '/insights', label: 'Insights' },
   { href: '/about', label: 'About' },
 ];
 
-const launchosLoginUrl = 'https://launchos-demo.vercel.app/login';
-const launchosPricingUrl = 'https://launchos-demo.vercel.app/pricing';
+const launchosLoginUrl = 'https://app.rxlaunchos.com/login';
+const launchosPricingUrl = 'https://app.rxlaunchos.com/pricing';
 
 export default function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -60,7 +60,7 @@ export default function Navigation() {
                 </Link>
               ))}
               <a href={launchosLoginUrl} className="ml-2 rounded border border-navy/25 px-4 py-2.5 text-[12px] font-semibold text-navy transition-colors hover:border-navy hover:bg-surface">
-                LaunchOS Login
+                RxLaunchOS Login
               </a>
               <Link href="/contact" className="btn-navy ml-3 px-5 py-2.5 text-[12px]">
                 Start a Conversation
@@ -102,10 +102,10 @@ export default function Navigation() {
             </Link>
           ))}
           <a href={launchosLoginUrl} className="mt-2 rounded border border-navy/25 px-5 py-3 text-center text-[13px] font-semibold text-navy">
-            LaunchOS Login
+            RxLaunchOS Login
           </a>
           <a href={launchosPricingUrl} className="rounded border border-navy/25 px-5 py-3 text-center text-[13px] font-semibold text-navy">
-            LaunchOS Pricing
+            RxLaunchOS Pricing
           </a>
           <Link href="/contact" className="mt-2 rounded bg-navy px-5 py-3 text-center text-[13px] font-semibold text-white">
             Start a Conversation

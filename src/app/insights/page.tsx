@@ -98,7 +98,7 @@ export default function InsightsPage() {
             <p className="mt-5 max-w-2xl leading-8 text-mid">
               UEM publishes to help commercial leaders see decisions, dependencies, and evidence
               gaps earlier. Each article connects practical launch questions with the operating
-              principles behind UEM and LaunchOS.
+              principles behind UEM and RxLaunchOS.
             </p>
           </FadeIn>
           <FadeIn delay={0.1}>

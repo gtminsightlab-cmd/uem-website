@@ -34,7 +34,7 @@ const coreLeadership = [
     name: 'Sharon Lee',
     role: 'Founding Member · Pharmaceutical Commercialization',
     location: 'United States',
-    body: 'Sharon brings 25 years of pharmaceutical commercial leadership and contributes field, organization, hiring, readiness, and launch-execution judgment to UEM engagements and LaunchOS development.',
+    body: 'Sharon brings 25 years of pharmaceutical commercial leadership and contributes field, organization, hiring, readiness, and launch-execution judgment to UEM engagements and RxLaunchOS development.',
   },
   {
     name: 'Ronnie O’Dell',
@@ -104,7 +104,7 @@ export default function AboutPage() {
           <p className="mt-8 max-w-3xl text-lg leading-8 text-white/72">
             Upper Echelon Management combines pharmaceutical commercial leadership with regulated
             distribution and go-to-market systems experience. That operating foundation informs both
-            client work and the development of LaunchOS.
+            client work and the development of RxLaunchOS.
           </p>
         </div>
       </section>

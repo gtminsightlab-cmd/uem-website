@@ -112,10 +112,10 @@ export const insights: Insight[] = [
         ],
       },
       {
-        heading: 'The philosophy behind LaunchOS',
+        heading: 'The philosophy behind RxLaunchOS',
         paragraphs: [
           {
-            text: 'LaunchOS is grounded in a simple belief: launch leadership should be able to see what decision is required, why it matters now, what evidence supports it, and what happens if the team waits. It supports experienced operators and accountable leaders rather than attempting to replace their judgment or the systems a manufacturer already uses.',
+            text: 'RxLaunchOS is grounded in a simple belief: launch leadership should be able to see what decision is required, why it matters now, what evidence supports it, and what happens if the team waits. It supports experienced operators and accountable leaders rather than attempting to replace their judgment or the systems a manufacturer already uses.',
           },
           {
             text: 'The intended role is a manufacturer-side decision layer: configurable methodology, evidence-aware AI, explicit rules, and scoped expert judgment working together. When the system does not know enough, it should say so—and help the team get the right human expertise into the decision.',
@@ -248,7 +248,7 @@ export const insights: Insight[] = [
             text: 'My field and hiring experience is one input into UEM’s work. The broader UEM team brings additional perspectives across pharmaceutical commercialization, regulated distribution, technology, operating-model design, and scoped specialist disciplines. A credible commercialization office should never pretend one person covers every launch decision.',
           },
           {
-            text: 'UEM translates that combined operator judgment into inspectable methods. LaunchOS makes assumptions, decision rules, evidence, and rationale visible rather than burying them in one expert’s memory or one vendor’s proposal.',
+            text: 'UEM translates that combined operator judgment into inspectable methods. RxLaunchOS makes assumptions, decision rules, evidence, and rationale visible rather than burying them in one expert’s memory or one vendor’s proposal.',
           },
         ],
       },
@@ -368,7 +368,7 @@ export const insights: Insight[] = [
             text: 'Software can help expose friction, compare patterns, and bring a stalled handoff to the right leader’s attention. It should not invent a payer strategy or claim certainty the evidence does not support.',
           },
           {
-            text: 'That evidence-honesty principle is part of how UEM is developing LaunchOS. The intended system connects risks, assumptions, decisions, dependencies, and next actions while preserving accountable human judgment. Deep payer strategy remains specialist work. The right response to an evidence gap is not a confident AI answer; it is a clearly scoped expert escalation and a decision owner.',
+            text: 'That evidence-honesty principle is part of how UEM is developing RxLaunchOS. The intended system connects risks, assumptions, decisions, dependencies, and next actions while preserving accountable human judgment. Deep payer strategy remains specialist work. The right response to an evidence gap is not a confident AI answer; it is a clearly scoped expert escalation and a decision owner.',
           },
         ],
       },

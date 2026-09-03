@@ -64,7 +64,7 @@ const artifacts: Array<{
 function SampleHeader() {
   return (
     <div className="flex flex-wrap items-center justify-between gap-3 border-b border-navy/10 bg-[#F7F4ED] px-4 py-3 md:px-6">
-      <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-navy/70">Sample LaunchOS output</p>
+      <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-navy/70">Sample RxLaunchOS output</p>
       <p className="text-[10px] font-medium uppercase tracking-[0.1em] text-mid">Fictional manufacturer data</p>
     </div>
   );

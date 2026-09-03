@@ -25,14 +25,14 @@ export default function RexaConcierge() {
         data-component-color="#b79b5b"
         data-fab-text="Ask Rexa"
         data-bot-name="Rexa"
-        data-popup-message="Questions about UEM or LaunchOS? Ask Rexa."
+        data-popup-message="Questions about UEM or RxLaunchOS? Ask Rexa."
         data-show-ai-popup="true"
         data-show-ai-popup-time="6"
         data-auto-open="false"
         data-dynamic={JSON.stringify({
           audience: 'public_website',
           contact_path: 'https://echelonconsulting.io/contact',
-          launchos_path: 'https://launchos-demo.vercel.app',
+          launchos_path: 'https://app.rxlaunchos.com',
         })}
       />
       <p className="sr-only">
