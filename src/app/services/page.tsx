@@ -3,12 +3,15 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import FadeIn from '@/components/FadeIn';
+import { createPageMetadata } from '@/lib/metadata';
+import { absoluteUrl, safeJsonLd, SITE_NAME, SITE_URL } from '@/lib/site';
 
-export const metadata: Metadata = {
-  title: 'Commercialization Office',
+export const metadata: Metadata = createPageMetadata({
+  title: 'Pharmaceutical & Medical Aesthetics Commercialization',
   description:
-    'Operator-led launch readiness, U.S. commercialization strategy, organization design, field design, and scoped expert support.',
-};
+    'Commercialization services for pharmaceutical, biosimilar, and medical-aesthetics manufacturers: readiness, operating-model, organization, field, and channel design.',
+  path: '/services',
+});
 
 const engagements = [
   {
@@ -61,9 +64,36 @@ const engagements = [
   },
 ];
 
+const servicesJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  '@id': `${absoluteUrl('/services')}#services`,
+  name: 'U.S. Pharmaceutical and Medical Aesthetics Commercialization Services',
+  itemListElement: engagements.map((engagement, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    item: {
+      '@type': 'Service',
+      name: engagement.title,
+      description: engagement.intro,
+      url: absoluteUrl(`/services#${engagement.id}`),
+      provider: { '@id': `${SITE_URL}/#organization`, name: SITE_NAME },
+      areaServed: 'United States',
+      audience: {
+        '@type': 'BusinessAudience',
+        audienceType: 'Pharmaceutical, biosimilar, and medical-aesthetics manufacturers',
+      },
+    },
+  })),
+};
+
 export default function ServicesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(servicesJsonLd) }}
+      />
       <section className="relative overflow-hidden bg-navy pt-[72px] text-white">
         <div className="absolute inset-0 hero-shimmer" aria-hidden="true" />
         <div className="container-wide relative">
@@ -71,12 +101,13 @@ export default function ServicesPage() {
             <div className="flex flex-col justify-center py-20 pr-0 md:py-24 lg:py-28 lg:pr-14">
               <p className="eyebrow">Commercialization Office</p>
               <h1 className="mt-6 max-w-4xl font-serif text-[clamp(40px,4.4vw,68px)] font-medium leading-[1.03] tracking-[-0.035em]">
-                Senior commercial discipline before scale makes mistakes expensive.
+                Build the U.S. commercialization system before scale makes mistakes expensive.
               </h1>
               <p className="mt-8 max-w-3xl text-lg leading-8 text-white/72">
-                UEM works with emerging and global biopharma leaders preparing for the U.S. market,
-                especially when the team is small, the timeline is compressed, and the operating model
-                is still taking shape.
+                UEM works with smaller, emerging, and global manufacturers preparing pharmaceutical or
+                biosimilar products for the U.S. market and with companies commercializing aesthetic
+                products through professional practices—especially when the team is lean and the
+                operating model is still taking shape.
               </p>
             </div>
 
@@ -139,6 +170,34 @@ export default function ServicesPage() {
       </section>
 
       <section className="section bg-surface">
+        <div className="container-content grid gap-12 lg:grid-cols-[0.82fr_1.18fr]">
+          <FadeIn>
+            <p className="eyebrow">Adjacent specialization</p>
+            <h2 className="mt-5 font-serif text-h2 font-medium text-navy">
+              Medical aesthetics commercialization
+            </h2>
+          </FadeIn>
+          <FadeIn delay={0.1}>
+            <div className="space-y-6 leading-8 text-mid">
+              <p>
+                UEM applies commercialization discipline to injectables, professional skincare,
+                and other practice-dispensed aesthetic products serving dermatology,
+                plastic-surgery, medical-office, and med-spa channels.
+              </p>
+              <p>
+                The work connects channel design, practice adoption, field and partner models,
+                evidence, launch governance, and performance measurement without treating
+                aesthetics as a copy of the pharmaceutical market.
+              </p>
+              <Link href="/aesthetic-medicine" className="inline-flex text-sm font-semibold text-navy animated-underline">
+                Explore aesthetic medicine commercialization <span className="ml-2" aria-hidden="true">→</span>
+              </Link>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      <section className="section bg-white">
         <div className="container-content grid gap-12 lg:grid-cols-2">
           <FadeIn>
             <p className="eyebrow">Best fit</p>
@@ -152,6 +211,7 @@ export default function ServicesPage() {
                 'An emerging U.S. biopharma or global manufacturer preparing for a first U.S. launch.',
                 'A launch roughly 6–24 months away with key commercial capabilities still to define.',
                 'A focused or specialty model where disciplined sequencing matters more than organizational size.',
+                'An aesthetic product manufacturer or professional-practice group making a consequential channel, portfolio, or growth decision.',
                 'A leadership team that wants assumptions challenged and decisions documented—not simply endorsed.',
               ].map((item) => (
                 <li key={item} className="flex gap-4 border-b border-gray-200 pb-4">

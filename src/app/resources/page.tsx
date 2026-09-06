@@ -2,12 +2,14 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 import FadeIn from '@/components/FadeIn';
+import { createPageMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
-  title: 'Launch Intelligence',
+export const metadata: Metadata = createPageMetadata({
+  title: 'Pharmaceutical Launch Research & Methodology',
   description:
-    'UEM launch intelligence and research areas for consequential U.S. commercialization decisions.',
-};
+    'Evidence-aware pharmaceutical launch research and methodology for U.S. commercialization readiness, operating-model, access, field, and execution decisions.',
+  path: '/resources',
+});
 
 const researchAreas = [
   'Cardiology',
@@ -44,10 +46,10 @@ export default function ResourcesPage() {
   return (
     <>
       <section className="bg-navy pt-[72px] text-white">
-        <div className="container-content py-24 md:py-30">
+        <div className="container-content py-18 md:py-30">
           <p className="eyebrow">Launch Intelligence</p>
           <h1 className="mt-6 max-w-4xl font-serif text-hero font-medium">
-            Research should improve a decision—not decorate a website.
+            Pharmaceutical launch research should improve a decision—not decorate a website.
           </h1>
           <p className="mt-8 max-w-3xl text-lg leading-8 text-white/72">
             UEM follows the scientific, market, access, field, and operating questions that shape

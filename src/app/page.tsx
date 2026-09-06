@@ -1,8 +1,17 @@
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 
 import FadeIn from '@/components/FadeIn';
 import VisualCarousel from '@/components/VisualCarousel';
+import { createPageMetadata } from '@/lib/metadata';
+
+export const metadata: Metadata = createPageMetadata({
+  title: 'Pharmaceutical & Medical Aesthetics Commercialization',
+  description:
+    'Operator-led U.S. pharmaceutical, biosimilar, and medical-aesthetics commercialization, from launch readiness and channel design to RxLaunchOS.',
+  path: '/',
+});
 
 const operatingSteps = [
   {
@@ -67,12 +76,12 @@ export default function HomePage() {
             <div className="flex flex-col justify-center py-20 pr-0 md:py-24 lg:py-28 lg:pr-14">
             <p className="eyebrow mb-6">Upper Echelon Management</p>
             <h1 className="font-serif text-hero font-medium text-white">
-              Your U.S. Commercialization Office.
+              Your U.S. Pharmaceutical Commercialization Office.
             </h1>
             <p className="mt-8 max-w-3xl text-lg leading-8 text-white/72 md:text-xl">
-              UEM helps pharmaceutical leaders design smarter launches, identify failure earlier,
-              and make better commercialization decisions—whether it is their first U.S. launch or
-              their tenth.
+              UEM helps emerging and global biopharma leaders design smarter U.S. pharmaceutical and
+              biosimilar launches, identify failure earlier, and make better commercialization
+              decisions—whether it is their first launch or their tenth.
             </p>
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
               <Link href="/services" className="btn-primary justify-center">
@@ -86,7 +95,7 @@ export default function HomePage() {
             <div className="relative min-h-[360px] overflow-hidden border-x border-t border-white/10 lg:min-h-full lg:border-y lg:border-r-0">
               <Image
                 src="/images/uem-commercialization-hero-final.webp"
-                alt=""
+                alt="Pharmaceutical commercialization leaders reviewing the operating system for a U.S. product launch"
                 fill
                 priority
                 quality={90}
@@ -117,6 +126,29 @@ export default function HomePage() {
               <p className="mt-3 text-xs leading-5 text-mid">{label}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="section bg-light/55">
+        <div className="container-content grid gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
+          <FadeIn>
+            <p className="eyebrow">Aesthetic medicine</p>
+            <h2 className="mt-5 font-serif text-h2 font-medium text-navy">
+              Commercialization for products sold through professional practices.
+            </h2>
+          </FadeIn>
+          <FadeIn delay={0.1}>
+            <div className="border border-gray-200 bg-white p-8 md:p-10">
+              <p className="leading-8 text-mid">
+                UEM&apos;s commercialization experience extends into medical aesthetics and
+                professional skincare, connecting manufacturers with the realities of adoption in
+                dermatology, plastic-surgery, medical-office, and med-spa settings.
+              </p>
+              <Link href="/aesthetic-medicine" className="mt-7 inline-flex text-sm font-semibold text-navy animated-underline">
+                Explore aesthetic medicine commercialization <span className="ml-2" aria-hidden="true">→</span>
+              </Link>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -303,7 +335,7 @@ export default function HomePage() {
       <section className="section-sm bg-gold text-white">
         <div className="container-content flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
           <div className="max-w-2xl">
-            <p className="text-xs font-bold uppercase tracking-[0.14em] text-white/70">Start with the launch reality</p>
+            <p className="text-xs font-bold uppercase tracking-[0.14em] text-white">Start with the launch reality</p>
             <h2 className="mt-3 font-serif text-3xl text-white md:text-4xl">
               Bring the decision you cannot afford to get wrong.
             </h2>
