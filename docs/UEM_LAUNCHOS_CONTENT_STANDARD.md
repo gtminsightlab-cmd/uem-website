@@ -28,7 +28,7 @@
 - Asterion must be described as the fictional pharmaceutical manufacturer inside the LaunchOS demonstration, never as the application name.
 - Professional and Commercial Team may be presented as monthly Stripe-hosted subscription paths only when the public page can read active Stripe Prices and the authenticated tenant checkout is operational.
 - Enterprise remains a scoped agreement and conversation path.
-- Public copy may state: **Sharon Lee defined LaunchOS and spearheaded its development and project management.**
+- LaunchOS provenance should be presented at the UEM team level. Do not give Sharon a standalone product-leadership spotlight.
 - The UEM and LaunchOS sites must link back to each other so visitors can distinguish the firm from the product.
 
 ## Approved product language
@@ -62,14 +62,16 @@ LaunchOS must not be described as:
 
 ## Approved founder context
 
-### Sharon Lee
+### Sharon O'Dell
 
-- Public name confirmed by the owner on 2026-08-30: **Sharon Lee**.
-- Public role confirmed by the owner on 2026-08-30: **Founding Member**.
+- Public name superseded by the owner on 2026-08-31: **Sharon O'Dell**.
+- Public role confirmed by the owner on 2026-08-31: **Founder · Since 2015**.
 - Sharon is one member of a broader UEM team; do not present her as the whole team or UEM as a two-person organization.
 
-- 25 years of pharmaceutical commercial leadership across Janssen/J&J, Bristol Myers Squibb, Novo Nordisk, VIVUS, KVK, and Daiichi Sankyo.
-- Multiple product launches; do not publish a product-by-product list until confirmed.
+- Pharmaceutical career began in 1996.
+- Bachelor of Science in History, UC Berkeley, magna cum laude.
+- Career chronology approved for public use: Janssen Pharmaceuticals; Bristol Myers Squibb; Sankyo, where she accepted her first district manager position; Novo Nordisk; VIVUS; Amplity, where she served as National Sales Director.
+- Helped launch several pharmaceutical products; do not publish a product-by-product list until confirmed.
 - 200+ field representatives and 30+ district managers hired.
 - 1,000+ representative interviews conducted.
 - Approximately four years of contract pharmaceutical sales experience at Amplity.
@@ -79,6 +81,7 @@ Do not publish unconfirmed therapeutic-area specifics, product names, client rev
 
 ### Ronnie O'Dell
 
+- Public role confirmed by the owner on 2026-08-31: **Chief Revenue Officer**.
 - 25+ years building regulated commercial distribution and go-to-market systems.
 - Founding input for system architecture, distribution, vendor governance, build/buy/rent choices, commercial operating models, and AI/product systems.
 - Do not publish unverified growth figures or employer-specific performance claims without evidence and owner approval.
@@ -97,7 +100,7 @@ substantiated.
 ### Broader team roster
 
 - The owner confirmed on 2026-08-30 that the team roster from the prior About page should be restored.
-- Sharon Lee must remain identified as a **Founding Member** and one member of the broader team.
+- Sharon O'Dell must remain identified as **Founder · Since 2015** and one member of the broader team.
 - Publish the restored names, practice roles, and locations without synthetic portraits.
 - Do not reintroduce detailed former-employer, product-launch, client-outcome, or tenure claims unless separately substantiated.
 
@@ -106,6 +109,15 @@ substantiated.
 - The founding team has real pharma launch experience; never describe it as absent.
 - Deep payer/market-access strategy remains the first material anchor-expert gap identified in the LaunchOS source documents.
 - Expert access and advice must be described as scoped. Expert opinions do not automatically become global methodology.
+
+## Aesthetic-medicine expansion approved 2026-09-05
+
+- The owner confirmed that UEM's commercialization experience extends into **aesthetic medicine** and **professional aesthetics**, including the manufacturer-to-practice channel serving dermatology, plastic-surgery, medical-office, and med-spa settings.
+- Public copy may reference injectables, professional skincare, practice-dispensed aesthetic products, channel design, provider/practice adoption, commercial-team design, partner models, launch governance, and performance measurement.
+- Galderma, Allergan Aesthetics, ALASTIN, and other category brands may explain the space internally. Do not name them publicly in a way that implies a UEM client, employment, endorsement, or product relationship unless the owner separately authorizes and substantiates that claim.
+- Keep pharmaceutical commercialization as UEM's core positioning and present aesthetic medicine as an adjacent specialization with its own market assumptions and methodology.
+- A future aesthetic-medicine configuration of LaunchOS may be described as exploratory. Do not represent it as generally available, validated, or as reusing pharmaceutical weights, readiness rules, or market assumptions.
+- UEM may link to ClearSpec Labs as a separate Seven16 Group initiative to which UEM contributes commercialization and operating-model perspective. Always preserve ClearSpec's current research-use-only boundary and do not imply that its catalog supplies products for human or veterinary use.
 
 ## Claims removed from the prior site pending evidence
 

@@ -15,7 +15,7 @@ const config: Config = {
           light: '#2A6A70',
         },
         gold: {
-          DEFAULT: '#B6533D',
+          DEFAULT: '#A94B36',
           light: '#C96852',
           dark: '#8F3F30',
         },
@@ -33,7 +33,7 @@ const config: Config = {
         sans: ['var(--font-sans)', 'system-ui', 'sans-serif'],
       },
       fontSize: {
-        'hero': ['clamp(42px, 5.8vw, 76px)', { lineHeight: '1.02', letterSpacing: '-0.035em' }],
+        'hero': ['clamp(36px, 5.8vw, 76px)', { lineHeight: '1.04', letterSpacing: '-0.035em' }],
         'h2': ['clamp(28px, 3.5vw, 48px)', { lineHeight: '1.12' }],
         'h3': ['clamp(20px, 2vw, 28px)', { lineHeight: '1.25' }],
       },

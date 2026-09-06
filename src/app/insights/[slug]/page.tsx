@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 import { getInsight, insights } from '@/content/insights';
+import { absoluteUrl, safeJsonLd, SITE_NAME, SITE_URL } from '@/lib/site';
 
 type InsightPageProps = {
   params: { slug: string };
@@ -17,26 +18,39 @@ export function generateMetadata({ params }: InsightPageProps): Metadata {
   const insight = getInsight(params.slug);
 
   if (!insight) {
-    return { title: 'Insight Not Found' };
+    return { title: 'Insight Not Found', robots: { index: false, follow: false } };
   }
+
+  const canonicalPath = `/insights/${insight.slug}`;
+  const publishedTime = new Date(insight.published).toISOString();
+  const articleImage = absoluteUrl(insight.image);
 
   return {
     title: insight.title,
     description: insight.description,
-    authors: [{ name: 'Sharon Lee' }],
+    authors: [{ name: 'Sharon O’Dell', url: absoluteUrl('/about') }],
+    alternates: { canonical: canonicalPath },
     openGraph: {
       title: insight.title,
       description: insight.description,
       type: 'article',
-      publishedTime: '2026-08-30',
-      authors: ['Sharon Lee'],
-      images: [],
+      url: canonicalPath,
+      siteName: SITE_NAME,
+      locale: 'en_US',
+      publishedTime,
+      authors: ['Sharon O’Dell'],
+      images: [
+        {
+          url: articleImage,
+          alt: insight.imageAlt,
+        },
+      ],
     },
     twitter: {
-      card: 'summary',
+      card: 'summary_large_image',
       title: insight.title,
       description: insight.description,
-      images: [],
+      images: [articleImage],
     },
   };
 }
@@ -47,6 +61,31 @@ export default function InsightPage({ params }: InsightPageProps) {
   if (!insight) {
     notFound();
   }
+
+  const articleJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    '@id': `${absoluteUrl(`/insights/${insight.slug}`)}#article`,
+    headline: insight.title,
+    description: insight.description,
+    image: absoluteUrl(insight.image),
+    datePublished: new Date(insight.published).toISOString(),
+    dateModified: new Date(insight.published).toISOString(),
+    inLanguage: 'en-US',
+    mainEntityOfPage: absoluteUrl(`/insights/${insight.slug}`),
+    author: {
+      '@type': 'Person',
+      name: 'Sharon O’Dell',
+      jobTitle: 'Founder',
+      url: absoluteUrl('/about'),
+    },
+    publisher: {
+      '@type': 'Organization',
+      '@id': `${SITE_URL}/#organization`,
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
+  };
 
   const citation = (ids?: number[]) =>
     ids?.map((id) => {
@@ -70,9 +109,14 @@ export default function InsightPage({ params }: InsightPageProps) {
     });
 
   return (
-    <article className="bg-white pt-[72px]">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(articleJsonLd) }}
+      />
+      <article className="bg-white pt-[72px]">
       <header className="border-b border-gray-200 bg-surface">
-        <div className="container-narrow py-20 md:py-24">
+        <div className="container-narrow py-16 md:py-24">
           <Link href="/insights" className="eyebrow inline-flex items-center gap-2 hover:text-gold-dark">
             <span aria-hidden="true">←</span> U.S. Commercialization Insights
           </Link>
@@ -84,7 +128,7 @@ export default function InsightPage({ params }: InsightPageProps) {
           </h1>
           <p className="mt-7 text-lg leading-8 text-mid">{insight.description}</p>
           <div className="mt-9 flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-gray-200 pt-6 text-xs">
-            <span className="font-semibold text-navy">By Sharon Lee, Founding Member</span>
+            <span className="font-semibold text-navy">By Sharon O’Dell, Founder</span>
             <span className="text-gray-300" aria-hidden="true">•</span>
             <span className="text-mist">{insight.published}</span>
             <span className="text-gray-300" aria-hidden="true">•</span>
@@ -188,6 +232,7 @@ export default function InsightPage({ params }: InsightPageProps) {
           </Link>
         </aside>
       </div>
-    </article>
+      </article>
+    </>
   );
 }

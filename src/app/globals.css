@@ -10,6 +10,9 @@
   }
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 88px;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -17,7 +20,37 @@
     font-family: var(--font-sans), system-ui, sans-serif;
     color: #182126;
     background: #F4F1EA;
-    overflow-x: hidden;
+    overflow-x: clip;
+  }
+  main {
+    overflow-x: clip;
+  }
+  img,
+  svg {
+    max-width: 100%;
+  }
+  h1,
+  h2,
+  h3 {
+    overflow-wrap: break-word;
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  a,
+  button,
+  input,
+  select,
+  textarea {
+    touch-action: manipulation;
+  }
+  :focus-visible {
+    outline: 3px solid #C96852;
+    outline-offset: 3px;
+  }
+  [id] {
+    scroll-margin-top: 88px;
   }
   ::selection {
     background: rgba(182, 83, 61, 0.2);
@@ -27,37 +60,41 @@
 
 @layer components {
   .container-wide {
-    @apply max-w-wide mx-auto px-6 md:px-12;
+    @apply max-w-wide mx-auto px-5 sm:px-6 md:px-12;
   }
   .container-content {
-    @apply max-w-content mx-auto px-6 md:px-12;
+    @apply max-w-content mx-auto px-5 sm:px-6 md:px-12;
   }
   .container-narrow {
-    @apply max-w-narrow mx-auto px-6 md:px-12;
+    @apply max-w-narrow mx-auto px-5 sm:px-6 md:px-12;
   }
   .eyebrow {
     @apply text-[11px] font-semibold tracking-[0.14em] uppercase text-gold;
+  }
+  .bg-navy .eyebrow,
+  .bg-navy .text-gold {
+    color: #F2B8A7;
   }
   .gold-line {
     @apply h-[3px] bg-gold w-12;
   }
   .section {
-    @apply py-24 md:py-30;
+    @apply py-18 md:py-30;
   }
   .section-sm {
-    @apply py-16 md:py-22;
+    @apply py-14 md:py-22;
   }
   .btn-primary {
-    @apply inline-flex items-center gap-2 bg-gold text-white text-[13px] font-bold tracking-[0.06em] px-7 py-3.5 rounded transition-all duration-200 hover:bg-gold-light;
+    @apply inline-flex min-h-11 items-center gap-2 bg-gold text-white text-[13px] font-bold tracking-[0.06em] px-7 py-3.5 rounded transition-all duration-200 hover:bg-gold-light;
   }
   .btn-outline {
-    @apply inline-flex items-center gap-2 bg-transparent text-navy text-[13px] font-semibold tracking-[0.06em] px-7 py-3.5 rounded border-[1.5px] border-gray-200 transition-all duration-200 hover:border-navy hover:bg-surface;
+    @apply inline-flex min-h-11 items-center gap-2 bg-transparent text-navy text-[13px] font-semibold tracking-[0.06em] px-7 py-3.5 rounded border-[1.5px] border-gray-200 transition-all duration-200 hover:border-navy hover:bg-surface;
   }
   .btn-outline-white {
-    @apply inline-flex items-center gap-2 bg-transparent text-white text-[13px] font-semibold tracking-[0.06em] px-7 py-3.5 rounded border-[1.5px] border-white/40 transition-all duration-200 hover:border-white hover:bg-white/[0.08];
+    @apply inline-flex min-h-11 items-center gap-2 bg-transparent text-white text-[13px] font-semibold tracking-[0.06em] px-7 py-3.5 rounded border-[1.5px] border-white/40 transition-all duration-200 hover:border-white hover:bg-white/[0.08];
   }
   .btn-navy {
-    @apply inline-flex items-center gap-2 bg-navy text-white text-[13px] font-bold tracking-[0.06em] px-7 py-3.5 rounded transition-all duration-200 hover:bg-navy-md;
+    @apply inline-flex min-h-11 items-center gap-2 bg-navy text-white text-[13px] font-bold tracking-[0.06em] px-7 py-3.5 rounded transition-all duration-200 hover:bg-navy-md;
   }
 }
 
@@ -89,10 +126,6 @@
 .hover-lift {
   transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
 }
-.hover-lift:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(22, 75, 82, 0.14);
-}
 
 /* Gradient text utility */
 .text-gradient-gold {
@@ -116,8 +149,24 @@
   background: #B6533D;
   transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
-.animated-underline:hover::after {
-  width: 100%;
+@media (hover: hover) {
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(22, 75, 82, 0.14);
+  }
+  .animated-underline:hover::after {
+    width: 100%;
+  }
+}
+
+@media (max-width: 30rem) {
+  .btn-primary,
+  .btn-outline,
+  .btn-outline-white,
+  .btn-navy {
+    justify-content: center;
+    width: 100%;
+  }
 }
 
 /* Subtle parallax shimmer on hero */

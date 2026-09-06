@@ -21,7 +21,7 @@ declare global {
 type SubmissionState = 'idle' | 'submitting' | 'success' | 'error';
 
 const fieldClassName =
-  'mt-2 w-full rounded border border-gray-200 bg-white px-4 py-3 text-sm text-ink outline-none transition placeholder:text-mist focus:border-navy focus:ring-2 focus:ring-navy/10';
+  'mt-2 w-full rounded border border-gray-200 bg-white px-4 py-3 text-sm text-ink outline-none transition placeholder:text-mid focus:border-navy focus:ring-2 focus:ring-navy/10';
 const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 
 function SectionHeading({ number, title, body }: { number: string; title: string; body: string }) {
@@ -127,7 +127,7 @@ export default function ContactForm() {
       <SectionHeading
         number="02"
         title="What is the commercialization context?"
-        body="Structure the inquiry around the asset, timing, and decision—not a generic request for information."
+        body="Structure the inquiry around the product, asset, practice, timing, and decision—not a generic request for information."
       />
 
       <label className="block text-sm font-semibold text-navy">
@@ -140,25 +140,25 @@ export default function ContactForm() {
 
       <div className="mt-6 grid gap-6 sm:grid-cols-2">
         <label className="text-sm font-semibold text-navy">
-          Asset or portfolio stage <span className="text-gold">*</span>
+          Product, asset, or portfolio stage <span className="text-gold">*</span>
           <select className={fieldClassName} name="assetStage" defaultValue="" required>
             <option value="" disabled>Select a stage</option>
             {assetStages.map((stage) => <option key={stage} value={stage}>{stage}</option>)}
           </select>
         </label>
         <label className="text-sm font-semibold text-navy">
-          U.S. launch horizon <span className="text-gold">*</span>
+          U.S. commercialization horizon <span className="text-gold">*</span>
           <select className={fieldClassName} name="launchHorizon" defaultValue="" required>
             <option value="" disabled>Select a horizon</option>
             {launchHorizons.map((horizon) => <option key={horizon} value={horizon}>{horizon}</option>)}
           </select>
         </label>
         <label className="text-sm font-semibold text-navy">
-          Therapeutic area or platform
+          Therapeutic area, aesthetic category, or platform
           <input className={fieldClassName} type="text" name="therapeuticArea" maxLength={150} />
         </label>
         <label className="text-sm font-semibold text-navy">
-          Product or asset name
+          Product, service, or asset name
           <input className={fieldClassName} type="text" name="assetName" maxLength={150} placeholder="Optional; use a non-confidential name" />
         </label>
       </div>
@@ -167,7 +167,7 @@ export default function ContactForm() {
         <legend className="text-sm font-semibold text-navy">
           Areas where perspective may be needed <span className="text-gold">*</span>
         </legend>
-        <p className="mt-2 text-xs leading-5 text-mist">Select every area relevant to the decision.</p>
+        <p className="mt-2 text-xs leading-5 text-mid">Select every area relevant to the decision.</p>
         <div className="mt-4 grid gap-3 sm:grid-cols-2">
           {engagementNeeds.map((need) => (
             <label key={need} className="flex items-start gap-3 border border-gray-200 bg-white p-3 text-xs leading-5 text-mid">
@@ -243,7 +243,7 @@ export default function ContactForm() {
           {submissionState === 'submitting' ? 'Sending inquiry…' : 'Submit commercialization brief'}
           {submissionState !== 'submitting' ? <span aria-hidden="true">→</span> : null}
         </button>
-        <p className="text-xs leading-5 text-mist">Required fields are marked with an asterisk.</p>
+        <p className="text-xs leading-5 text-mid">Required fields are marked with an asterisk.</p>
       </div>
 
       <div aria-live="polite" className="mt-5">

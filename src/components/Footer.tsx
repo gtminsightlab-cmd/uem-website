@@ -6,6 +6,7 @@ const footerLinks = {
     { href: '/services#office', label: 'Fractional Launch Office' },
     { href: '/services#organization', label: 'Organization & Field Design' },
     { href: '/services#experts', label: 'Scoped Expert Engagements' },
+    { href: '/aesthetic-medicine', label: 'Medical Aesthetics' },
   ],
   Product: [
     { href: '/launchos', label: 'LaunchOS Overview' },
@@ -24,33 +25,33 @@ const footerLinks = {
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0A0F1A] pb-7 pt-14">
+    <footer className="bg-[#0A0F1A] pb-[max(1.75rem,env(safe-area-inset-bottom))] pt-14" aria-label="Site footer">
       <div className="container-content">
         <div className="grid grid-cols-1 gap-12 border-b border-white/[0.07] pb-11 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <div className="mb-4 flex items-center gap-2.5">
               <div className="flex h-9 w-9 items-center justify-center border border-gold/40 bg-navy">
-                <span className="font-serif text-base text-gold">U</span>
+                <span className="font-serif text-base text-gold-light">U</span>
               </div>
               <div className="flex flex-col">
                 <span className="text-sm font-semibold text-white">Upper Echelon</span>
-                <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-gold">Management</span>
+                <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-gold-light">Management</span>
               </div>
             </div>
-            <p className="mb-4 max-w-[240px] text-xs leading-relaxed text-white/[0.42]">
-              Operator leadership and a commercialization operating system for high-stakes U.S. launches.
+            <p className="mb-4 max-w-[260px] text-xs leading-relaxed text-white/[0.58]">
+              Operator-led U.S. pharmaceutical, biosimilar, and medical-aesthetics commercialization, supported by LaunchOS.
             </p>
-            <Link href="/contact" className="text-xs text-white/[0.55] transition-colors hover:text-gold">
+            <Link href="/contact" className="inline-flex min-h-11 items-center text-xs font-semibold text-white/[0.72] transition-colors hover:text-gold-light">
               Begin an inquiry through the contact form →
             </Link>
           </div>
 
           {Object.entries(footerLinks).map(([heading, links]) => (
             <div key={heading}>
-              <h2 className="mb-4 text-[10px] font-bold uppercase tracking-[0.16em] text-gold">{heading}</h2>
+              <h2 className="mb-4 text-[10px] font-bold uppercase tracking-[0.16em] text-gold-light">{heading}</h2>
               <div className="flex flex-col gap-2.5">
                 {links.map((link) => (
-                  <Link key={link.label} href={link.href} className="text-[13px] text-white/[0.5] transition-colors hover:text-white">
+                  <Link key={link.label} href={link.href} className="inline-flex min-h-9 items-center text-[13px] text-white/[0.62] transition-colors hover:text-white">
                     {link.label}
                   </Link>
                 ))}
@@ -60,10 +61,10 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col items-center justify-between gap-3 pt-5 sm:flex-row">
-          <span className="text-[11px] tracking-wide text-white/[0.3]">
+          <span className="text-[11px] tracking-wide text-white/[0.62]">
             &copy; {new Date().getFullYear()} Upper Echelon Management. All rights reserved.
           </span>
-          <span className="text-[10px] uppercase tracking-[0.14em] text-white/[0.3]">
+          <span className="text-[10px] uppercase tracking-[0.14em] text-white/[0.62]">
             Evidence before certainty
           </span>
         </div>

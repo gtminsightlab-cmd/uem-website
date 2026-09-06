@@ -3,12 +3,15 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import FadeIn from '@/components/FadeIn';
+import { createPageMetadata } from '@/lib/metadata';
+import { absoluteUrl, safeJsonLd, SITE_NAME, SITE_URL } from '@/lib/site';
 
-export const metadata: Metadata = {
-  title: 'About',
+export const metadata: Metadata = createPageMetadata({
+  title: 'Pharmaceutical Commercialization Leadership',
   description:
-    'Meet the operators behind Upper Echelon Management and the principles guiding its commercialization work.',
-};
+    'Meet the operators behind Upper Echelon Management and the evidence, accountability, and expert-judgment principles guiding its pharmaceutical commercialization work.',
+  path: '/about',
+});
 
 const principles = [
   {
@@ -31,16 +34,16 @@ const principles = [
 
 const coreLeadership = [
   {
-    name: 'Sharon Lee',
-    role: 'Founding Member · Pharmaceutical Commercialization',
+    name: 'Ronnie O’Dell',
+    role: 'Chief Revenue Officer',
     location: 'United States',
-    body: 'Sharon brings 25 years of pharmaceutical commercial leadership and contributes field, organization, hiring, readiness, and launch-execution judgment to UEM engagements and LaunchOS development.',
+    body: 'Ronnie leads revenue strategy and growth for Upper Echelon Management. He brings more than 25 years of experience building regulated distribution, channel, vendor-network, and go-to-market systems.',
   },
   {
-    name: 'Ronnie O’Dell',
-    role: 'Regulated Distribution & Commercial Systems',
+    name: 'Sharon O’Dell',
+    role: 'Founder · Since 2015',
     location: 'United States',
-    body: 'Ronnie brings more than 25 years of experience building regulated distribution, channel, vendor-network, and go-to-market systems.',
+    body: 'Sharon began her pharmaceutical career in 1996 after earning a Bachelor of Science in History, magna cum laude, from UC Berkeley. Her career progressed through Janssen Pharmaceuticals, Bristol Myers Squibb, Sankyo—where she accepted her first district manager position—Novo Nordisk, VIVUS, and Amplity, where she served as National Sales Director. She has helped launch several pharmaceutical products during her career.',
   },
   {
     name: 'Alexandra “Alex” Cortez',
@@ -92,14 +95,44 @@ const practiceTeam = [
   ['Emily Watson', 'Organizational Change & Launch Readiness', 'Basel, Switzerland'],
 ] as const;
 
+const leadershipJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  '@id': `${absoluteUrl('/about')}#about`,
+  url: absoluteUrl('/about'),
+  name: 'Pharmaceutical Commercialization Leadership',
+  about: { '@id': `${SITE_URL}/#organization` },
+  mainEntity: {
+    '@type': 'Organization',
+    '@id': `${SITE_URL}/#organization`,
+    name: SITE_NAME,
+    employee: [
+      {
+        '@type': 'Person',
+        name: 'Ronnie O’Dell',
+        jobTitle: 'Chief Revenue Officer',
+      },
+      {
+        '@type': 'Person',
+        name: 'Sharon O’Dell',
+        jobTitle: 'Founder',
+      },
+    ],
+  },
+};
+
 export default function AboutPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(leadershipJsonLd) }}
+      />
       <section className="bg-navy pt-[72px] text-white">
-        <div className="container-content py-24 md:py-30">
+        <div className="container-content py-18 md:py-30">
           <p className="eyebrow">About UEM</p>
           <h1 className="mt-6 max-w-4xl font-serif text-hero font-medium">
-            Operator knowledge, encoded—not invented.
+            Pharmaceutical launch experience, built into an accountable commercialization system.
           </h1>
           <p className="mt-8 max-w-3xl text-lg leading-8 text-white/72">
             Upper Echelon Management combines pharmaceutical commercial leadership with regulated
@@ -150,9 +183,10 @@ export default function AboutPage() {
             <p className="eyebrow">The UEM team</p>
             <h2 className="mt-5 font-serif text-h2 font-medium text-navy">Founding experience inside a multidisciplinary operating team.</h2>
             <p className="mt-5 max-w-2xl leading-8 text-mid">
-              Sharon Lee is a Founding Member and one contributor among a broader team of operators
-              and specialists. Team members enter an engagement according to the decision, evidence,
-              and functional depth required—not as a generic bench assigned to every project.
+              UEM brings revenue leadership, pharmaceutical commercialization experience, and a
+              broader team of operators and specialists to each engagement. Team members enter
+              according to the decision, evidence, and functional depth required—not as a generic
+              bench assigned to every project.
             </p>
           </FadeIn>
 

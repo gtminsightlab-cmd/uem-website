@@ -4,34 +4,23 @@ import Link from 'next/link';
 
 import FadeIn from '@/components/FadeIn';
 import { insights } from '@/content/insights';
+import { createPageMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
-  title: 'U.S. Commercialization Insights',
+export const metadata: Metadata = createPageMetadata({
+  title: 'U.S. Pharmaceutical Launch Insights',
   description:
-    'Evidence-backed perspectives from Sharon Lee and Upper Echelon Management for global and emerging manufacturers preparing a U.S. pharmaceutical launch.',
-  openGraph: {
-    title: 'U.S. Commercialization Insights | Upper Echelon Management',
-    description:
-      'Human, evidence-backed guidance for first-time U.S. launch manufacturers.',
-    type: 'website',
-    images: [],
-  },
-  twitter: {
-    card: 'summary',
-    title: 'U.S. Commercialization Insights | Upper Echelon Management',
-    description: 'Human, evidence-backed guidance for first-time U.S. launch manufacturers.',
-    images: [],
-  },
-};
+    'Evidence-backed U.S. pharmaceutical launch insights for emerging, global, and first-time commercial-stage biopharma manufacturers.',
+  path: '/insights',
+});
 
 export default function InsightsPage() {
   return (
     <>
       <section className="bg-navy pt-[72px] text-white">
-        <div className="container-content py-24 md:py-30">
+        <div className="container-content py-18 md:py-30">
           <p className="eyebrow">U.S. Commercialization Insights</p>
           <h1 className="mt-6 max-w-4xl font-serif text-hero font-medium">
-            Clear thinking for the decisions behind a first U.S. launch.
+            Clear thinking for the decisions behind a U.S. pharmaceutical launch.
           </h1>
           <p className="mt-8 max-w-3xl text-lg leading-8 text-white/72">
             Written for global manufacturers entering the United States and emerging U.S. biopharma
@@ -71,8 +60,8 @@ export default function InsightsPage() {
                     </h2>
                     <p className="mt-4 flex-1 text-sm leading-7 text-mid">{insight.description}</p>
                     <div className="mt-7 border-t border-gray-200 pt-5">
-                      <p className="text-xs font-semibold text-navy">By Sharon Lee</p>
-                      <p className="mt-1 text-[11px] text-mist">Founding Member · Upper Echelon Management</p>
+                      <p className="text-xs font-semibold text-navy">By Sharon O’Dell</p>
+                      <p className="mt-1 text-[11px] text-mist">Founder · Upper Echelon Management</p>
                     </div>
                     <Link
                       href={`/insights/${insight.slug}`}
@@ -108,7 +97,7 @@ export default function InsightsPage() {
                 an honest statement that the evidence is not ready.”
               </p>
               <p className="mt-5 text-xs font-semibold uppercase tracking-[0.12em] text-gold">
-                Sharon Lee · Founding Member
+                Sharon O’Dell · Founder
               </p>
             </div>
           </FadeIn>

@@ -3,12 +3,15 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 import FadeIn from '@/components/FadeIn';
+import { createPageMetadata } from '@/lib/metadata';
+import { absoluteUrl, safeJsonLd, SITE_NAME, SITE_URL } from '@/lib/site';
 
-export const metadata: Metadata = {
-  title: 'LaunchOS',
+export const metadata: Metadata = createPageMetadata({
+  title: 'LaunchOS Pharmaceutical Launch Readiness Software',
   description:
-    'LaunchOS is UEM’s AI-native U.S. pharmaceutical commercialization operating system for evidence, readiness, risks, decisions, and execution.',
-};
+    'LaunchOS is UEM’s AI-native pharmaceutical and biosimilar launch readiness system for evidence, scenarios, risks, decisions, projects, and portfolios.',
+  path: '/launchos',
+});
 
 const decisionViews = [
   {
@@ -60,20 +63,38 @@ const launchosUrl = 'https://launchos-demo.vercel.app';
 const launchosLoginUrl = `${launchosUrl}/login`;
 const launchosPricingUrl = `${launchosUrl}/pricing`;
 
+const launchOsJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  '@id': `${absoluteUrl('/launchos')}#software`,
+  name: 'LaunchOS',
+  url: absoluteUrl('/launchos'),
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: 'Web',
+  description:
+    'An AI-native pharmaceutical launch readiness and commercialization operating system for evidence, scenarios, risks, decisions, projects, and portfolios.',
+  publisher: { '@id': `${SITE_URL}/#organization`, name: SITE_NAME },
+  featureList: decisionViews.map((view) => `${view.title}: ${view.body}`),
+};
+
 export default function LaunchOSPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(launchOsJsonLd) }}
+      />
       <section className="relative overflow-hidden bg-navy pt-[72px] text-white">
         <div className="container-wide relative">
           <div className="grid min-h-[680px] items-stretch lg:grid-cols-[1.08fr_0.92fr]">
             <div className="flex flex-col justify-center py-20 pr-0 md:py-24 lg:py-28 lg:pr-14">
               <div className="mb-7 inline-flex w-fit border border-gold/40 bg-gold/[0.08] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-gold">LaunchOS by UEM</div>
               <h1 className="font-serif text-hero font-medium">
-                The decision system behind a smarter U.S. launch.
+                The pharmaceutical launch decision system behind a smarter U.S. commercialization plan.
               </h1>
               <p className="mt-8 max-w-3xl text-lg leading-8 text-white/72">
                 LaunchOS is UEM&apos;s AI-native commercialization operating system for pharmaceutical
-                manufacturers. It connects evidence,
+                and biosimilar manufacturers. It connects evidence,
                 readiness, risks, decisions, experts, and execution into one executive operating view.
               </p>
               <div className="mt-10 flex flex-col gap-3 sm:flex-row">
@@ -89,7 +110,7 @@ export default function LaunchOSPage() {
             <div className="relative min-h-[360px] overflow-hidden border-x border-t border-white/10 lg:min-h-full lg:border-y lg:border-r-0">
               <Image
                 src="/images/launchos-decision-system-hero-v4.webp"
-                alt=""
+                alt="LaunchOS pharmaceutical launch readiness system connecting evidence, risks, decisions, and execution"
                 fill
                 priority
                 quality={90}
@@ -187,12 +208,13 @@ export default function LaunchOSPage() {
         <div className="container-content">
           <FadeIn className="grid gap-8 border-l-2 border-gold py-3 pl-6 md:grid-cols-[0.35fr_1fr] md:items-center md:pl-10">
             <div>
-              <p className="eyebrow">Product leadership</p>
-              <h2 className="mt-3 font-serif text-3xl font-medium text-navy">Sharon Lee</h2>
-              <p className="mt-2 text-sm font-semibold text-mid">Founding Member, Upper Echelon Management</p>
+              <p className="eyebrow">Operating provenance</p>
+              <h2 className="mt-3 font-serif text-3xl font-medium text-navy">Built from operator experience</h2>
             </div>
             <p className="max-w-3xl text-base leading-8 text-mid">
-              Sharon Lee defined LaunchOS and spearheaded its development and project management, translating 25 years of pharmaceutical commercial leadership, launch, field-organization, hiring, and CRM planning experience into the product&apos;s operating direction.
+              LaunchOS translates UEM&apos;s pharmaceutical commercialization, launch execution,
+              regulated distribution, and go-to-market systems experience into a configurable,
+              evidence-aware operating system.
             </p>
           </FadeIn>
         </div>
