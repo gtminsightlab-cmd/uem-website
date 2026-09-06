@@ -130,9 +130,8 @@ export default function AboutPage() {
       />
       <section className="relative overflow-hidden bg-navy pt-[72px] text-white">
         <div className="absolute inset-0 hero-shimmer" aria-hidden="true" />
-        <div className="container-wide relative">
-          <div className="grid min-h-[660px] items-stretch lg:grid-cols-[1.08fr_0.92fr]">
-            <div className="flex flex-col justify-center py-20 pr-0 md:py-24 lg:py-28 lg:pr-14">
+        <div className="relative grid min-h-[660px] items-stretch lg:grid-cols-[minmax(0,1.08fr)_minmax(0,0.92fr)]">
+            <div className="flex flex-col justify-center px-5 py-20 sm:px-6 md:px-12 md:py-24 lg:py-28 lg:pl-[max(3rem,calc((100vw-1400px)/2+3rem))] lg:pr-14">
               <p className="eyebrow">About UEM</p>
               <h1 className="mt-6 max-w-4xl font-serif text-hero font-medium">
                 Pharmaceutical launch experience, built into an accountable commercialization system.
@@ -161,7 +160,6 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-          </div>
         </div>
       </section>
 
