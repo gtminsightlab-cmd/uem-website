@@ -85,9 +85,8 @@ export default function RxLaunchOSPage() {
         dangerouslySetInnerHTML={{ __html: safeJsonLd(launchOsJsonLd) }}
       />
       <section className="relative overflow-hidden bg-navy pt-[72px] text-white">
-        <div className="container-wide relative">
-          <div className="grid min-h-[680px] items-stretch lg:grid-cols-[1.08fr_0.92fr]">
-            <div className="flex flex-col justify-center py-20 pr-0 md:py-24 lg:py-28 lg:pr-14">
+        <div className="relative grid min-h-[680px] items-stretch lg:grid-cols-[minmax(0,1.08fr)_minmax(0,0.92fr)]">
+            <div className="flex flex-col justify-center px-5 py-20 sm:px-6 md:px-12 md:py-24 lg:py-28 lg:pl-[max(3rem,calc((100vw-1400px)/2+3rem))] lg:pr-14">
               <div className="mb-7 inline-flex w-fit border border-gold/40 bg-gold/[0.08] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-gold">RxLaunchOS by UEM</div>
               <h1 className="font-serif text-hero font-medium">
                 The pharmaceutical launch decision system behind a smarter U.S. commercialization plan.
@@ -124,7 +123,6 @@ export default function RxLaunchOSPage() {
                 </p>
               </div>
             </div>
-          </div>
         </div>
       </section>
 
