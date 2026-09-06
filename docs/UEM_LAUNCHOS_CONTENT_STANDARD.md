@@ -1,4 +1,6 @@
-# UEM + LaunchOS Public Content Standard
+# UEM + RxLaunchOS Public Content Standard
+
+> Canonical identity approved 2026-09-03: the software product is **RxLaunchOS**, written as one word, and its production application URL is `https://app.rxlaunchos.com`. Upper Echelon Management remains the company and brochure-site context.
 
 ## Contact intake
 
@@ -13,23 +15,23 @@
 - Follow `docs/EMPLOYMENT_VERIFICATION_INTAKE_STANDARD.md` for the implemented security and legal-review baseline.
 
 **Status:** Current website content authority  
-**Purpose:** Keep public UEM messaging aligned with verified LaunchOS product and founder context.
+**Purpose:** Keep public UEM messaging aligned with verified RxLaunchOS product and founder context.
 
 ## Brand and product relationship
 
 - **Upper Echelon Management (UEM)** is the operator-led commercialization firm.
-- **LaunchOS** is the AI-native, multi-tenant U.S. pharmaceutical commercialization operating system being developed as part of UEM's work.
-- UEM supplies operator leadership and scoped expert judgment. LaunchOS is intended to make methodology, evidence, risks, decisions, dependencies, and next actions configurable and visible.
-- Public copy should describe what LaunchOS helps leaders do without publishing internal release-stage names, build notes, roadmap tactics, or engineering architecture. Do not imply self-service or general commercial availability unless an accessible offer is approved.
+- **RxLaunchOS** is the AI-native, multi-tenant U.S. pharmaceutical commercialization operating system being developed as part of UEM's work.
+- UEM supplies operator leadership and scoped expert judgment. RxLaunchOS is intended to make methodology, evidence, risks, decisions, dependencies, and next actions configurable and visible.
+- Public copy should describe what RxLaunchOS helps leaders do without publishing internal release-stage names, build notes, roadmap tactics, or engineering architecture. Do not imply self-service or general commercial availability unless an accessible offer is approved.
 
 ### Accessible product paths approved 2026-08-30
 
-- The UEM website may link to the live LaunchOS product page, read-only fictional demonstration, account login, 14-day working trial, and public pricing page.
-- Asterion must be described as the fictional pharmaceutical manufacturer inside the LaunchOS demonstration, never as the application name.
+- The UEM website may link to the live RxLaunchOS product page, read-only fictional demonstration, account login, 14-day working trial, and public pricing page.
+- Asterion must be described as the fictional pharmaceutical manufacturer inside the RxLaunchOS demonstration, never as the application name.
 - Professional and Commercial Team may be presented as monthly Stripe-hosted subscription paths only when the public page can read active Stripe Prices and the authenticated tenant checkout is operational.
 - Enterprise remains a scoped agreement and conversation path.
-- LaunchOS provenance should be presented at the UEM team level. Do not give Sharon a standalone product-leadership spotlight.
-- The UEM and LaunchOS sites must link back to each other so visitors can distinguish the firm from the product.
+- RxLaunchOS provenance should be presented at the UEM team level. Do not give Sharon a standalone product-leadership spotlight.
+- The UEM and RxLaunchOS sites must link back to each other so visitors can distinguish the firm from the product.
 
 ## Approved product language
 
@@ -41,9 +43,9 @@ Primary wedge:
 
 - emerging U.S. biopharma and global manufacturers preparing a first U.S. launch;
 - typically 6–24 months from launch, with retained U.S. rights and a small U.S. commercial organization;
-- specialty or focused HCP universes are preferred, but UEM and LaunchOS are not limited to one therapeutic area.
+- specialty or focused HCP universes are preferred, but UEM and RxLaunchOS are not limited to one therapeutic area.
 
-LaunchOS may be described as:
+RxLaunchOS may be described as:
 
 - a manufacturer-side decision layer;
 - a U.S. Commercialization Office;
@@ -53,7 +55,7 @@ LaunchOS may be described as:
 - vendor-neutral;
 - service-led software that combines operator knowledge, expert input, deterministic rules, and AI.
 
-LaunchOS must not be described as:
+RxLaunchOS must not be described as:
 
 - a generic project manager, CRM, dashboard collection, or ChatGPT wrapper;
 - a replacement for Veeva, Salesforce, IQVIA, MMIT, HUBs, distributors, CSOs, MLR, or PV systems;
@@ -107,7 +109,7 @@ substantiated.
 ## Expertise honesty
 
 - The founding team has real pharma launch experience; never describe it as absent.
-- Deep payer/market-access strategy remains the first material anchor-expert gap identified in the LaunchOS source documents.
+- Deep payer/market-access strategy remains the first material anchor-expert gap identified in the RxLaunchOS source documents.
 - Expert access and advice must be described as scoped. Expert opinions do not automatically become global methodology.
 
 ## Aesthetic-medicine expansion approved 2026-09-05
@@ -116,7 +118,7 @@ substantiated.
 - Public copy may reference injectables, professional skincare, practice-dispensed aesthetic products, channel design, provider/practice adoption, commercial-team design, partner models, launch governance, and performance measurement.
 - Galderma, Allergan Aesthetics, ALASTIN, and other category brands may explain the space internally. Do not name them publicly in a way that implies a UEM client, employment, endorsement, or product relationship unless the owner separately authorizes and substantiates that claim.
 - Keep pharmaceutical commercialization as UEM's core positioning and present aesthetic medicine as an adjacent specialization with its own market assumptions and methodology.
-- A future aesthetic-medicine configuration of LaunchOS may be described as exploratory. Do not represent it as generally available, validated, or as reusing pharmaceutical weights, readiness rules, or market assumptions.
+- A future aesthetic-medicine configuration of RxLaunchOS may be described as exploratory. Do not represent it as generally available, validated, or as reusing pharmaceutical weights, readiness rules, or market assumptions.
 - UEM may link to ClearSpec Labs as a separate Seven16 Group initiative to which UEM contributes commercialization and operating-model perspective. Always preserve ClearSpec's current research-use-only boundary and do not imply that its catalog supplies products for human or veterinary use.
 
 ## Claims removed from the prior site pending evidence
@@ -150,7 +152,7 @@ Before publishing a claim, answer:
 1. Which source authorizes it?
 2. Is it a fact, estimate, aspiration, candidate methodology, or product-in-development statement?
 3. Could a buyer reasonably mistake it for a verified result or currently working feature?
-4. Does it preserve UEM/LaunchOS vendor neutrality and evidence honesty?
+4. Does it preserve UEM/RxLaunchOS vendor neutrality and evidence honesty?
 5. Does it reveal confidential client or former-employer information?
 
 If the answer is unclear, add it to `docs/UEM_OPEN_CONTENT_QUESTIONS.md` and omit it from public copy.
@@ -190,4 +192,4 @@ Keep private unless separately approved:
 - prompts, evaluation suites, agent instructions, and automation logic;
 - client-specific playbooks, licensed data, and identifiable engagement outputs.
 
-Public examples must not imply predictive validation, general availability, or a verified client outcome. Use concise buyer-facing disclosure such as “Sample LaunchOS output · fictional manufacturer data,” not production notes or internal build labels.
+Public examples must not imply predictive validation, general availability, or a verified client outcome. Use concise buyer-facing disclosure such as “Sample RxLaunchOS output · fictional manufacturer data,” not production notes or internal build labels.

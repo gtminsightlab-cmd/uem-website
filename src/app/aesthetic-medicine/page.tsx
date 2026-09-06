@@ -181,7 +181,7 @@ export default function AestheticMedicinePage() {
           <FadeIn delay={0.1}>
             <article className="h-full border border-gold/35 bg-surface p-8 md:p-10">
               <p className="eyebrow">System direction</p>
-              <h2 className="mt-5 font-serif text-3xl text-navy">LaunchOS for aesthetic medicine</h2>
+              <h2 className="mt-5 font-serif text-3xl text-navy">RxLaunchOS for aesthetic medicine</h2>
               <p className="mt-5 leading-8 text-mid">
                 This work is informing a future aesthetic-medicine configuration of UEM&apos;s
                 commercialization operating system: separate sector methodology, shared decision
@@ -192,7 +192,7 @@ export default function AestheticMedicinePage() {
                 available, off-the-shelf product today.
               </p>
               <Link href="/launchos" className="mt-7 inline-flex text-sm font-semibold text-navy animated-underline">
-                Explore the LaunchOS model <span className="ml-2" aria-hidden="true">→</span>
+                Explore the RxLaunchOS model <span className="ml-2" aria-hidden="true">→</span>
               </Link>
             </article>
           </FadeIn>

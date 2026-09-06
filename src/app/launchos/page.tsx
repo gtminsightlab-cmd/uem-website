@@ -7,9 +7,9 @@ import { createPageMetadata } from '@/lib/metadata';
 import { absoluteUrl, safeJsonLd, SITE_NAME, SITE_URL } from '@/lib/site';
 
 export const metadata: Metadata = createPageMetadata({
-  title: 'LaunchOS Pharmaceutical Launch Readiness Software',
+  title: 'RxLaunchOS Pharmaceutical Commercialization Software',
   description:
-    'LaunchOS is UEM’s AI-native pharmaceutical and biosimilar launch readiness system for evidence, scenarios, risks, decisions, projects, and portfolios.',
+    'RxLaunchOS is UEM’s AI-native pharmaceutical and biosimilar commercialization system for evidence, readiness, scenarios, risks, decisions, projects, and portfolios.',
   path: '/launchos',
 });
 
@@ -43,7 +43,7 @@ const decisionViews = [
 const operatingCommitments = [
   {
     label: 'Manufacturer control',
-    body: 'The manufacturer remains accountable for the launch, the evidence, and the final decision. LaunchOS strengthens that control rather than transferring it to a vendor.',
+    body: 'The manufacturer remains accountable for the launch, the evidence, and the final decision. RxLaunchOS strengthens that control rather than transferring it to a vendor.',
   },
   {
     label: 'Visible reasoning',
@@ -59,7 +59,7 @@ const operatingCommitments = [
   },
 ];
 
-const launchosUrl = 'https://launchos-demo.vercel.app';
+const launchosUrl = 'https://app.rxlaunchos.com';
 const launchosLoginUrl = `${launchosUrl}/login`;
 const launchosPricingUrl = `${launchosUrl}/pricing`;
 
@@ -67,7 +67,7 @@ const launchOsJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
   '@id': `${absoluteUrl('/launchos')}#software`,
-  name: 'LaunchOS',
+  name: 'RxLaunchOS',
   url: absoluteUrl('/launchos'),
   applicationCategory: 'BusinessApplication',
   operatingSystem: 'Web',
@@ -77,7 +77,7 @@ const launchOsJsonLd = {
   featureList: decisionViews.map((view) => `${view.title}: ${view.body}`),
 };
 
-export default function LaunchOSPage() {
+export default function RxLaunchOSPage() {
   return (
     <>
       <script
@@ -88,29 +88,29 @@ export default function LaunchOSPage() {
         <div className="container-wide relative">
           <div className="grid min-h-[680px] items-stretch lg:grid-cols-[1.08fr_0.92fr]">
             <div className="flex flex-col justify-center py-20 pr-0 md:py-24 lg:py-28 lg:pr-14">
-              <div className="mb-7 inline-flex w-fit border border-gold/40 bg-gold/[0.08] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-gold">LaunchOS by UEM</div>
+              <div className="mb-7 inline-flex w-fit border border-gold/40 bg-gold/[0.08] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-gold">RxLaunchOS by UEM</div>
               <h1 className="font-serif text-hero font-medium">
                 The pharmaceutical launch decision system behind a smarter U.S. commercialization plan.
               </h1>
               <p className="mt-8 max-w-3xl text-lg leading-8 text-white/72">
-                LaunchOS is UEM&apos;s AI-native commercialization operating system for pharmaceutical
+                RxLaunchOS is UEM&apos;s AI-native commercialization operating system for pharmaceutical
                 and biosimilar manufacturers. It connects evidence,
                 readiness, risks, decisions, experts, and execution into one executive operating view.
               </p>
               <div className="mt-10 flex flex-col gap-3 sm:flex-row">
                 <a href={launchosLoginUrl} className="btn-primary justify-center">
-                  Explore the LaunchOS demo <span aria-hidden="true">→</span>
+                  Explore the RxLaunchOS demo <span aria-hidden="true">→</span>
                 </a>
                 <a href={launchosPricingUrl} className="btn-outline-white justify-center">View plans &amp; pricing</a>
               </div>
               <p className="mt-4 max-w-2xl text-sm leading-6 text-white/55">
-                LaunchOS is the product. Asterion is the clearly labeled fictional pharmaceutical company used inside its read-only demonstration.
+                RxLaunchOS is the product. Asterion is the clearly labeled fictional pharmaceutical company used inside its read-only demonstration.
               </p>
             </div>
             <div className="relative min-h-[360px] overflow-hidden border-x border-t border-white/10 lg:min-h-full lg:border-y lg:border-r-0">
               <Image
                 src="/images/launchos-decision-system-hero-v4.webp"
-                alt="LaunchOS pharmaceutical launch readiness system connecting evidence, risks, decisions, and execution"
+                alt="RxLaunchOS pharmaceutical launch readiness system connecting evidence, risks, decisions, and execution"
                 fill
                 priority
                 quality={90}
@@ -138,7 +138,7 @@ export default function LaunchOSPage() {
             <div className="grid gap-3 sm:grid-cols-3">
               <a href={launchosLoginUrl} className="border border-gray-200 bg-surface p-5 transition-colors hover:border-gold">
                 <span className="text-[10px] font-bold uppercase tracking-[0.14em] text-gold">Demo</span>
-                <strong className="mt-3 block text-navy">Explore LaunchOS</strong>
+                <strong className="mt-3 block text-navy">Explore RxLaunchOS</strong>
                 <span className="mt-2 block text-xs leading-5 text-mid">Use fictional Asterion data in a read-only workspace.</span>
               </a>
               <a href={`${launchosUrl}/signup`} className="border border-gray-200 bg-surface p-5 transition-colors hover:border-gold">
@@ -167,7 +167,7 @@ export default function LaunchOSPage() {
           <FadeIn delay={0.1}>
             <div className="space-y-6 text-base leading-8 text-mid md:text-lg">
               <p>
-                LaunchOS is designed for pharmaceutical commercial leaders preparing for a U.S.
+                RxLaunchOS is designed for pharmaceutical commercial leaders preparing for a U.S.
                 launch—especially teams with retained rights, a small U.S. organization, and roughly
                 6–24 months before launch.
               </p>
@@ -212,7 +212,7 @@ export default function LaunchOSPage() {
               <h2 className="mt-3 font-serif text-3xl font-medium text-navy">Built from operator experience</h2>
             </div>
             <p className="max-w-3xl text-base leading-8 text-mid">
-              LaunchOS translates UEM&apos;s pharmaceutical commercialization, launch execution,
+              RxLaunchOS translates UEM&apos;s pharmaceutical commercialization, launch execution,
               regulated distribution, and go-to-market systems experience into a configurable,
               evidence-aware operating system.
             </p>
@@ -226,7 +226,7 @@ export default function LaunchOSPage() {
             <p className="eyebrow">Operating commitments</p>
             <h2 className="mt-5 font-serif text-h2 font-medium">A decision system built from the manufacturer&apos;s side.</h2>
             <p className="mt-5 leading-8 text-white/68">
-              LaunchOS is designed to improve commercial judgment without obscuring accountability,
+              RxLaunchOS is designed to improve commercial judgment without obscuring accountability,
               evidence, or the interests behind a recommendation.
             </p>
           </FadeIn>
@@ -259,7 +259,7 @@ export default function LaunchOSPage() {
           </FadeIn>
           <FadeIn delay={0.1}>
             <div className="border border-gray-200 bg-surface p-8 md:p-10">
-              <p className="eyebrow">What LaunchOS will not replace</p>
+              <p className="eyebrow">What RxLaunchOS will not replace</p>
               <ul className="mt-6 space-y-4 text-sm leading-7 text-mid">
                 {[
                   'The accountable leaders and functions inside the manufacturer',
@@ -284,7 +284,7 @@ export default function LaunchOSPage() {
             <p className="eyebrow">From evidence to action</p>
             <h2 className="mt-5 font-serif text-h2 font-medium text-navy">Make the next consequential decision visible.</h2>
             <p className="mt-6 leading-8 text-mid">
-              LaunchOS helps commercial leaders identify the evidence a decision depends on, the
+              RxLaunchOS helps commercial leaders identify the evidence a decision depends on, the
               assumptions most likely to change the answer, the people who must contribute, and the
               consequence of waiting.
             </p>
@@ -295,13 +295,13 @@ export default function LaunchOSPage() {
               <h3 className="mt-4 font-serif text-3xl">Bring the decision your team cannot afford to get wrong.</h3>
               <p className="mt-5 text-sm leading-7 text-white/75">
                 UEM will help clarify the decision, the evidence already available, the gaps that
-                remain, and whether LaunchOS or a scoped specialist can strengthen the path forward.
+                remain, and whether RxLaunchOS or a scoped specialist can strengthen the path forward.
               </p>
               <Link href="/contact" className="btn-outline-white mt-7">
-                Start a LaunchOS conversation <span aria-hidden="true">→</span>
+                Start an RxLaunchOS conversation <span aria-hidden="true">→</span>
               </Link>
               <a href={launchosPricingUrl} className="mt-4 block text-xs font-semibold text-white/70 underline decoration-white/30 underline-offset-4 hover:text-white">
-                Or view plans and monthly pricing in LaunchOS →
+                Or view plans and monthly pricing in RxLaunchOS →
               </a>
             </div>
           </FadeIn>

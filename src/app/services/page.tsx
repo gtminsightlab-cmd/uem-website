@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 
 import FadeIn from '@/components/FadeIn';
@@ -67,7 +68,7 @@ const servicesJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
   '@id': `${absoluteUrl('/services')}#services`,
-  name: 'U.S. Pharmaceutical Commercialization Services',
+  name: 'U.S. Pharmaceutical and Medical Aesthetics Commercialization Services',
   itemListElement: engagements.map((engagement, index) => ({
     '@type': 'ListItem',
     position: index + 1,
@@ -80,7 +81,7 @@ const servicesJsonLd = {
       areaServed: 'United States',
       audience: {
         '@type': 'BusinessAudience',
-        audienceType: 'Emerging and global biopharma manufacturers',
+        audienceType: 'Pharmaceutical, biosimilar, and medical-aesthetics manufacturers',
       },
     },
   })),
@@ -93,18 +94,41 @@ export default function ServicesPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: safeJsonLd(servicesJsonLd) }}
       />
-      <section className="bg-navy pt-[72px] text-white">
-        <div className="container-content py-18 md:py-30">
-          <p className="eyebrow">Commercialization Office</p>
-          <h1 className="mt-6 max-w-4xl font-serif text-hero font-medium">
-            Build the U.S. commercialization system before scale makes mistakes expensive.
-          </h1>
-          <p className="mt-8 max-w-3xl text-lg leading-8 text-white/72">
-            UEM works with smaller, emerging, and global manufacturers preparing pharmaceutical or
-            biosimilar products for the U.S. market and with companies commercializing aesthetic
-            products through professional practices—especially when the team is lean and the
-            operating model is still taking shape.
-          </p>
+      <section className="relative overflow-hidden bg-navy pt-[72px] text-white">
+        <div className="absolute inset-0 hero-shimmer" aria-hidden="true" />
+        <div className="container-wide relative">
+          <div className="grid min-h-[660px] items-stretch lg:grid-cols-[1.08fr_0.92fr]">
+            <div className="flex flex-col justify-center py-20 pr-0 md:py-24 lg:py-28 lg:pr-14">
+              <p className="eyebrow">Commercialization Office</p>
+              <h1 className="mt-6 max-w-4xl font-serif text-[clamp(40px,4.4vw,68px)] font-medium leading-[1.03] tracking-[-0.035em]">
+                Build the U.S. commercialization system before scale makes mistakes expensive.
+              </h1>
+              <p className="mt-8 max-w-3xl text-lg leading-8 text-white/72">
+                UEM works with smaller, emerging, and global manufacturers preparing pharmaceutical or
+                biosimilar products for the U.S. market and with companies commercializing aesthetic
+                products through professional practices—especially when the team is lean and the
+                operating model is still taking shape.
+              </p>
+            </div>
+
+            <div className="relative min-h-[360px] overflow-hidden border-x border-t border-white/10 lg:min-h-full lg:border-y lg:border-r-0">
+              <Image
+                src="/images/uem-commercialization-office-hero.webp"
+                alt=""
+                fill
+                priority
+                quality={90}
+                sizes="(min-width: 1024px) 46vw, 100vw"
+                className="object-cover object-center"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/35 via-transparent to-transparent" aria-hidden="true" />
+              <div className="absolute bottom-0 left-0 right-0 border-t border-white/12 bg-navy/65 px-5 py-4 backdrop-blur-sm">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-white/65">
+                  Readiness · Organization · Field · Experts
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -209,7 +233,7 @@ export default function ServicesPage() {
           <FadeIn delay={0.1}>
             <div className="space-y-6 leading-8 text-white/72">
               <p>
-                UEM and the developing LaunchOS product are not intended to replace CRM, data
+                UEM and the developing RxLaunchOS product are not intended to replace CRM, data
                 platforms, agency execution, market-access specialists, or the accountable leaders
                 inside the manufacturer.
               </p>
@@ -219,7 +243,7 @@ export default function ServicesPage() {
                 of executive decisions.
               </p>
               <Link href="/launchos" className="inline-flex text-sm font-semibold text-gold">
-                See how LaunchOS extends this model <span className="ml-2" aria-hidden="true">→</span>
+                See how RxLaunchOS extends this model <span className="ml-2" aria-hidden="true">→</span>
               </Link>
             </div>
           </FadeIn>

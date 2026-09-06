@@ -3,6 +3,7 @@ import { IBM_Plex_Sans, Source_Serif_4 } from 'next/font/google';
 
 import Footer from '@/components/Footer';
 import Navigation from '@/components/Navigation';
+import RexaConcierge from '@/components/RexaConcierge';
 import {
   absoluteUrl,
   DEFAULT_DESCRIPTION,
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
   authors: [{ name: SITE_NAME, url: SITE_URL }],
   creator: SITE_NAME,
   publisher: SITE_NAME,
-  category: 'Pharmaceutical commercialization consulting and software',
+  category: 'Pharmaceutical and medical-aesthetics commercialization consulting and software',
   alternates: { canonical: '/' },
   manifest: '/manifest.webmanifest',
   formatDetection: { address: false, email: false, telephone: false },
@@ -56,6 +57,16 @@ export const metadata: Metadata = {
       'max-video-preview': -1,
     },
   },
+  keywords: [
+    'pharmaceutical commercialization',
+    'medical aesthetics commercialization',
+    'aesthetic medicine commercialization',
+    'first U.S. launch',
+    'commercial launch readiness',
+    'pharma organization design',
+    'field force design',
+    'RxLaunchOS',
+  ],
   openGraph: {
     title: 'Pharmaceutical Commercialization & U.S. Launch Strategy | UEM',
     description: DEFAULT_DESCRIPTION,
@@ -109,6 +120,8 @@ const organizationJsonLd = {
         'Biopharma organization design',
         'Pharmaceutical field-force design',
         'Biosimilar commercialization',
+        'Medical aesthetics commercialization',
+        'Professional skincare commercialization',
       ],
     },
     {
@@ -134,6 +147,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <Navigation />
         <main>{children}</main>
         <Footer />
+        <RexaConcierge />
       </body>
     </html>
   );

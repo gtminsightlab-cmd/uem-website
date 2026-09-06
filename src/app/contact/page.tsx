@@ -6,7 +6,7 @@ import { createPageMetadata } from "@/lib/metadata";
 export const metadata: Metadata = createPageMetadata({
   title: "Discuss Your Commercialization Decision",
   description:
-    "Talk with Upper Echelon Management about pharmaceutical or medical-aesthetics commercialization, launch readiness, channel and organization design, LaunchOS, or a scoped expert decision.",
+    "Talk with Upper Echelon Management about pharmaceutical or medical-aesthetics commercialization, launch readiness, channel and organization design, RxLaunchOS, or a scoped expert decision.",
   path: "/contact",
 });
 
@@ -24,7 +24,7 @@ const inquiryTypes = [
     body: "Operator support for the U.S. commercial model, organization, field strategy, governance, or a decision on what to build, buy, or rent.",
   },
   {
-    title: "LaunchOS",
+    title: "RxLaunchOS",
     body: "A pharmaceutical commercial leader exploring a more evidence-aware way to govern readiness, risk, and consequential launch decisions.",
   },
   {

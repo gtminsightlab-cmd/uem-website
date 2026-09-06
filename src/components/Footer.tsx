@@ -9,9 +9,9 @@ const footerLinks = {
     { href: '/aesthetic-medicine', label: 'Medical Aesthetics' },
   ],
   Product: [
-    { href: '/launchos', label: 'LaunchOS Overview' },
-    { href: 'https://launchos-demo.vercel.app/login', label: 'LaunchOS Demo & Login' },
-    { href: 'https://launchos-demo.vercel.app/pricing', label: 'Plans & Monthly Pricing' },
+    { href: '/launchos', label: 'RxLaunchOS Overview' },
+    { href: 'https://app.rxlaunchos.com/login', label: 'RxLaunchOS Demo & Login' },
+    { href: 'https://app.rxlaunchos.com/pricing', label: 'Plans & Monthly Pricing' },
     { href: '/contact', label: 'Discuss Enterprise Scope' },
   ],
   Company: [
@@ -39,7 +39,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="mb-4 max-w-[260px] text-xs leading-relaxed text-white/[0.58]">
-              Operator-led U.S. pharmaceutical, biosimilar, and medical-aesthetics commercialization, supported by LaunchOS.
+              Operator-led U.S. pharmaceutical, biosimilar, and medical-aesthetics commercialization, supported by RxLaunchOS.
             </p>
             <Link href="/contact" className="inline-flex min-h-11 items-center text-xs font-semibold text-white/[0.72] transition-colors hover:text-gold-light">
               Begin an inquiry through the contact form →

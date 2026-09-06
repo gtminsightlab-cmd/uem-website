@@ -6,7 +6,7 @@ export const contactPurposes = [
   'Market access, patient journey, or channel strategy',
   'Aesthetic medicine or professional skincare commercialization',
   'Research, intelligence, or evidence review',
-  'LaunchOS',
+  'RxLaunchOS',
   'Expert, data, or strategic partnership',
   'Media, speaking, or other inquiry',
 ] as const;
@@ -57,7 +57,7 @@ export const engagementNeeds = [
   'Aesthetic practice channel, adoption, or network design',
   'Research, competitive intelligence, or evidence synthesis',
   'Launch economics, scenarios, or investment choices',
-  'LaunchOS, data, analytics, or decision-system review',
+  'RxLaunchOS, data, analytics, or decision-system review',
   'Expert network or strategic partnership',
   'Other',
 ] as const;

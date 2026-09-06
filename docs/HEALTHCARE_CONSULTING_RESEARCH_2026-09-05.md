@@ -1,4 +1,4 @@
-# Separate opportunities and Echelon / LaunchOS consulting
+# Separate opportunities and Echelon / RxLaunchOS consulting
 
 Date: 2026-09-05. Status: initial researched recommendation and website implementation brief.
 
@@ -6,14 +6,14 @@ Date: 2026-09-05. Status: initial researched recommendation and website implemen
 
 ClearSpec Labs ecommerce/sourcing, ClearSpec Platform software, and healthcare opportunities are different
 businesses. The owner accepted separate website entrances and requested implementation plus research. Healthcare
-may remain consulting through echelonconsulting.io and a future med-spa/healthcare-lab adaptation of LaunchOS.
+may remain consulting through echelonconsulting.io and a future med-spa/healthcare-lab adaptation of RxLaunchOS.
 This does not approve operating a clinical network or selling a new healthcare software subscription.
 The earlier combined-investment recommendation in OPPORTUNITY_REVIEW.md is superseded by this clarification.
 
 ## Recommendation
 
 Use Seven16's parent site to explain the separate opportunities, with individual destination pages. Use Echelon as
-the potential consulting entry point for healthcare business decisions. Adapt LaunchOS through separately reviewed,
+the potential consulting entry point for healthcare business decisions. Adapt RxLaunchOS through separately reviewed,
 versioned sector methodology after consulting demonstrates a repeatable need. Preserve the existing pharma offering.
 
 The near-term deliverable should be a decision brief: whether to pursue the business, what operating model fits,
@@ -48,7 +48,7 @@ These are candidate engagements, not currently contracted service packages. Comp
 specialist costs and data permissions must be scoped. They do not share Labs customers, product supply, checkout,
 merchant accounts or sourcing endorsements merely because the parent website links to all of them.
 
-## How LaunchOS could support the work
+## How RxLaunchOS could support the work
 
 Local UEM source reviewed: READ_ME_FIRST, product constitution, build guardrails, right-to-win, decision log, open
 questions and public content standard. The source defines a configurable decision system with tenant isolation,
@@ -64,7 +64,7 @@ inspect the full live product application or verify that every documented capabi
 | Economics | Service/location/test economics rather than pharmaceutical-launch defaults | Independent arithmetic; separate revenue, contribution, cash needs and sensitivity |
 | Executive report | Sector-appropriate recommendation, unresolved evidence and next decisions | Human reviewer can approve, reject and trace each material conclusion |
 
-Do not reuse pharmaceutical launch weights or readiness percentages for these sectors. Do not turn LaunchOS into
+Do not reuse pharmaceutical launch weights or readiness percentages for these sectors. Do not turn RxLaunchOS into
 an EHR, laboratory information system, dispensing system or medication checkout. The application repository needs
 a separately scoped change covering archetypes, methodology versions, permissions and acceptance evidence.
 
@@ -78,7 +78,7 @@ a separately scoped change covering archetypes, methodology versions, permission
    specialist fees, research/data, software and support before setting a price.
 4. Deliver with existing approved tools and human review. Track delivery effort, usefulness, missing evidence and
    whether the decision changed. Do not require integrations to validate consulting demand.
-5. Adapt LaunchOS only for repeated work that clients and specialists validate. Initially prefer reviewed business
+5. Adapt RxLaunchOS only for repeated work that clients and specialists validate. Initially prefer reviewed business
    documents and properly aggregated operating information over patient-level feeds.
 6. Decide independently whether to remain consulting, add software-assisted consulting, offer a repeatable module,
    or stop. No obligation to commercialize Health Network follows from this research.
@@ -93,8 +93,8 @@ a separately scoped change covering archetypes, methodology versions, permission
 - Echelon site: existing contact is pharma-oriented. Before active healthcare acquisition, add appropriate
   organization/purpose choices and contextual pages in its own scoped change. Do not require a drug asset/PDUFA
   answer from a med-spa or clinical-lab visitor. No new form or false confirmation is implemented here.
-- Echelon naming: current public pages say RxLaunchOS; the owner uses LaunchOS. Final sector naming is unresolved.
-  Preserve the current brand and label the new applications exploratory instead of inventing HealthLaunchOS.
+- Echelon naming: **RxLaunchOS** is the owner-approved working public product name. Describe any
+  aesthetic-medicine or healthcare-lab sector configuration as exploratory rather than inventing a separate product brand.
 - Existing public UEM biography/product-leadership copy differs from newer local content rules. That discrepancy
   should be reconciled by its owning release; no old biography facts are copied into this work.
 

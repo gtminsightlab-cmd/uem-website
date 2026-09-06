@@ -5,7 +5,7 @@ export const SOCIAL_IMAGE = '/images/uem-social-preview.png';
 export const SOCIAL_IMAGE_WIDTH = 1200;
 export const SOCIAL_IMAGE_HEIGHT = 630;
 export const DEFAULT_DESCRIPTION =
-  'Operator-led U.S. pharmaceutical and biosimilar commercialization for emerging and global biopharma manufacturers, including launch readiness, organization and field-force design, and LaunchOS.';
+  'Operator-led U.S. pharmaceutical, biosimilar, and medical-aesthetics commercialization, including launch readiness, channel and field-force design, and RxLaunchOS.';
 
 export const absoluteUrl = (path = '/') => new URL(path, `${SITE_URL}/`).toString();
 
