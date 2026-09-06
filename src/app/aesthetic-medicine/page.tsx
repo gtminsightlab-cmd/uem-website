@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 
 import FadeIn from '@/components/FadeIn';
@@ -67,20 +68,42 @@ export default function AestheticMedicinePage() {
         dangerouslySetInnerHTML={{ __html: safeJsonLd(aestheticServiceJsonLd) }}
       />
 
-      <section className="bg-navy pt-[72px] text-white">
-        <div className="container-content py-18 md:py-30">
-          <p className="eyebrow">Aesthetic medicine commercialization</p>
-          <h1 className="mt-6 max-w-5xl font-serif text-hero font-medium">
-            Commercialize aesthetic products through the practices that adopt, recommend, and use them.
-          </h1>
-          <p className="mt-8 max-w-3xl text-lg leading-8 text-white/72">
-            UEM supports smaller and growth-stage manufacturers bringing injectables,
-            professional skincare, and other practice-dispensed aesthetic products into U.S.
-            dermatology, plastic-surgery, medical-office, and med-spa channels.
-          </p>
-          <Link href="/contact" className="btn-primary mt-9">
-            Discuss an aesthetic launch <span aria-hidden="true">→</span>
-          </Link>
+      <section className="relative overflow-hidden bg-navy pt-[72px] text-white">
+        <div className="absolute inset-0 hero-shimmer" aria-hidden="true" />
+        <div className="relative grid min-h-[660px] items-stretch lg:grid-cols-[minmax(0,1.08fr)_minmax(0,0.92fr)]">
+          <div className="flex flex-col justify-center px-5 py-20 sm:px-6 md:px-12 md:py-24 lg:py-28 lg:pl-[max(3rem,calc((100vw-1400px)/2+3rem))] lg:pr-14">
+            <p className="eyebrow">Aesthetic medicine commercialization</p>
+            <h1 className="mt-6 max-w-5xl font-serif text-[clamp(40px,4.4vw,68px)] font-medium leading-[1.03] tracking-[-0.035em]">
+              Commercialize aesthetic products through the practices that adopt, recommend, and use them.
+            </h1>
+            <p className="mt-8 max-w-3xl text-lg leading-8 text-white/72">
+              UEM supports smaller and growth-stage manufacturers bringing injectables,
+              professional skincare, and other practice-dispensed aesthetic products into U.S.
+              dermatology, plastic-surgery, medical-office, and med-spa channels.
+            </p>
+            <Link href="/contact" className="btn-primary mt-9 self-start">
+              Discuss an aesthetic launch <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+
+          <div className="relative min-h-[360px] overflow-hidden border-x border-t border-white/10 lg:min-h-full lg:border-y lg:border-r-0">
+            <Image
+              src="/images/uem-aesthetic-medicine-hero.webp"
+              alt=""
+              fill
+              priority
+              quality={90}
+              sizes="(min-width: 1024px) 46vw, 100vw"
+              className="object-cover object-center"
+            />
+            <div
+              className="absolute inset-0 bg-gradient-to-t from-navy/36 via-transparent to-transparent"
+              aria-hidden="true"
+            />
+            <p className="absolute inset-x-0 bottom-0 border-t border-white/20 bg-navy/72 px-5 py-5 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/62 backdrop-blur-sm md:px-6">
+              Practice adoption · Channel design · Commercial discipline
+            </p>
+          </div>
         </div>
       </section>
 
