@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
 import { createPageMetadata } from "@/lib/metadata";
@@ -36,23 +37,43 @@ const inquiryTypes = [
 export default function ContactPage() {
   return (
     <>
-      <section className="bg-navy pt-[72px] text-white">
-        <div className="container-content py-18 md:py-30">
-          <p className="eyebrow">Start a conversation</p>
-          <h1 className="mt-6 max-w-4xl font-serif text-hero font-medium">
-            Bring the commercialization decision—not a polished brief.
-          </h1>
-          <p className="mt-8 max-w-3xl text-lg leading-8 text-white/72">
-            A useful first conversation establishes the product or practice context, the
-            decision at risk, the evidence already available, and where operator
-            or specialist judgment may be needed.
-          </p>
-          <Link
-            className="btn-outline-white mt-8"
-            href="/employment-verification"
-          >
-            Need job verification? Open the form →
-          </Link>
+      <section className="relative overflow-hidden bg-navy pt-[72px] text-white">
+        <div className="absolute inset-0 hero-shimmer" aria-hidden="true" />
+        <div className="container-wide relative">
+          <div className="grid min-h-[660px] items-stretch lg:grid-cols-[1.08fr_0.92fr]">
+            <div className="flex flex-col justify-center py-20 pr-0 md:py-24 lg:py-28 lg:pr-14">
+              <p className="eyebrow">Start a conversation</p>
+              <h1 className="mt-6 max-w-4xl font-serif text-[clamp(40px,4.4vw,68px)] font-medium leading-[1.03] tracking-[-0.035em]">
+                Bring the commercialization decision—not a polished brief.
+              </h1>
+              <p className="mt-8 max-w-3xl text-lg leading-8 text-white/72">
+                A useful first conversation establishes the product or practice context, the
+                decision at risk, the evidence already available, and where operator or specialist
+                judgment may be needed.
+              </p>
+              <Link className="btn-outline-white mt-8" href="/employment-verification">
+                Need job verification? Open the form →
+              </Link>
+            </div>
+
+            <div className="relative min-h-[360px] overflow-hidden border-x border-t border-white/10 lg:min-h-full lg:border-y lg:border-r-0">
+              <Image
+                src="/images/uem-contact-conversation-hero.webp"
+                alt=""
+                fill
+                priority
+                quality={90}
+                sizes="(min-width: 1024px) 46vw, 100vw"
+                className="object-cover object-center"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/35 via-transparent to-transparent" aria-hidden="true" />
+              <div className="absolute bottom-0 left-0 right-0 border-t border-white/12 bg-navy/65 px-5 py-4 backdrop-blur-sm">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-white/65">
+                  Context · Evidence · Judgment · Next step
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
