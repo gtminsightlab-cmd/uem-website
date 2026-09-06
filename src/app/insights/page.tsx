@@ -27,17 +27,40 @@ export const metadata: Metadata = {
 export default function InsightsPage() {
   return (
     <>
-      <section className="bg-navy pt-[72px] text-white">
-        <div className="container-content py-24 md:py-30">
-          <p className="eyebrow">U.S. Commercialization Insights</p>
-          <h1 className="mt-6 max-w-4xl font-serif text-hero font-medium">
-            Clear thinking for the decisions behind a first U.S. launch.
-          </h1>
-          <p className="mt-8 max-w-3xl text-lg leading-8 text-white/72">
-            Written for global manufacturers entering the United States and emerging U.S. biopharma
-            teams building commercial infrastructure for the first time. Research is cited, limits
-            are stated, and the human consequences stay visible.
-          </p>
+      <section className="relative overflow-hidden bg-navy pt-[72px] text-white">
+        <div className="absolute inset-0 hero-shimmer" aria-hidden="true" />
+        <div className="container-wide relative">
+          <div className="grid min-h-[660px] items-stretch lg:grid-cols-[1.08fr_0.92fr]">
+            <div className="flex flex-col justify-center py-20 pr-0 md:py-24 lg:py-28 lg:pr-14">
+              <p className="eyebrow">U.S. Commercialization Insights</p>
+              <h1 className="mt-6 max-w-4xl font-serif text-[clamp(40px,4.4vw,68px)] font-medium leading-[1.03] tracking-[-0.035em]">
+                Clear thinking for the decisions behind a first U.S. launch.
+              </h1>
+              <p className="mt-8 max-w-3xl text-lg leading-8 text-white/72">
+                Written for global manufacturers entering the United States and emerging U.S. biopharma
+                teams building commercial infrastructure for the first time. Research is cited, limits
+                are stated, and the human consequences stay visible.
+              </p>
+            </div>
+
+            <div className="relative min-h-[360px] overflow-hidden border-x border-t border-white/10 lg:min-h-full lg:border-y lg:border-r-0">
+              <Image
+                src="/images/uem-insights-evidence-clarity-hero.webp"
+                alt=""
+                fill
+                priority
+                quality={90}
+                sizes="(min-width: 1024px) 46vw, 100vw"
+                className="object-cover object-center"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/35 via-transparent to-transparent" aria-hidden="true" />
+              <div className="absolute bottom-0 left-0 right-0 border-t border-white/12 bg-navy/65 px-5 py-4 backdrop-blur-sm">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-white/65">
+                  Research · Evidence · Limits · Decisions
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
