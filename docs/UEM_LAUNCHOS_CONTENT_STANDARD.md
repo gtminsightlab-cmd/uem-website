@@ -220,3 +220,16 @@ Do not publish private weights, thresholds, hard-gate rules, or expert calibrati
 RxLaunchOS may be described as comparing explicit options, assumptions, dependencies, tradeoffs, leading indicators, and wait consequences for choices such as field operating model, organization size and sequencing, CRM timing, access-sensitive investment gates, and territory alignment.
 
 Use “scenario,” “simulation,” “rehearsal,” or “comparison” only when the copy preserves the human decision boundary. A scenario is not a prediction, autonomous recommendation, verified outcome, or substitute for specialist judgment.
+
+## Four-film public explainer package approved for production 2026-09-07
+
+The owner approved two explainer films on each sector page so a prospective tester understands the product and the work before entering a demo, trial, or design-partner conversation:
+
+- pharmaceutical end-to-end: define, diagnose, design, rehearse, decide, operate, and learn;
+- pharmaceutical personas: territory/KAM through district, regional, functional, executive, and cross-functional lenses;
+- aesthetic-medicine end-to-end: manufacturer-to-practice market, channel, operating-model, scenario, governance, and learning flow;
+- aesthetic-medicine personas: executive, brand/channel, regional/district, territory/practice-development, education, operations, and analytics lenses.
+
+The pharmaceutical films may show RxLaunchOS as a working beta and point viewers to the fictional demonstration, isolated working trial, pricing, or enterprise discussion. The aesthetic films must identify the RxLaunchOS sector configuration as a design-partner direction under validation—not a generally available or proven product—while explaining that UEM supports category commercialization today.
+
+The public films must preserve evidence honesty, human approval, scoped access, non-predictive scenario language, and the role-lens authorization boundary. Category brands may inform the internal model, but the public films must not imply a UEM relationship with Galderma, Allergan Aesthetics, ALASTIN, or another company without separate substantiation and approval.

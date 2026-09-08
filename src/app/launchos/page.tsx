@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 import FadeIn from '@/components/FadeIn';
+import VideoShowcase from '@/components/VideoShowcase';
 import { createPageMetadata } from '@/lib/metadata';
 import { absoluteUrl, safeJsonLd, SITE_NAME, SITE_URL } from '@/lib/site';
 
@@ -234,6 +235,44 @@ export default function RxLaunchOSPage() {
               </a>
             </div>
           </FadeIn>
+        </div>
+      </section>
+
+      <section className="section bg-navy text-white">
+        <div className="container-content">
+          <FadeIn className="max-w-4xl">
+            <p className="eyebrow">Understand what you are testing</p>
+            <h2 className="mt-5 font-serif text-h2 font-medium">Two ways to see the commercialization office.</h2>
+            <p className="mt-5 max-w-3xl leading-8 text-white/68">
+              Start with the complete manufacturer workflow, then see how the same launch changes from
+              the territory representative to the commercial executive. These are product explainers—not
+              claims that software can predict approval, revenue, or launch success.
+            </p>
+          </FadeIn>
+          <div className="mt-12 grid gap-6 lg:grid-cols-2">
+            <FadeIn>
+              <VideoShowcase
+                title="From launch thesis to learning loop"
+                description="How RxLaunchOS defines context, diagnoses readiness, structures operating-model and RFP choices, compares governed scenarios, records human decisions, and carries them into accountable launch work."
+                src="/videos/pharma-end-to-end.mp4"
+                poster="/videos/pharma-end-to-end-poster.jpg"
+                captions="/videos/pharma-end-to-end.vtt"
+                duration="2 minutes"
+                status="Working beta"
+              />
+            </FadeIn>
+            <FadeIn delay={0.08}>
+              <VideoShowcase
+                title="One strategy, six operating lenses"
+                description="What commercial executives, functional leaders, regional and district leaders, representatives, KAMs, and cross-functional teams need from the same controlled launch record."
+                src="/videos/pharma-personas.mp4"
+                poster="/videos/pharma-personas-poster.jpg"
+                captions="/videos/pharma-personas.vtt"
+                duration="1 minute 41 seconds"
+                status="Role-based planning"
+              />
+            </FadeIn>
+          </div>
         </div>
       </section>
 
