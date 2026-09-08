@@ -4,8 +4,9 @@ export const contactPurposes = [
   'Commercialization office engagement',
   'Organization or field-force design',
   'Market access, patient journey, or channel strategy',
+  'Aesthetic medicine or professional skincare commercialization',
   'Research, intelligence, or evidence review',
-  'LaunchOS',
+  'RxLaunchOS',
   'Expert, data, or strategic partnership',
   'Media, speaking, or other inquiry',
 ] as const;
@@ -15,6 +16,8 @@ export type ContactPurpose = (typeof contactPurposes)[number];
 export const organizationTypes = [
   'U.S. biotech or pharmaceutical manufacturer',
   'Global manufacturer preparing for U.S. entry',
+  'Aesthetic medicine or professional skincare manufacturer',
+  'Dermatology, plastic-surgery, medical-office, or med-spa group',
   'Commercialization, data, or service partner',
   'Research, academic, or evidence organization',
   'Independent operator or functional expert',
@@ -51,9 +54,10 @@ export const engagementNeeds = [
   'Commercial operating model and governance',
   'Organization, field-force, or talent design',
   'Market access, channel, and patient support',
+  'Aesthetic practice channel, adoption, or network design',
   'Research, competitive intelligence, or evidence synthesis',
   'Launch economics, scenarios, or investment choices',
-  'LaunchOS, data, analytics, or decision-system review',
+  'RxLaunchOS, data, analytics, or decision-system review',
   'Expert network or strategic partnership',
   'Other',
 ] as const;

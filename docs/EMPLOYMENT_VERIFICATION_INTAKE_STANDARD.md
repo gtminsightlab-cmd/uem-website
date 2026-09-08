@@ -48,6 +48,10 @@ information unless an approved jurisdiction-specific policy and documented recor
 Never automate the substantive verification response. Ronnie O'Dell or another specifically authorized
 UEM reviewer must compare the request with the source record and determine what may be released.
 
+After the intake API and notification service accept a submission, route the requester to a dedicated
+confirmation page stating that the request was received and to allow up to 3 business days for verification.
+Do not show that confirmation when delivery fails.
+
 ## Why the form asks for authorization and jurisdiction
 
 - The FTC's employer background-check guidance says a requesting employer using a background-reporting

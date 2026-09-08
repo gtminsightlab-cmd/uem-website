@@ -1,13 +1,16 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 
 import FadeIn from '@/components/FadeIn';
+import { createPageMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
-  title: 'Launch Intelligence',
+export const metadata: Metadata = createPageMetadata({
+  title: 'Pharmaceutical Launch Research & Methodology',
   description:
-    'UEM launch intelligence and research areas for consequential U.S. commercialization decisions.',
-};
+    'Evidence-aware pharmaceutical launch research and methodology for U.S. commercialization readiness, operating-model, access, field, and execution decisions.',
+  path: '/resources',
+});
 
 const researchAreas = [
   'Cardiology',
@@ -43,16 +46,37 @@ const intelligencePrinciples = [
 export default function ResourcesPage() {
   return (
     <>
-      <section className="bg-navy pt-[72px] text-white">
-        <div className="container-content py-24 md:py-30">
-          <p className="eyebrow">Launch Intelligence</p>
-          <h1 className="mt-6 max-w-4xl font-serif text-hero font-medium">
-            Research should improve a decision—not decorate a website.
-          </h1>
-          <p className="mt-8 max-w-3xl text-lg leading-8 text-white/72">
-            UEM follows the scientific, market, access, field, and operating questions that shape
-            commercialization decisions across major therapeutic areas.
-          </p>
+      <section className="relative overflow-hidden bg-navy pt-[72px] text-white">
+        <div className="absolute inset-0 hero-shimmer" aria-hidden="true" />
+        <div className="relative grid min-h-[660px] items-stretch lg:grid-cols-[minmax(0,1.08fr)_minmax(0,0.92fr)]">
+            <div className="flex flex-col justify-center px-5 py-20 sm:px-6 md:px-12 md:py-24 lg:py-28 lg:pl-[max(3rem,calc((100vw-1400px)/2+3rem))] lg:pr-14">
+              <p className="eyebrow">Launch Intelligence</p>
+              <h1 className="mt-6 max-w-4xl font-serif text-[clamp(40px,4.4vw,68px)] font-medium leading-[1.03] tracking-[-0.035em]">
+                Pharmaceutical launch research should improve a decision—not decorate a website.
+              </h1>
+              <p className="mt-8 max-w-3xl text-lg leading-8 text-white/72">
+                UEM follows the scientific, market, access, field, and operating questions that shape
+                commercialization decisions across major therapeutic areas.
+              </p>
+            </div>
+
+            <div className="relative min-h-[360px] overflow-hidden border-x border-t border-white/10 lg:min-h-full lg:border-y lg:border-r-0">
+              <Image
+                src="/images/uem-launch-intelligence-hero.webp"
+                alt=""
+                fill
+                priority
+                quality={90}
+                sizes="(min-width: 1024px) 46vw, 100vw"
+                className="object-cover object-center"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/35 via-transparent to-transparent" aria-hidden="true" />
+              <div className="absolute bottom-0 left-0 right-0 border-t border-white/12 bg-navy/65 px-5 py-4 backdrop-blur-sm">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-white/65">
+                  Sources · Context · Synthesis · Decisions
+                </p>
+              </div>
+            </div>
         </div>
       </section>
 

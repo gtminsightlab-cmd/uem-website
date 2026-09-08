@@ -1,7 +1,8 @@
 "use client";
 
 import Script from "next/script";
-import { FormEvent, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
+import { FormEvent, useState } from "react";
 
 import {
   maxVerificationFileBytes,
@@ -18,7 +19,7 @@ declare global {
   }
 }
 
-type SubmissionState = "idle" | "submitting" | "success" | "error";
+type SubmissionState = "idle" | "submitting" | "error";
 
 const fieldClassName =
   "mt-2 w-full rounded border border-gray-200 bg-white px-4 py-3 text-sm text-ink outline-none transition placeholder:text-mid focus:border-navy focus:ring-2 focus:ring-navy/10";
@@ -45,11 +46,11 @@ function SectionHeading({
 }
 
 export default function EmploymentVerificationForm() {
-  const formRef = useRef<HTMLFormElement>(null);
+  const router = useRouter();
   const [submissionState, setSubmissionState] =
     useState<SubmissionState>("idle");
   const [errorMessage, setErrorMessage] = useState("");
-  const [startedAt, setStartedAt] = useState(() => Date.now());
+  const [startedAt] = useState(() => Date.now());
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -75,10 +76,7 @@ export default function EmploymentVerificationForm() {
         );
       }
 
-      formRef.current?.reset();
-      window.turnstile?.reset();
-      setStartedAt(Date.now());
-      setSubmissionState("success");
+      router.replace("/employment-verification/confirmation");
     } catch (error) {
       window.turnstile?.reset();
       setSubmissionState("error");
@@ -92,7 +90,6 @@ export default function EmploymentVerificationForm() {
 
   return (
     <form
-      ref={formRef}
       onSubmit={handleSubmit}
       className="border border-gray-200 bg-surface p-6 md:p-8"
     >
@@ -465,14 +462,6 @@ export default function EmploymentVerificationForm() {
       </div>
 
       <div aria-live="polite" className="mt-5">
-        {submissionState === "success" ? (
-          <p className="border-l-2 border-navy bg-white px-4 py-3 text-sm leading-6 text-navy">
-            Your employment-verification request has been received for review.
-            Submission does not confirm the worker’s record or authorize
-            disclosure; UEM will validate the request and use an appropriate
-            secure response method.
-          </p>
-        ) : null}
         {submissionState === "error" ? (
           <p className="border-l-2 border-gold bg-white px-4 py-3 text-sm leading-6 text-ink">
             {errorMessage}

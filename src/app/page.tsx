@@ -1,8 +1,17 @@
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 
 import FadeIn from '@/components/FadeIn';
 import VisualCarousel from '@/components/VisualCarousel';
+import { createPageMetadata } from '@/lib/metadata';
+
+export const metadata: Metadata = createPageMetadata({
+  title: 'Pharmaceutical & Medical Aesthetics Commercialization',
+  description:
+    'Operator-led U.S. pharmaceutical, biosimilar, and medical-aesthetics commercialization, from launch readiness and channel design to RxLaunchOS.',
+  path: '/',
+});
 
 const operatingSteps = [
   {
@@ -62,31 +71,30 @@ export default function HomePage() {
     <>
       <section className="relative overflow-hidden bg-navy pt-[72px] text-white">
         <div className="absolute inset-0 hero-shimmer" aria-hidden="true" />
-        <div className="container-wide relative">
-          <div className="grid min-h-[680px] items-stretch lg:grid-cols-[1.08fr_0.92fr]">
-            <div className="flex flex-col justify-center py-20 pr-0 md:py-24 lg:py-28 lg:pr-14">
+        <div className="relative grid min-h-[680px] items-stretch lg:grid-cols-[minmax(0,1.08fr)_minmax(0,0.92fr)]">
+            <div className="flex flex-col justify-center px-5 py-20 sm:px-6 md:px-12 md:py-24 lg:py-28 lg:pl-[max(3rem,calc((100vw-1400px)/2+3rem))] lg:pr-14">
             <p className="eyebrow mb-6">Upper Echelon Management</p>
             <h1 className="font-serif text-hero font-medium text-white">
-              Your U.S. Commercialization Office.
+              Your U.S. Pharmaceutical Commercialization Office.
             </h1>
             <p className="mt-8 max-w-3xl text-lg leading-8 text-white/72 md:text-xl">
-              UEM helps pharmaceutical leaders design smarter launches, identify failure earlier,
-              and make better commercialization decisions—whether it is their first U.S. launch or
-              their tenth.
+              UEM helps emerging and global biopharma leaders design smarter U.S. pharmaceutical and
+              biosimilar launches, identify failure earlier, and make better commercialization
+              decisions—whether it is their first launch or their tenth.
             </p>
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
               <Link href="/services" className="btn-primary justify-center">
                 Explore the operating model <span aria-hidden="true">→</span>
               </Link>
               <Link href="/launchos" className="btn-outline-white justify-center">
-                Explore LaunchOS
+                Explore RxLaunchOS
               </Link>
             </div>
             </div>
             <div className="relative min-h-[360px] overflow-hidden border-x border-t border-white/10 lg:min-h-full lg:border-y lg:border-r-0">
               <Image
                 src="/images/uem-commercialization-hero-final.webp"
-                alt=""
+                alt="Pharmaceutical commercialization leaders reviewing the operating system for a U.S. product launch"
                 fill
                 priority
                 quality={90}
@@ -100,7 +108,6 @@ export default function HomePage() {
                 </p>
               </div>
             </div>
-          </div>
         </div>
       </section>
 
@@ -110,13 +117,36 @@ export default function HomePage() {
             ['Operator-led', 'Commercial leaders who have built and run regulated operating systems'],
             ['Cross-functional', 'Science, access, field, operations, data, and executive decision perspectives'],
             ['Globally connected', 'Experience connecting global asset strategy with U.S. launch execution'],
-            ['System-enabled', 'Human judgment strengthened by LaunchOS evidence, signals, and decision discipline'],
+            ['System-enabled', 'Human judgment strengthened by RxLaunchOS evidence, signals, and decision discipline'],
           ].map(([value, label]) => (
             <div key={value} className="px-5 py-8 text-left md:px-8">
               <p className="font-serif text-2xl text-navy md:text-3xl">{value}</p>
               <p className="mt-3 text-xs leading-5 text-mid">{label}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="section bg-light/55">
+        <div className="container-content grid gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
+          <FadeIn>
+            <p className="eyebrow">Aesthetic medicine</p>
+            <h2 className="mt-5 font-serif text-h2 font-medium text-navy">
+              Commercialization for products sold through professional practices.
+            </h2>
+          </FadeIn>
+          <FadeIn delay={0.1}>
+            <div className="border border-gray-200 bg-white p-8 md:p-10">
+              <p className="leading-8 text-mid">
+                UEM&apos;s commercialization experience extends into medical aesthetics and
+                professional skincare, connecting manufacturers with the realities of adoption in
+                dermatology, plastic-surgery, medical-office, and med-spa settings.
+              </p>
+              <Link href="/aesthetic-medicine" className="mt-7 inline-flex text-sm font-semibold text-navy animated-underline">
+                Explore aesthetic medicine commercialization <span className="ml-2" aria-hidden="true">→</span>
+              </Link>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -285,15 +315,15 @@ export default function HomePage() {
           </FadeIn>
           <FadeIn delay={0.1}>
             <article className="h-full border border-gold/35 bg-surface p-8 md:p-10">
-              <p className="eyebrow">LaunchOS</p>
+              <p className="eyebrow">RxLaunchOS</p>
               <h2 className="mt-5 font-serif text-3xl text-navy">The system layer</h2>
               <p className="mt-5 leading-8 text-mid">
-                LaunchOS is UEM&apos;s AI-native commercialization operating system, connecting
+                RxLaunchOS is UEM&apos;s AI-native commercialization operating system, connecting
                 role-based plans, evidence-qualified scoring, governed scenarios, risks, decisions,
                 experts, and the launch critical path without replacing the tools teams already use.
               </p>
               <Link href="/launchos" className="mt-7 inline-flex text-sm font-semibold text-navy animated-underline">
-                See how LaunchOS works <span className="ml-2" aria-hidden="true">→</span>
+                See how RxLaunchOS works <span className="ml-2" aria-hidden="true">→</span>
               </Link>
             </article>
           </FadeIn>
@@ -303,7 +333,7 @@ export default function HomePage() {
       <section className="section-sm bg-gold text-white">
         <div className="container-content flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
           <div className="max-w-2xl">
-            <p className="text-xs font-bold uppercase tracking-[0.14em] text-white/70">Start with the launch reality</p>
+            <p className="text-xs font-bold uppercase tracking-[0.14em] text-white">Start with the launch reality</p>
             <h2 className="mt-3 font-serif text-3xl text-white md:text-4xl">
               Bring the decision you cannot afford to get wrong.
             </h2>

@@ -4,40 +4,50 @@ import Link from 'next/link';
 
 import FadeIn from '@/components/FadeIn';
 import { insights } from '@/content/insights';
+import { createPageMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
-  title: 'U.S. Commercialization Insights',
+export const metadata: Metadata = createPageMetadata({
+  title: 'U.S. Pharmaceutical Launch Insights',
   description:
-    'Evidence-backed perspectives from Sharon Lee and Upper Echelon Management for global and emerging manufacturers preparing a U.S. pharmaceutical launch.',
-  openGraph: {
-    title: 'U.S. Commercialization Insights | Upper Echelon Management',
-    description:
-      'Human, evidence-backed guidance for first-time U.S. launch manufacturers.',
-    type: 'website',
-    images: [],
-  },
-  twitter: {
-    card: 'summary',
-    title: 'U.S. Commercialization Insights | Upper Echelon Management',
-    description: 'Human, evidence-backed guidance for first-time U.S. launch manufacturers.',
-    images: [],
-  },
-};
+    'Evidence-backed U.S. pharmaceutical launch insights for emerging, global, and first-time commercial-stage biopharma manufacturers.',
+  path: '/insights',
+});
 
 export default function InsightsPage() {
   return (
     <>
-      <section className="bg-navy pt-[72px] text-white">
-        <div className="container-content py-24 md:py-30">
-          <p className="eyebrow">U.S. Commercialization Insights</p>
-          <h1 className="mt-6 max-w-4xl font-serif text-hero font-medium">
-            Clear thinking for the decisions behind a first U.S. launch.
-          </h1>
-          <p className="mt-8 max-w-3xl text-lg leading-8 text-white/72">
-            Written for global manufacturers entering the United States and emerging U.S. biopharma
-            teams building commercial infrastructure for the first time. Research is cited, limits
-            are stated, and the human consequences stay visible.
-          </p>
+      <section className="relative overflow-hidden bg-navy pt-[72px] text-white">
+        <div className="absolute inset-0 hero-shimmer" aria-hidden="true" />
+        <div className="relative grid min-h-[660px] items-stretch lg:grid-cols-[minmax(0,1.08fr)_minmax(0,0.92fr)]">
+            <div className="flex flex-col justify-center px-5 py-20 sm:px-6 md:px-12 md:py-24 lg:py-28 lg:pl-[max(3rem,calc((100vw-1400px)/2+3rem))] lg:pr-14">
+              <p className="eyebrow">U.S. Commercialization Insights</p>
+              <h1 className="mt-6 max-w-4xl font-serif text-[clamp(40px,4.4vw,68px)] font-medium leading-[1.03] tracking-[-0.035em]">
+                Clear thinking for the decisions behind a U.S. pharmaceutical launch.
+              </h1>
+              <p className="mt-8 max-w-3xl text-lg leading-8 text-white/72">
+                Written for global manufacturers entering the United States and emerging U.S. biopharma
+                teams building commercial infrastructure for the first time. Research is cited, limits
+                are stated, and the human consequences stay visible.
+              </p>
+            </div>
+
+            <div className="relative min-h-[360px] overflow-hidden border-x border-t border-white/10 lg:min-h-full lg:border-y lg:border-r-0">
+              <Image
+                src="/images/uem-insights-evidence-clarity-hero.webp"
+                alt=""
+                fill
+                priority
+                quality={90}
+                sizes="(min-width: 1024px) 46vw, 100vw"
+                className="object-cover object-center"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/35 via-transparent to-transparent" aria-hidden="true" />
+              <div className="absolute bottom-0 left-0 right-0 border-t border-white/12 bg-navy/65 px-5 py-4 backdrop-blur-sm">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-white/65">
+                  Research · Evidence · Limits · Decisions
+                </p>
+              </div>
+            </div>
         </div>
       </section>
 
@@ -71,8 +81,8 @@ export default function InsightsPage() {
                     </h2>
                     <p className="mt-4 flex-1 text-sm leading-7 text-mid">{insight.description}</p>
                     <div className="mt-7 border-t border-gray-200 pt-5">
-                      <p className="text-xs font-semibold text-navy">By Sharon Lee</p>
-                      <p className="mt-1 text-[11px] text-mist">Founding Member · Upper Echelon Management</p>
+                      <p className="text-xs font-semibold text-navy">By Sharon O’Dell</p>
+                      <p className="mt-1 text-[11px] text-mist">Founder · Upper Echelon Management</p>
                     </div>
                     <Link
                       href={`/insights/${insight.slug}`}
@@ -98,7 +108,7 @@ export default function InsightsPage() {
             <p className="mt-5 max-w-2xl leading-8 text-mid">
               UEM publishes to help commercial leaders see decisions, dependencies, and evidence
               gaps earlier. Each article connects practical launch questions with the operating
-              principles behind UEM and LaunchOS.
+              principles behind UEM and RxLaunchOS.
             </p>
           </FadeIn>
           <FadeIn delay={0.1}>
@@ -108,7 +118,7 @@ export default function InsightsPage() {
                 an honest statement that the evidence is not ready.”
               </p>
               <p className="mt-5 text-xs font-semibold uppercase tracking-[0.12em] text-gold">
-                Sharon Lee · Founding Member
+                Sharon O’Dell · Founder
               </p>
             </div>
           </FadeIn>

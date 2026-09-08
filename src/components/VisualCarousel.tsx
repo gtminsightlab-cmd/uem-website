@@ -64,7 +64,7 @@ const artifacts: Array<{
 function SampleHeader() {
   return (
     <div className="flex flex-wrap items-center justify-between gap-3 border-b border-navy/10 bg-[#F7F4ED] px-4 py-3 md:px-6">
-      <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-navy/70">Sample LaunchOS output</p>
+      <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-navy/70">Sample RxLaunchOS output</p>
       <p className="text-[10px] font-medium uppercase tracking-[0.1em] text-mid">Fictional manufacturer data</p>
     </div>
   );
@@ -95,7 +95,7 @@ function DecisionSpine() {
       <div className="flex items-center justify-between gap-4">
         <div>
           <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-gold">Decision spine · DS-014</p>
-          <h4 className="mt-2 font-serif text-xl text-navy md:text-2xl">Market-access capability sequencing</h4>
+        <h3 className="mt-2 font-serif text-xl text-navy md:text-2xl">Market-access capability sequencing</h3>
         </div>
         <span className="hidden border border-gold/30 bg-gold/[0.06] px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.1em] text-gold sm:inline-block">Action required</span>
       </div>
