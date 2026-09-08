@@ -77,6 +77,29 @@ const rolePaths = [
   },
 ];
 
+const platformProof = [
+  {
+    image: '/images/launchos-product/territory-signals.png',
+    title: 'Practice-channel coverage and capacity',
+    body: 'The current product connects target universes, geography, workload, capacity, and vacancies. For aesthetic medicine, the same operating mechanic would be configured around practices, providers, and adoption conditions.',
+  },
+  {
+    image: '/images/launchos-product/decisions-risks.png',
+    title: 'Channel and operating-model decisions',
+    body: 'Direct, distributor, hybrid, and staged routes can be compared without losing the assumptions, trade-offs, evidence, owner, or human approval behind the decision.',
+  },
+  {
+    image: '/images/launchos-product/readiness-queue.png',
+    title: 'Training and enablement readiness',
+    body: 'Evidence, severity, ownership, and state turn provider education, staff confidence, and practice enablement gaps into visible work instead of disconnected follow-up.',
+  },
+  {
+    image: '/images/launchos-product/board-launch-report.png',
+    title: 'A versioned commercialization record',
+    body: 'Leadership can review decisions, risks, dependencies, evidence, and supersession history in one governed record while accountable people retain approval authority.',
+  },
+];
+
 const aestheticServiceJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Service',
@@ -190,6 +213,53 @@ export default function AestheticMedicinePage() {
             UEM supports aesthetic-medicine commercialization today. The RxLaunchOS sector
             configuration shown here is exploratory, under validation, and not represented as a
             generally available or proven product.
+          </FadeIn>
+        </div>
+      </section>
+
+      <section className="section border-b border-gray-200 bg-surface">
+        <div className="container-content">
+          <FadeIn className="max-w-4xl">
+            <p className="eyebrow">Inside the platform</p>
+            <h2 className="mt-5 font-serif text-h2 font-medium text-navy">
+              See the operating mechanics being adapted for the practice channel.
+            </h2>
+            <p className="mt-5 max-w-3xl leading-8 text-mid">
+              These are actual RxLaunchOS screens populated with fictional Asterion pharmaceutical
+              demonstration data. They show the governed operating mechanics being adapted—not a
+              live aesthetic-medicine tenant or a validated sector result.
+            </p>
+          </FadeIn>
+
+          <div className="mt-12 grid gap-6 lg:grid-cols-2">
+            {platformProof.map((proof, index) => (
+              <FadeIn key={proof.title} delay={index * 0.05}>
+                <article className="h-full overflow-hidden border border-gray-200 bg-white">
+                  <div className="relative aspect-[16/9] overflow-hidden border-b border-gray-200 bg-navy">
+                    <Image
+                      src={proof.image}
+                      alt={`${proof.title} shown in the RxLaunchOS fictional Asterion demonstration tenant`}
+                      fill
+                      sizes="(min-width: 1024px) 50vw, 100vw"
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-7 md:p-8">
+                    <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-gold">
+                      Actual platform screen
+                    </p>
+                    <h3 className="mt-4 font-serif text-2xl text-navy">{proof.title}</h3>
+                    <p className="mt-4 text-sm leading-7 text-mid">{proof.body}</p>
+                  </div>
+                </article>
+              </FadeIn>
+            ))}
+          </div>
+
+          <FadeIn delay={0.1} className="mt-8">
+            <Link href="https://app.rxlaunchos.com/login" className="text-link">
+              Explore the live fictional RxLaunchOS demo <span aria-hidden="true">→</span>
+            </Link>
           </FadeIn>
         </div>
       </section>
