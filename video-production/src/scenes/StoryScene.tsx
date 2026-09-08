@@ -1,9 +1,56 @@
 import {Audio} from "@remotion/media";
-import {AbsoluteFill, Easing, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig} from "remotion";
+import {AbsoluteFill, Easing, Img, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig} from "remotion";
 import type {VideoScene, VideoStory, VisualKind} from "../videoContent";
 
 const palette = {ink: "#071b23", navy: "#0b2733", cream: "#f7f1e7", mist: "#dce9e5", teal: "#36b8a8", lime: "#b5e76a", coral: "#ef7b68", gold: "#e6b957"};
 const accents = [palette.teal, palette.lime, palette.coral, palette.gold];
+
+type ProductCapture = {
+  image: string;
+  label: string;
+  signal: string;
+};
+
+const productCaptures: Record<string, Record<string, ProductCapture>> = {
+  "pharma-end-to-end": {
+    "launch-reality": {image: "app-captures/live-launch-office.png", label: "Live Launch Office", signal: "428 days to launch · one governed operating view"},
+    define: {image: "app-captures/live-launch-signals.png", label: "Highest-consequence work", signal: "Named owner · 21 days overdue · at risk"},
+    diagnose: {image: "app-captures/readiness-summary.png", label: "Readiness assessment", signal: "28% coverage · 8% illustrative readiness · 25 hard gates"},
+    design: {image: "app-captures/roadmap.png", label: "Critical path and dependencies", signal: "15 dated milestones · ownership · downstream effects"},
+    rehearse: {image: "app-captures/decisions-risks.png", label: "Decision chain", signal: "Internal · CSO · hybrid · evidence and trade-offs retained"},
+    operate: {image: "app-captures/territory-signals.png", label: "Territory operating signals", signal: "Workload 38 · capacity gap −12 · one vacancy"},
+    learn: {image: "app-captures/board-launch-report.png", label: "Immutable board launch review", signal: "Versioned report · human review state · retained evidence"},
+  },
+  "pharma-personas": {
+    "role-system": {image: "app-captures/live-launch-office.png", label: "Shared launch record", signal: "One strategy · role-relevant operating lenses"},
+    executive: {image: "app-captures/portfolio-control-tower.png", label: "Portfolio Control Tower", signal: "Leadership attention · timing · open controls"},
+    functional: {image: "app-captures/roadmap.png", label: "National operating plan", signal: "Capabilities become milestones, owners, and dependencies"},
+    regional: {image: "app-captures/executive-dashboard.png", label: "Meaningful signal", signal: "Coverage 12.92% · payer evidence insufficient · CRM 35.71%"},
+    manager: {image: "app-captures/readiness-queue.png", label: "Owned next-action queue", signal: "Filter by accountability · evidence · severity · state"},
+    field: {image: "app-captures/territory-signals.png", label: "Territory Planning", signal: "Authorized targets · workload · capacity · geographic coverage"},
+    "shared-record": {image: "app-captures/report-lineage.png", label: "Board-grade launch record", signal: "Three immutable versions · explicit supersession lineage"},
+  },
+};
+
+const ProductCapturePanel = ({capture, accent}: {capture: ProductCapture; accent: string}) => {
+  const frame = useCurrentFrame();
+  const enter = spring({frame, fps: 30, config: {damping: 18, mass: 0.8}});
+  const scale = interpolate(frame, [0, 240], [1.035, 1.075], {extrapolateRight: "clamp"});
+
+  return (
+    <div style={{position: "relative", width: 705, height: 430, borderRadius: 24, overflow: "hidden", border: `2px solid ${accent}88`, background: palette.cream, boxShadow: "0 28px 90px rgba(0,0,0,.42)", transform: `translateY(${interpolate(enter, [0, 1], [34, 0])}px)`}}>
+      <Img src={staticFile(capture.image)} style={{width: "100%", height: "100%", objectFit: "cover", transform: `scale(${scale})`}} />
+      <div style={{position: "absolute", top: 18, left: 18, display: "flex", alignItems: "center", gap: 9, borderRadius: 999, padding: "9px 13px", background: "rgba(7,27,35,.91)", color: palette.cream, fontSize: 13, fontWeight: 800, letterSpacing: .4}}>
+        <span style={{width: 8, height: 8, borderRadius: 99, background: accent}} />
+        Actual RxLaunchOS demo · fictional Asterion data
+      </div>
+      <div style={{position: "absolute", left: 0, right: 0, bottom: 0, padding: "18px 22px", background: "linear-gradient(180deg, transparent, rgba(7,27,35,.96) 24%)", color: palette.cream}}>
+        <div style={{fontSize: 13, textTransform: "uppercase", letterSpacing: 1.7, color: accent, fontWeight: 900}}>{capture.label}</div>
+        <div style={{fontSize: 18, marginTop: 6, fontWeight: 750}}>{capture.signal}</div>
+      </div>
+    </div>
+  );
+};
 
 const Panel = ({scene, kind}: {scene: VideoScene; kind: VisualKind}) => {
   const frame = useCurrentFrame();
@@ -29,5 +76,6 @@ export const StoryScene = ({story, scene, sceneIndex, durationInFrames}: {story:
   const frame = useCurrentFrame(); const {fps} = useVideoConfig();
   const opacity = interpolate(frame, [0, 12, durationInFrames - 14, durationInFrames], [0, 1, 1, 0], {extrapolateLeft: "clamp", extrapolateRight: "clamp"});
   const lift = spring({frame: frame - 5, fps, config: {damping: 20}}); const accent = story.sector === "pharma" ? palette.lime : palette.coral;
-  return <AbsoluteFill style={{background: palette.ink, color: palette.cream, fontFamily: "Arial, Helvetica, sans-serif", opacity, overflow: "hidden"}}><Audio src={staticFile(`voiceover/${story.id}/${scene.id}.mp3`)} /><div style={{position: "absolute", inset: 0, background: `radial-gradient(circle at 85% 20%, ${accent}24, transparent 32%), linear-gradient(120deg, ${palette.ink} 25%, ${palette.navy})`}} /><div style={{position: "absolute", top: 0, right: 0, width: 12, height: "100%", background: accent}} /><div style={{position: "relative", padding: "48px 64px 42px", height: "100%", display: "grid", gridTemplateRows: "auto 1fr auto"}}><header style={{display: "flex", justifyContent: "space-between", alignItems: "center"}}><div style={{fontWeight: 900, fontSize: 21, letterSpacing: -.5}}><span style={{color: accent}}>Rx</span>LaunchOS <span style={{fontWeight: 400, opacity: .48}}>× UEM</span></div><div style={{fontSize: 13, textTransform: "uppercase", letterSpacing: 1.6, color: palette.mist}}>{story.disclosure}</div></header><main style={{display: "grid", gridTemplateColumns: "1.12fr .88fr", gap: 56, alignItems: "center"}}><div style={{transform: `translateY(${interpolate(lift, [0, 1], [28, 0])}px)`}}><div style={{fontSize: 17, textTransform: "uppercase", letterSpacing: 2.3, color: accent, fontWeight: 800, marginBottom: 18}}>{scene.eyebrow}</div><div style={{fontSize: 55, lineHeight: 1.03, letterSpacing: -2.2, fontFamily: "Georgia, 'Times New Roman', serif", maxWidth: 660}}>{scene.headline}</div><div style={{fontSize: 22, lineHeight: 1.45, color: palette.mist, marginTop: 24, maxWidth: 675}}>{scene.body}</div></div><Panel scene={scene} kind={scene.visual} /></main><footer style={{display: "grid", gridTemplateColumns: "1fr auto", alignItems: "end", gap: 30}}><div><div style={{height: 3, background: "rgba(247,241,231,.12)", borderRadius: 10, overflow: "hidden"}}><div style={{height: "100%", width: `${((sceneIndex + interpolate(frame, [0, durationInFrames], [0, 1], {extrapolateLeft: "clamp", extrapolateRight: "clamp"})) / story.scenes.length) * 100}%`, background: accent}} /></div><div style={{fontSize: 12, color: palette.mist, opacity: .68, marginTop: 9}}>echelonconsulting.io</div></div><div style={{fontSize: 14, fontWeight: 800, letterSpacing: 1.5, color: accent}}>{String(sceneIndex + 1).padStart(2, "0")} / {String(story.scenes.length).padStart(2, "0")}</div></footer></div></AbsoluteFill>;
+  const capture = productCaptures[story.id]?.[scene.id];
+  return <AbsoluteFill style={{background: palette.ink, color: palette.cream, fontFamily: "Arial, Helvetica, sans-serif", opacity, overflow: "hidden"}}><Audio src={staticFile(`voiceover/${story.id}/${scene.id}.mp3`)} /><div style={{position: "absolute", inset: 0, background: `radial-gradient(circle at 85% 20%, ${accent}24, transparent 32%), linear-gradient(120deg, ${palette.ink} 25%, ${palette.navy})`}} /><div style={{position: "absolute", top: 0, right: 0, width: 12, height: "100%", background: accent}} /><div style={{position: "relative", padding: capture ? "38px 50px 34px" : "48px 64px 42px", height: "100%", display: "grid", gridTemplateRows: "auto 1fr auto"}}><header style={{display: "flex", justifyContent: "space-between", alignItems: "center"}}><div style={{fontWeight: 900, fontSize: 21, letterSpacing: -.5}}><span style={{color: accent}}>Rx</span>LaunchOS <span style={{fontWeight: 400, opacity: .48}}>× UEM</span></div><div style={{fontSize: 13, textTransform: "uppercase", letterSpacing: 1.6, color: palette.mist}}>{story.disclosure}</div></header><main style={{display: "grid", gridTemplateColumns: capture ? ".67fr 1.33fr" : "1.12fr .88fr", gap: capture ? 34 : 56, alignItems: "center"}}><div style={{transform: `translateY(${interpolate(lift, [0, 1], [28, 0])}px)`}}><div style={{fontSize: capture ? 14 : 17, textTransform: "uppercase", letterSpacing: 2.3, color: accent, fontWeight: 800, marginBottom: 18}}>{scene.eyebrow}</div><div style={{fontSize: capture ? 42 : 55, lineHeight: 1.03, letterSpacing: capture ? -1.5 : -2.2, fontFamily: "Georgia, 'Times New Roman', serif", maxWidth: 660}}>{scene.headline}</div><div style={{fontSize: capture ? 18 : 22, lineHeight: 1.45, color: palette.mist, marginTop: 22, maxWidth: 675}}>{scene.body}</div></div>{capture ? <ProductCapturePanel capture={capture} accent={accent} /> : <Panel scene={scene} kind={scene.visual} />}</main><footer style={{display: "grid", gridTemplateColumns: "1fr auto", alignItems: "end", gap: 30}}><div><div style={{height: 3, background: "rgba(247,241,231,.12)", borderRadius: 10, overflow: "hidden"}}><div style={{height: "100%", width: `${((sceneIndex + interpolate(frame, [0, durationInFrames], [0, 1], {extrapolateLeft: "clamp", extrapolateRight: "clamp"})) / story.scenes.length) * 100}%`, background: accent}} /></div><div style={{fontSize: 12, color: palette.mist, opacity: .68, marginTop: 9}}>echelonconsulting.io</div></div><div style={{fontSize: 14, fontWeight: 800, letterSpacing: 1.5, color: accent}}>{String(sceneIndex + 1).padStart(2, "0")} / {String(story.scenes.length).padStart(2, "0")}</div></footer></div></AbsoluteFill>;
 };

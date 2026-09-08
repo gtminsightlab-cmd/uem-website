@@ -9,8 +9,14 @@ const root = resolve(here, "..");
 const siteRoot = resolve(root, "..");
 const publishedDir = join(siteRoot, "public", "videos");
 mkdirSync(publishedDir, {recursive: true});
+const requestedStoryIds = new Set((process.env.STORY_IDS ?? "").split(",").map((id) => id.trim()).filter(Boolean));
+const stories = requestedStoryIds.size ? videoStories.filter((story) => requestedStoryIds.has(story.id)) : videoStories;
 
-for (const story of videoStories) {
+if (requestedStoryIds.size && stories.length !== requestedStoryIds.size) {
+  throw new Error(`Unknown story id in STORY_IDS: ${[...requestedStoryIds].filter((id) => !videoStories.some((story) => story.id === id)).join(", ")}`);
+}
+
+for (const story of stories) {
   const framesDir = join(root, "out", `frames-${story.id}`);
   if (!existsSync(framesDir)) throw new Error(`Missing frame sequence for ${story.id}`);
   const frames = readdirSync(framesDir).filter((name) => name.endsWith(".jpeg")).sort();
@@ -29,4 +35,4 @@ for (const story of videoStories) {
   copyFileSync(join(root, "public", "captions", `${story.id}.vtt`), join(publishedDir, `${story.id}.vtt`));
 }
 
-process.stdout.write(`Published four videos, posters, and caption tracks to ${publishedDir}.\n`);
+process.stdout.write(`Published ${stories.length} video${stories.length === 1 ? "" : "s"}, posters, and caption tracks to ${publishedDir}.\n`);

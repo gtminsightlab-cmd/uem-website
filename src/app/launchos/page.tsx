@@ -147,6 +147,29 @@ const launchosUrl = 'https://app.rxlaunchos.com';
 const launchosLoginUrl = `${launchosUrl}/login`;
 const launchosPricingUrl = `${launchosUrl}/pricing`;
 
+const productProof = [
+  {
+    image: '/images/launchos-product/executive-dashboard.png',
+    title: 'Executive launch command dashboard',
+    body: 'The fictional Asterion launch shows how coverage, evidence adequacy, and CRM readiness become decision signals instead of disconnected activity metrics.',
+  },
+  {
+    image: '/images/launchos-product/readiness-summary.png',
+    title: 'Readiness, confidence, and hard gates',
+    body: 'Assessment coverage, illustrative readiness, evidence confidence, and unresolved gates stay separate so an incomplete plan cannot look falsely precise.',
+  },
+  {
+    image: '/images/launchos-product/roadmap.png',
+    title: 'Critical path and dependencies',
+    body: 'Fifteen dated milestones connect owners, predecessors, downstream effects, and at-risk work while simulations leave the approved plan unchanged.',
+  },
+  {
+    image: '/images/launchos-product/board-launch-report.png',
+    title: 'Immutable board launch review',
+    body: 'A versioned executive record carries readiness, risks, decisions, dependencies, evidence, and human-review state into one inspectable report.',
+  },
+];
+
 const launchOsJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
@@ -272,6 +295,50 @@ export default function RxLaunchOSPage() {
                 status="Role-based planning"
               />
             </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      <section className="section border-b border-gray-200 bg-surface">
+        <div className="container-content">
+          <FadeIn className="grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-end">
+            <div>
+              <p className="eyebrow">Inside the application</p>
+              <h2 className="mt-5 font-serif text-h2 font-medium text-navy">
+                See the data become a signal, a decision, and a board record.
+              </h2>
+            </div>
+            <div>
+              <p className="leading-8 text-mid">
+                These are current RxLaunchOS screens using the clearly labeled, fictional Asterion
+                demonstration company—not conceptual mockups or client results.
+              </p>
+              <a href={launchosLoginUrl} className="mt-5 inline-flex text-sm font-semibold text-navy animated-underline">
+                Walk through the live fictional demo <span className="ml-2" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </FadeIn>
+          <div className="mt-12 grid gap-6 lg:grid-cols-2">
+            {productProof.map((proof, index) => (
+              <FadeIn key={proof.title} delay={index * 0.05}>
+                <article className="h-full overflow-hidden border border-gray-200 bg-white">
+                  <div className="relative aspect-[16/9] overflow-hidden border-b border-gray-200 bg-gray-100">
+                    <Image
+                      src={proof.image}
+                      alt={`${proof.title} shown with fictional Asterion demonstration data`}
+                      fill
+                      sizes="(min-width: 1024px) 48vw, 100vw"
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-7 md:p-8">
+                    <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-gold">Actual product screen</p>
+                    <h3 className="mt-3 font-serif text-2xl text-navy">{proof.title}</h3>
+                    <p className="mt-4 text-sm leading-7 text-mid">{proof.body}</p>
+                  </div>
+                </article>
+              </FadeIn>
+            ))}
           </div>
         </div>
       </section>
