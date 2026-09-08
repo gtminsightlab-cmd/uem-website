@@ -193,3 +193,43 @@ Keep private unless separately approved:
 - client-specific playbooks, licensed data, and identifiable engagement outputs.
 
 Public examples must not imply predictive validation, general availability, or a verified client outcome. Use concise buyer-facing disclosure such as “Sample RxLaunchOS output · fictional manufacturer data,” not production notes or internal build labels.
+
+## Approved audience, scoring, and simulation language
+
+### Role-based planning
+
+The website may explain the operating jobs supported by these role lenses:
+
+- territory representative / KAM: assigned accounts, objectives, stakeholder and barrier facts, evidence, outcomes, follow-ups, and the next purposeful action;
+- district manager / first-line manager: roster, territories, capacity, coaching evidence, commitments, barriers, actions, and escalations;
+- regional director / RVP: authorized district patterns, manager intervention, resource needs, and regional strategy pivots;
+- VP / functional leader: national targets, capabilities, vendors, channels, evidence, milestones, and cross-functional dependencies;
+- CMO / commercial executive: cross-functional decisions, tradeoffs, resource and capital implications, risks, assumptions, and launch attention;
+- cross-functional commercial team: a shared versioned operating record with explicit functional ownership and human approval.
+
+Public copy must state or preserve the principle that a role lens changes questions, horizons, and roll-ups but does not grant authorization. Do not describe RxLaunchOS as ranking employees, conducting employee surveillance, or replacing manager judgment.
+
+### Plan-quality scoring
+
+RxLaunchOS may be described as evaluating plan sufficiency or readiness under a named, versioned methodology. Public explanation may identify coverage, gate integrity, decision hygiene, evidence adequacy, critical-path exposure, blocking inputs, contradictions, stale evidence, and refused calculations.
+
+Do not publish private weights, thresholds, hard-gate rules, or expert calibration. Do not describe a plan-quality score as a probability of regulatory approval, market success, forecast attainment, revenue, or employee performance. When required coverage, gates, or evidence are insufficient, explain that RxLaunchOS suppresses false precision and shows what must be resolved.
+
+### Governed scenarios and simulation
+
+RxLaunchOS may be described as comparing explicit options, assumptions, dependencies, tradeoffs, leading indicators, and wait consequences for choices such as field operating model, organization size and sequencing, CRM timing, access-sensitive investment gates, and territory alignment.
+
+Use “scenario,” “simulation,” “rehearsal,” or “comparison” only when the copy preserves the human decision boundary. A scenario is not a prediction, autonomous recommendation, verified outcome, or substitute for specialist judgment.
+
+## Four-film public explainer package approved for production 2026-09-07
+
+The owner approved two explainer films on each sector page so a prospective tester understands the product and the work before entering a demo, trial, or design-partner conversation:
+
+- pharmaceutical end-to-end: define, diagnose, design, rehearse, decide, operate, and learn;
+- pharmaceutical personas: territory/KAM through district, regional, functional, executive, and cross-functional lenses;
+- aesthetic-medicine end-to-end: manufacturer-to-practice market, channel, operating-model, scenario, governance, and learning flow;
+- aesthetic-medicine personas: executive, brand/channel, regional/district, territory/practice-development, education, operations, and analytics lenses.
+
+The pharmaceutical films may show RxLaunchOS as a working beta and point viewers to the fictional demonstration, isolated working trial, pricing, or enterprise discussion. The aesthetic films must identify the RxLaunchOS sector configuration as a design-partner direction under validation—not a generally available or proven product—while explaining that UEM supports category commercialization today.
+
+The public films must preserve evidence honesty, human approval, scoped access, non-predictive scenario language, and the role-lens authorization boundary. Category brands may inform the internal model, but the public films must not imply a UEM relationship with Galderma, Allergan Aesthetics, ALASTIN, or another company without separate substantiation and approval.

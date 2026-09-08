@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import FadeIn from '@/components/FadeIn';
+import VideoShowcase from '@/components/VideoShowcase';
 import { createPageMetadata } from '@/lib/metadata';
 import { absoluteUrl, safeJsonLd, SITE_NAME, SITE_URL } from '@/lib/site';
 
@@ -40,6 +41,39 @@ const capabilities = [
     number: '04',
     title: 'Launch governance and measurement',
     body: 'Make claims, evidence, owners, dependencies, risks, milestones, and performance signals visible before commercial activity outruns the operating system.',
+  },
+];
+
+const rolePaths = [
+  {
+    role: 'GM / commercial executive',
+    horizon: 'Market, model, and investment',
+    body: 'Pressure-test category assumptions, channel economics, capability gaps, partner choices, investment gates, and launch risks before capital is committed.',
+  },
+  {
+    role: 'Brand, sales, and channel leaders',
+    horizon: 'National commercial design',
+    body: 'Connect positioning, target practice segments, account strategy, coverage, distributor roles, education, measures, and launch sequence.',
+  },
+  {
+    role: 'Regional and district leaders',
+    horizon: 'Coverage and intervention',
+    body: 'Compare territory coverage, manager capacity, practice barriers, training needs, partner performance, and evidence-backed resource requests.',
+  },
+  {
+    role: 'Territory and practice-development teams',
+    horizon: 'Practice adoption plan',
+    body: 'Turn provider, staff, economics, education, barrier, commitment, and outcome facts into the next purposeful account action.',
+  },
+  {
+    role: 'Clinical education and enablement',
+    horizon: 'Readiness and confidence',
+    body: 'Coordinate training readiness, provider and staff education, approved evidence, practice workflows, follow-up, and escalation.',
+  },
+  {
+    role: 'Commercial operations and analytics',
+    horizon: 'Operating evidence',
+    body: 'Keep roster, territory, inventory and service assumptions, data quality, partner obligations, adoption signals, and reporting connected.',
   },
 ];
 
@@ -117,6 +151,49 @@ export default function AestheticMedicinePage() {
         </div>
       </section>
 
+      <section className="section bg-navy text-white">
+        <div className="container-content">
+          <FadeIn className="max-w-4xl">
+            <p className="eyebrow">Manufacturer-to-practice commercialization</p>
+            <h2 className="mt-5 font-serif text-h2 font-medium">See the system before you help us validate it.</h2>
+            <p className="mt-5 max-w-3xl leading-8 text-white/68">
+              The first film explains the complete commercialization path. The second shows how the
+              operating view changes for the people responsible for category strategy, channel design,
+              field execution, education, and practice adoption.
+            </p>
+          </FadeIn>
+          <div className="mt-12 grid gap-6 lg:grid-cols-2">
+            <FadeIn>
+              <VideoShowcase
+                title="From manufacturer to practice adoption"
+                description="A structured path through market definition, direct or partner channel design, team and training choices, RFPs, launch-tactic comparison, governance, and learning."
+                src="/videos/aesthetics-end-to-end.mp4"
+                poster="/videos/aesthetics-end-to-end-poster.jpg"
+                captions="/videos/aesthetics-end-to-end.vtt"
+                duration="1 minute 52 seconds"
+                status="Design-partner direction"
+              />
+            </FadeIn>
+            <FadeIn delay={0.08}>
+              <VideoShowcase
+                title="The people behind practice adoption"
+                description="Proposed decision lenses for executives, brand and channel leaders, regional and district teams, territory and practice-development roles, education, operations, and analytics."
+                src="/videos/aesthetics-personas.mp4"
+                poster="/videos/aesthetics-personas-poster.jpg"
+                captions="/videos/aesthetics-personas.vtt"
+                duration="1 minute 46 seconds"
+                status="Proposed role lenses"
+              />
+            </FadeIn>
+          </div>
+          <FadeIn delay={0.1} className="mt-8 border-l-2 border-gold bg-white/[0.04] px-6 py-5 text-sm leading-7 text-white/65">
+            UEM supports aesthetic-medicine commercialization today. The RxLaunchOS sector
+            configuration shown here is exploratory, under validation, and not represented as a
+            generally available or proven product.
+          </FadeIn>
+        </div>
+      </section>
+
       <section className="section bg-white">
         <div className="container-content">
           <FadeIn className="max-w-3xl">
@@ -138,6 +215,33 @@ export default function AestheticMedicinePage() {
                   <p className="text-xs font-semibold tracking-[0.14em] text-gold">{capability.number}</p>
                   <h3 className="mt-5 font-serif text-2xl text-navy">{capability.title}</h3>
                   <p className="mt-4 leading-7 text-mid">{capability.body}</p>
+                </article>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section bg-white">
+        <div className="container-content">
+          <FadeIn className="max-w-4xl">
+            <p className="eyebrow">Different jobs, one controlled launch record</p>
+            <h2 className="mt-5 font-serif text-h2 font-medium text-navy">
+              Give each role the context, decisions, and next actions needed to do its job.
+            </h2>
+            <p className="mt-5 max-w-3xl leading-8 text-mid">
+              These proposed role lenses are being tested with manufacturers and experienced
+              practice-channel operators. They change the questions and planning horizon; they do
+              not create access, rank employees, or replace accountable leadership.
+            </p>
+          </FadeIn>
+          <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {rolePaths.map((path, index) => (
+              <FadeIn key={path.role} delay={index * 0.04}>
+                <article className="h-full border border-gray-200 bg-surface p-7">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-gold">{path.horizon}</p>
+                  <h3 className="mt-4 font-serif text-2xl text-navy">{path.role}</h3>
+                  <p className="mt-4 text-sm leading-7 text-mid">{path.body}</p>
                 </article>
               </FadeIn>
             ))}
