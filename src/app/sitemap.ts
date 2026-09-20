@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: absoluteUrl('/services'), lastModified: updated, changeFrequency: 'monthly', priority: 0.9 },
     { url: absoluteUrl('/aesthetic-medicine'), lastModified: updated, changeFrequency: 'monthly', priority: 0.85 },
     { url: absoluteUrl('/launchos'), lastModified: updated, changeFrequency: 'weekly', priority: 0.9 },
+    { url: absoluteUrl('/rfp-intelligence'), lastModified: updated, changeFrequency: 'monthly', priority: 0.8 },
     { url: absoluteUrl('/insights'), lastModified: updated, changeFrequency: 'weekly', priority: 0.8 },
     { url: absoluteUrl('/about'), lastModified: updated, changeFrequency: 'monthly', priority: 0.7 },
     { url: absoluteUrl('/resources'), lastModified: updated, changeFrequency: 'monthly', priority: 0.7 },

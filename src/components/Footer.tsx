@@ -10,6 +10,7 @@ const footerLinks = {
   ],
   Product: [
     { href: '/launchos', label: 'RxLaunchOS Overview' },
+    { href: '/rfp-intelligence', label: 'RFP & Partner Selection' },
     { href: 'https://app.rxlaunchos.com/login', label: 'RxLaunchOS Demo & Login' },
     { href: 'https://app.rxlaunchos.com/pricing', label: 'Plans & Monthly Pricing' },
     { href: '/contact', label: 'Discuss Enterprise Scope' },
