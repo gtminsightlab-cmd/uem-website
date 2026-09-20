@@ -60,6 +60,29 @@ const operatingCommitments = [
   },
 ];
 
+const rfpIntelligenceSteps = [
+  {
+    number: '01',
+    title: 'Define the actual decision',
+    body: 'Set the scope, launch context, partner types, timing, data or integration needs, constraints, and accountable decision owner before a vendor responds.',
+  },
+  {
+    number: '02',
+    title: 'Freeze the criteria',
+    body: 'Use a relevant, approved method to build the request, response format, evidence expectations, and comparison rubric before the response can influence the rules.',
+  },
+  {
+    number: '03',
+    title: 'Compare documented evidence',
+    body: 'Keep claims, exceptions, omissions, contradictions, and clarification needs connected to the question they answer instead of buried in competing slide decks.',
+  },
+  {
+    number: '04',
+    title: 'Retain the human decision',
+    body: 'Give the manufacturer a comparison record that preserves limitations, conflicts, overrides, and the named decision owner’s rationale. Software never awards the work.',
+  },
+];
+
 const rolePaths = [
   {
     role: 'Territory representative / KAM',
@@ -296,6 +319,43 @@ export default function RxLaunchOSPage() {
               />
             </FadeIn>
           </div>
+        </div>
+      </section>
+
+      <section className="section border-y border-gray-200 bg-white">
+        <div className="container-content">
+          <FadeIn className="grid gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:items-end">
+            <div>
+              <p className="eyebrow">RFP Intelligence</p>
+              <h2 className="mt-5 font-serif text-h2 font-medium text-navy">
+                Choose a commercialization partner with a process you can defend.
+              </h2>
+            </div>
+            <div>
+              <p className="leading-8 text-mid">
+                When a manufacturer is choosing a consulting firm, CSO, data partner, market-access
+                specialist, CRM integrator, or other commercialization partner, the decision should
+                belong to the buyer—not the firm that happens to be selling.
+              </p>
+              <Link href="/rfp-intelligence" className="mt-5 inline-flex text-sm font-semibold text-navy animated-underline">
+                Explore RFP Intelligence <span className="ml-2" aria-hidden="true">→</span>
+              </Link>
+            </div>
+          </FadeIn>
+          <div className="mt-12 grid gap-4 md:grid-cols-2">
+            {rfpIntelligenceSteps.map((step, index) => (
+              <FadeIn key={step.title} delay={index * 0.05}>
+                <article className="h-full border border-gray-200 bg-surface p-7 md:p-8">
+                  <span className="text-xs font-semibold text-gold">{step.number}</span>
+                  <h3 className="mt-4 font-serif text-2xl text-navy">{step.title}</h3>
+                  <p className="mt-4 text-sm leading-7 text-mid">{step.body}</p>
+                </article>
+              </FadeIn>
+            ))}
+          </div>
+          <FadeIn delay={0.15} className="mt-8 border-l-2 border-gold bg-surface px-6 py-5 text-sm leading-7 text-mid">
+            <strong className="text-navy">Manufacturer control stays intact.</strong> RFP Intelligence is being developed under controlled validation. It is intended to structure a vendor-neutral process; it does not recommend, select, or award a firm, including UEM.
+          </FadeIn>
         </div>
       </section>
 
